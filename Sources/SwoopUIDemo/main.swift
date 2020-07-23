@@ -1,7 +1,5 @@
 import Foundation
-
 import SwoopUI
-import Flynn
 
 var body: some View {
     VStack {

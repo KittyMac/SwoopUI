@@ -23,9 +23,16 @@ let package = Package(
         ),
         .target(
             name: "SwoopUI",
-            dependencies: [ "Flynn" ]),
+            dependencies: [ 
+				"Flynn",
+				"Yoga"
+			]),
+        .target(
+            name: "Yoga",
+            dependencies: [ ]),
         .testTarget(
             name: "SwoopUITests",
             dependencies: [ "SwoopUI" ]),
-    ]
+    ],
+	cxxLanguageStandard: .gnucxx14
 )
