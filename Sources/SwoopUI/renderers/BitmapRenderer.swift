@@ -1,5 +1,6 @@
 import Foundation
+import Flynn
 
-public class BitmapRenderer {
+public class BitmapRenderer: Actor {
     
 }

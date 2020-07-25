@@ -1,0 +1,1 @@
+Note: This code was derived from the OpenSwiftUI project ( https://github.com/Cosmo/OpenSwiftUI )

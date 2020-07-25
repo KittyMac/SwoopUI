@@ -1,20 +1,9 @@
-import Foundation
-
 public protocol View {
-    
+    func iterate() -> AnyIterator<View>
 }
 
-extension View {
-    
-}
-
-public struct TupleView<T> : View {
-    public var value: T
-    @inlinable public init(_ value: T) {
-        self.value = value
+public extension View {
+    func iterate() -> AnyIterator<View> {
+        return AnyIterator({return nil})
     }
-}
-
-public struct EmptyView : View {
-    
 }

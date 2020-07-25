@@ -1,3 +1,4 @@
+// Should we use CGPoint instead?
 public struct Point {
     public var x: Int
     public var y: Int

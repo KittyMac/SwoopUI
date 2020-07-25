@@ -10,3 +10,13 @@ As SwoopUI is very new, it would be premature to speculate what all it will be g
     Multi-core CPUs are here in abundance right now.  Not only are there many cores, on Apple Silicon some cores provide different runtime characteristics (high efficiency vs high performance). SwoopUI uses [Flynn](https://github.com/KittyMac/flynn), the Actor-Model framework for Swift, to make concurrent programming easy and safe. It is our belief that a light-weight, highly-concurrent UI can be more efficient (ie use less battery) than existing UI frameworks.
 3. **SwiftUI Equivalent**  
     As much as is feasible, SwoopUI should be syntactically hot-swappable with SwiftUI.  Just switch ```import SwiftUI``` to ```import SwoopUI``` and you should be good to go.
+
+
+### Architecture
+
+1. SwoopUI
+    * Empty, SwiftUI-identical data structures
+2. Yoga
+    * Read SwoopUI structure and create Yoga nodes
+3. "Renderer Backend"
+    * Each Yoga node can have (multiple) views attached

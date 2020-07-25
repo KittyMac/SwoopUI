@@ -18,11 +18,13 @@ import Yoga
 public typealias YogaID = UInt64
 public typealias Pixel = Float
 
-public class Yoga {
-    private var parent: Yoga?
+public class YogaNode {
+    private var parent: YogaNode?
     private var node: YGNodeRef
 
     private var yogaID: YogaID
+    
+    private var name: String = ""
 
     private var _usesLeft: Bool = true
     private var _usesTop: Bool = true
@@ -35,6 +37,7 @@ public class Yoga {
     public init() {
         node = YGNodeNew()
         yogaID = YGNodeGetID(node)
+        fill()
     }
 
     public func print() {
@@ -52,15 +55,21 @@ public class Yoga {
         return self
     }
 
-    @discardableResult public func child(_ yoga: Yoga) -> Self {
+    @discardableResult public func child(_ yoga: YogaNode) -> Self {
         YGNodeInsertChild(node, yoga.node, YGNodeGetChildCount(node))
         return self
     }
 
-    @discardableResult public func children(_ yogas: [Yoga]) -> Self {
+    @discardableResult public func children(_ yogas: [YogaNode]) -> Self {
         for yoga in yogas {
             YGNodeInsertChild(node, yoga.node, YGNodeGetChildCount(node))
         }
+        return self
+    }
+    
+    @discardableResult public func name(_ name: String) -> Self {
+        self.name = name
+        debugPrint(name)
         return self
     }
 

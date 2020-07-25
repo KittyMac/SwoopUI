@@ -1,5 +1,3 @@
-import Foundation
-
 @_functionBuilder
 public struct ViewBuilder {
     public static func buildBlock() -> EmptyView {
@@ -14,12 +12,14 @@ public struct ViewBuilder {
         return content
     }
     
+    // TODO: TBD
+    /*
     public static func buildEither<TrueContent, FalseContent>(first: TrueContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
         return .init(storage: .trueContent(first))
     }
     public static func buildEither<TrueContent, FalseContent>(second: FalseContent) -> _ConditionalContent<TrueContent, FalseContent> where TrueContent: View, FalseContent: View {
         return .init(storage: .falseContent(second))
-    }
+    }*/
 }
 
 extension ViewBuilder {
