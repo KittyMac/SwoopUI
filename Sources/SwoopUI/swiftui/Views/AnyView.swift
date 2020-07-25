@@ -1,22 +1,22 @@
 public class AnyViewStorageBase {
-    
+
 }
 
 public class AnyViewStorage<V: View>: AnyViewStorageBase {
-    public var _view: V
-    
+    public var view: V
+
     init(_ view: V) {
-        self._view = view
+        self.view = view
     }
 }
 
 public struct AnyView: View {
-    public var _storage: AnyViewStorageBase
-    
+    public var storage: AnyViewStorageBase
+
     public init<V>(_ view: V) where V: View {
-        _storage = AnyViewStorage<V>(view)
+        storage = AnyViewStorage<V>(view)
     }
-    
+
     public init?(_fromValue value: Any) {
         fatalError()
     }

@@ -5,10 +5,10 @@ public protocol EnvironmentKey {
 
 public struct EnvironmentValues: CustomStringConvertible {
     var values: [ObjectIdentifier: Any] = [:]
-    
+
     public init() {
     }
-    
+
     public subscript<K>(key: K.Type) -> K.Value where K: EnvironmentKey {
         get {
             if let value = values[ObjectIdentifier(key)] as? K.Value {
@@ -21,14 +21,12 @@ public struct EnvironmentValues: CustomStringConvertible {
         }
     }
     public var description: String {
-        get {
-            return ""
-        }
+        return ""
     }
 }
 
 protocol DynamicProperty {
-    
+
 }
 
 @propertyWrapper public struct Environment<Value>: DynamicProperty {
@@ -36,24 +34,22 @@ protocol DynamicProperty {
         case keyPath(KeyPath<EnvironmentValues, Value>)
         case value(Value)
     }
-    
+
     internal var content: Environment<Value>.Content
-    
+
     public init(_ keyPath: KeyPath<EnvironmentValues, Value>) {
         content = .keyPath(keyPath)
     }
     public var wrappedValue: Value {
-        get {
-            switch content {
-            case let .value(value):
-                return value
-            case let .keyPath(keyPath):
-                // not bound to a view, return the default value.
-                return EnvironmentValues()[keyPath: keyPath]
-            }
+        switch content {
+        case let .value(value):
+            return value
+        case let .keyPath(keyPath):
+            // not bound to a view, return the default value.
+            return EnvironmentValues()[keyPath: keyPath]
         }
     }
-    
+
     internal func error() -> Never {
         fatalError()
     }

@@ -1,9 +1,9 @@
-
- public extension View {
+/*
+public extension VStack {
     func node() -> YogaNode {
         let node = YogaNode()
-        node.name("View")
+        node.name("VStack")
         return node
     }
 }
-
+*/

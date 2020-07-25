@@ -1,6 +1,6 @@
 public struct TupleView<T>: View {
     public var value: T
-    
+
     public init(_ value: T) {
         self.value = value
     }
@@ -17,7 +17,7 @@ extension TupleView {
                 let result = tupleElements[index]
                 index += 1
                 return result as? View
-            } 
+            }
             return nil
         })
     }

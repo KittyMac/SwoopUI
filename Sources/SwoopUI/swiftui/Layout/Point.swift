@@ -1,8 +1,9 @@
-// Should we use CGPoint instead?
+// swiftlint:disable identifier_name
+
 public struct Point {
     public var x: Int
     public var y: Int
-    
+
     public static let zero = Point(x: 0, y: 0)
 }
 

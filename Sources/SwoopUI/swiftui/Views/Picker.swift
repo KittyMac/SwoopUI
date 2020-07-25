@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol PickerStyle {
-    
+
 }
 
 extension View {
@@ -26,13 +26,13 @@ public struct Picker<Label, SelectionValue, Content>: View where Label: View, Se
     let selection: Binding<SelectionValue>
     let label: Label
     let content: Content
-    
+
     public init(selection: Binding<SelectionValue>, label: Label, @ViewBuilder content: () -> Content) {
         self.selection = selection
         self.label = label
         self.content = content()
     }
-    
+
     public var body: some View {
         HStack {
             label
@@ -42,13 +42,17 @@ public struct Picker<Label, SelectionValue, Content>: View where Label: View, Se
 }
 
 extension Picker where Label == Text {
-    public init(_ titleKey: LocalizedStringKey, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) {
+    public init(_ titleKey: LocalizedStringKey,
+                selection: Binding<SelectionValue>,
+                @ViewBuilder content: () -> Content) {
         self.selection = selection
         self.label = Text(titleKey)
         self.content = content()
     }
-    
-    public init<S>(_ title: S, selection: Binding<SelectionValue>, @ViewBuilder content: () -> Content) where S: StringProtocol {
+
+    public init<S>(_ title: S,
+                   selection: Binding<SelectionValue>,
+                   @ViewBuilder content: () -> Content) where S: StringProtocol {
         self.selection = selection
         self.label = Text(title)
         self.content = content()
@@ -58,9 +62,9 @@ extension Picker where Label == Text {
 public struct PickerStyleWriter<Style>: ViewModifier {
     public typealias Body = Never
     public typealias Content = View
-    
+
     var style: Style
-    
+
     init(_ style: Style) {
         self.style = style
     }

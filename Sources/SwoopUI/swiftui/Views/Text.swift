@@ -2,7 +2,7 @@ import Foundation
 
 public class AnyTextStorage<Storage: StringProtocol> {
     public var storage: Storage
-    
+
     internal init(storage: Storage) {
         self.storage = storage
     }
@@ -14,9 +14,10 @@ public class AnyTextModifier {
 }
 
 public struct Text: View, Equatable {
-    public var _storage: Storage
-    public var _modifiers: [Text.Modifier] = [Modifier]()
-    
+    public typealias Body = Never
+    public var storage: Storage
+    public var modifiers: [Text.Modifier] = [Modifier]()
+
     public enum Storage: Equatable {
         public static func == (lhs: Text.Storage, rhs: Text.Storage) -> Bool {
             switch (lhs, rhs) {
@@ -28,11 +29,11 @@ public struct Text: View, Equatable {
                 return false
             }
         }
-        
+
         case verbatim(String)
         case anyTextStorage(AnyTextStorage<String>)
     }
-    
+
     public enum Modifier: Equatable {
         case color(Color?)
         case font(Font?)
@@ -54,26 +55,29 @@ public struct Text: View, Equatable {
             }
         }
     }
-    
+
     public init(verbatim content: String) {
-        self._storage = .verbatim(content)
+        self.storage = .verbatim(content)
     }
-    
+
     public init<S>(_ content: S) where S: StringProtocol {
-        self._storage = .anyTextStorage(AnyTextStorage<String>(storage: String(content)))
+        self.storage = .anyTextStorage(AnyTextStorage<String>(storage: String(content)))
     }
-    
-    public init(_ key: LocalizedStringKey, tableName: String? = nil, bundle: Bundle? = nil, comment: StaticString? = nil) {
-        self._storage = .anyTextStorage(AnyTextStorage<String>(storage: key.key))
+
+    public init(_ key: LocalizedStringKey,
+                tableName: String? = nil,
+                bundle: Bundle? = nil,
+                comment: StaticString? = nil) {
+        self.storage = .anyTextStorage(AnyTextStorage<String>(storage: key.key))
     }
-    
+
     private init(verbatim content: String, modifiers: [Modifier] = []) {
-        self._storage = .verbatim(content)
-        self._modifiers = modifiers
+        self.storage = .verbatim(content)
+        self.modifiers = modifiers
     }
-    
+
     public static func == (lhs: Text, rhs: Text) -> Bool {
-        return lhs._storage == rhs._storage && lhs._modifiers == rhs._modifiers
+        return lhs.storage == rhs.storage && lhs.modifiers == rhs.modifiers
     }
 }
 
@@ -81,14 +85,14 @@ extension Text {
     public func foregroundColor(_ color: Color?) -> Text {
         textWithModifier(Text.Modifier.color(color))
     }
-    
+
     public func font(_ font: Font?) -> Text {
         textWithModifier(Text.Modifier.font(font))
     }
-    
+
     private func textWithModifier(_ modifier: Modifier) -> Text {
-        let modifiers = _modifiers + [modifier]
-        switch _storage {
+        let modifiers = self.modifiers + [modifier]
+        switch storage {
         case .verbatim(let content):
             return Text(verbatim: content, modifiers: modifiers)
         case .anyTextStorage(let content):
@@ -98,5 +102,7 @@ extension Text {
 }
 
 extension Text {
-    
+    public var body: Never {
+        fatalError()
+    }
 }

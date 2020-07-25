@@ -1,20 +1,19 @@
 public struct Button<Label>: View where Label: View {
-    public let _label: Label
-    public let _action: () -> Void
-        
+    public let label: Label
+    public let action: () -> Void
+
     public init(action: @escaping () -> Void, @ViewBuilder label: () -> Label) {
-        self._action = action
-        self._label = label()
+        self.action = action
+        self.label = label()
     }
 }
 
 extension Button where Label == Text {
     public init<S: StringProtocol>(_ title: S, action: @escaping () -> Void) {
-        self._action = action
-        self._label = Text(title)
+        self.action = action
+        self.label = Text(title)
     }
 }
-
 
 public protocol ButtonStyle {
     associatedtype Body: View
@@ -24,10 +23,10 @@ public protocol ButtonStyle {
 
 public struct ButtonStyleConfiguration {
     public struct Label: View {
-        public var _storage: Any
-        
+        public var storage: Any
+
         init(_ storage: Any) {
-            self._storage = storage
+            self.storage = storage
         }
     }
     public let label: Label

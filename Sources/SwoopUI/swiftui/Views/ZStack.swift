@@ -6,12 +6,12 @@ public struct ZStack<Content>: View where Content: View {
         self.children = content()
         self.alignment = alignment
     }
-    
+
     public func iterate() -> AnyIterator<View> {
         return children.iterate()
     }
 }
 
 extension ZStack {
-    
+
 }

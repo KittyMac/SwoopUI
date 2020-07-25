@@ -26,4 +26,3 @@ extension ViewDimensions: Equatable {
         return true
     }
 }
-

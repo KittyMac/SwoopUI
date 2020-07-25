@@ -24,8 +24,8 @@ public class AnyFontBox: Hashable, Equatable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(ObjectIdentifier(self).hashValue)
     }
-    
-    public static func ==(lhs: AnyFontBox, rhs: AnyFontBox) -> Bool {
+
+    public static func == (lhs: AnyFontBox, rhs: AnyFontBox) -> Bool {
         return ObjectIdentifier(lhs) == ObjectIdentifier(rhs)
     }
 }
@@ -34,14 +34,14 @@ public class SystemProvider: AnyFontBox {
     public var size: CGFloat
     public var weight: Font.Weight
     public var design: Font.Design
-    
+
     init(size: CGFloat, weight: Font.Weight, design: Font.Design) {
         self.size = size
         self.weight = weight
         self.design = design
     }
-    
-    public static func ==(lhs: SystemProvider, rhs: SystemProvider) -> Bool {
+
+    public static func == (lhs: SystemProvider, rhs: SystemProvider) -> Bool {
         return lhs.size == rhs.size && lhs.weight == rhs.weight && lhs.design == rhs.design
     }
 }
@@ -49,38 +49,38 @@ public class SystemProvider: AnyFontBox {
 public class TextStyleProvider: AnyFontBox {
     public var style: Font.TextStyle
     public var design: Font.Design
-    
+
     init(style: Font.TextStyle, design: Font.Design) {
         self.style = style
         self.design = design
     }
-    
-    public static func ==(lhs: TextStyleProvider, rhs: TextStyleProvider) -> Bool {
+
+    public static func == (lhs: TextStyleProvider, rhs: TextStyleProvider) -> Bool {
         return lhs.style == rhs.style && lhs.design == rhs.design
     }
 }
 
 public struct Font: Hashable {
     public var provider: AnyFontBox
-    
+
     init(provider: AnyFontBox) {
         self.provider = provider
     }
-    
+
     public static func system(_ style: Font.TextStyle, design: Font.Design = .default) -> Font {
         let provider = TextStyleProvider(style: style, design: design)
         return Font(provider: provider)
     }
-    
+
     public static func system(size: CGFloat, weight: Font.Weight = .regular, design: Font.Design = .default) -> Font {
         let provider = SystemProvider(size: size, weight: weight, design: design)
         return Font(provider: provider)
     }
-    
+
     public static func custom(_ name: String, size: CGFloat) -> Font {
         fatalError()
     }
-    
+
     public static func == (lhs: Font, rhs: Font) -> Bool {
         return lhs.provider == rhs.provider
     }
@@ -89,7 +89,7 @@ public struct Font: Hashable {
 extension Font {
     public struct Weight: Hashable {
         public var value: CGFloat
-        
+
         public static let ultraLight: Font.Weight = Weight(value: 100)
         public static let thin: Font.Weight = Weight(value: 200)
         public static let light: Font.Weight = Weight(value: 300)
@@ -111,7 +111,7 @@ extension Font {
     public static var callout = Font.system(Font.TextStyle.callout)
     public static var footnote = Font.system(Font.TextStyle.footnote)
     public static var caption = Font.system(Font.TextStyle.caption)
-    
+
     public enum TextStyle: CaseIterable {
         case largeTitle
         case title
@@ -122,7 +122,7 @@ extension Font {
         case footnote
         case caption
     }
-    
+
     public enum Design: Hashable {
         case `default`
         case serif

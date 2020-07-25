@@ -6,9 +6,6 @@
 //  Copyright © 2020 Rocco Bowling. All rights reserved.
 //
 
-// swiftlint:disable type_body_length
-// swiftlint:disable function_body_length
-// swiftlint:disable file_length
 // swiftlint:disable line_length
 
 import Foundation
@@ -23,7 +20,7 @@ public class YogaNode {
     private var node: YGNodeRef
 
     private var yogaID: YogaID
-    
+
     private var name: String = ""
 
     private var _usesLeft: Bool = true
@@ -37,7 +34,6 @@ public class YogaNode {
     public init() {
         node = YGNodeNew()
         yogaID = YGNodeGetID(node)
-        fill()
     }
 
     public func print() {
@@ -66,7 +62,7 @@ public class YogaNode {
         }
         return self
     }
-    
+
     @discardableResult public func name(_ name: String) -> Self {
         self.name = name
         debugPrint(name)

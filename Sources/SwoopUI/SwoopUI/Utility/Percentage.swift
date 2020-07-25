@@ -49,4 +49,3 @@ public func += <T: PercentageNumericType> (lhs: inout T, rhs: T) {
 public func -= <T: PercentageNumericType> (lhs: inout T, rhs: T) {
     lhs.value -= rhs.value
 }
-

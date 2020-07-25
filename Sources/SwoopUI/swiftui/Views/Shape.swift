@@ -5,7 +5,7 @@ public protocol Shape: Animatable, View {
 }
 
 extension Shape {
-    
+
 }
 
 public struct FillStyle: Equatable {
@@ -16,8 +16,6 @@ public struct FillStyle: Equatable {
         self.isAntialiased = antialiased
     }
 }
-
-
 
 public struct ForegroundStyle {
     public init() {}

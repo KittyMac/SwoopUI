@@ -1,18 +1,18 @@
 import Foundation
 
 public struct Image: Equatable {
-    public var _provider: AnyImageProviderBox
+    public var provider: AnyImageProviderBox
     public static func == (lhs: Image, rhs: Image) -> Bool {
-        return ObjectIdentifier(lhs._provider) == ObjectIdentifier(rhs._provider)
+        return ObjectIdentifier(lhs.provider) == ObjectIdentifier(rhs.provider)
     }
-    
+
     public init(provider: AnyImageProviderBox) {
-        self._provider = provider
+        self.provider = provider
     }
 }
 
 extension Image {
-    
+
 }
 
 open class AnyImageProviderBox {

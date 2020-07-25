@@ -2,32 +2,32 @@ internal class AnyLocationBase {
 }
 
 internal class AnyLocation<Value>: AnyLocationBase {
-    internal let _value = UnsafeMutablePointer<Value>.allocate(capacity: 1)
-    
+    internal let value = UnsafeMutablePointer<Value>.allocate(capacity: 1)
+
     init(value: Value) {
-        self._value.pointee = value
+        self.value.pointee = value
     }
 }
 
 @propertyWrapper public struct State<Value>: DynamicProperty {
-    internal var _value: Value
-    internal var _location: AnyLocation<Value>?
-    
+    internal var value: Value
+    internal var location: AnyLocation<Value>?
+
     public init(wrappedValue value: Value) {
-        self._value = value
-        self._location = AnyLocation(value: value)
+        self.value = value
+        self.location = AnyLocation(value: value)
     }
-    
+
     public init(initialValue value: Value) {
-        self._value = value
-        self._location = AnyLocation(value: value)
+        self.value = value
+        self.location = AnyLocation(value: value)
     }
-    
+
     public var wrappedValue: Value {
-        get { return _location?._value.pointee ?? _value }
-        nonmutating set { _location?._value.pointee = newValue }
+        get { return location?.value.pointee ?? value }
+        nonmutating set { location?.value.pointee = newValue }
     }
-    
+
     public var projectedValue: Binding<Value> {
         return Binding(get: { return self.wrappedValue }, set: { newValue in self.wrappedValue = newValue })
     }

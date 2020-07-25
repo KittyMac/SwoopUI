@@ -1,3 +1,6 @@
+//swiftlint:disable identifier_name
+//swiftlint:disable large_tuple
+
 import Foundation
 
 public class AnyColorBox {
@@ -32,13 +35,13 @@ public class SystemColorType: AnyColorBox {
         case secondary
         case accentColor
     }
-    
+
     public let value: SystemColor
-    
+
     internal init(value: SystemColorType.SystemColor) {
         self.value = value
     }
-    
+
     public var description: String {
         return value.rawValue
     }
@@ -49,7 +52,7 @@ public class DisplayP3: AnyColorBox {
     public let green: Double
     public let blue: Double
     public let opacity: Double
-    
+
     internal init(red: Double, green: Double, blue: Double, opacity: Double) {
         self.red = red
         self.green = green
@@ -64,64 +67,71 @@ extension Double {
     }
 }
 
-public class _Resolved: AnyColorBox {
+public class ResolvedColor: AnyColorBox {
     public let linearRed: Double
     public let linearGreen: Double
     public let linearBlue: Double
     public let opacity: Double
-    
+
     internal init(linearRed: Double, linearGreen: Double, linearBlue: Double, opacity: Double) {
         self.linearRed = linearRed
         self.linearGreen = linearGreen
         self.linearBlue = linearBlue
         self.opacity = opacity
     }
-    
+
     public var description: String {
         return "#\(linearRed.hexString)\(linearGreen.hexString)\(linearBlue.hexString)\(opacity.hexString)"
     }
 }
 
-public struct Color: View, Hashable, CustomStringConvertible {    
+public struct Color: View, Hashable, CustomStringConvertible {
     public let provider: AnyColorBox
-    
+
     public enum RGBColorSpace: Equatable {
         case sRGB
         case sRGBLinear
         case displayP3
     }
-    
-    public init(_ colorSpace: Color.RGBColorSpace = .sRGB, red: Double, green: Double, blue: Double, opacity: Double = 1) {
+
+    public init(_ colorSpace: Color.RGBColorSpace = .sRGB,
+                red: Double,
+                green: Double,
+                blue: Double,
+                opacity: Double = 1) {
         switch colorSpace {
         case .sRGB:
-            self.provider = _Resolved(linearRed: red, linearGreen: green, linearBlue: blue, opacity: opacity)
+            self.provider = ResolvedColor(linearRed: red, linearGreen: green, linearBlue: blue, opacity: opacity)
         case .sRGBLinear:
-            self.provider = _Resolved(linearRed: red, linearGreen: green, linearBlue: blue, opacity: opacity)
+            self.provider = ResolvedColor(linearRed: red, linearGreen: green, linearBlue: blue, opacity: opacity)
         case .displayP3:
             self.provider = DisplayP3(red: red, green: green, blue: blue, opacity: opacity)
         }
     }
-    
+
     public init(_ colorSpace: Color.RGBColorSpace = .sRGB, white: Double, opacity: Double = 1) {
         switch colorSpace {
         case .sRGB:
-            self.provider = _Resolved(linearRed: white, linearGreen: white, linearBlue: white, opacity: opacity)
+            self.provider = ResolvedColor(linearRed: white, linearGreen: white, linearBlue: white, opacity: opacity)
         case .sRGBLinear:
-            self.provider = _Resolved(linearRed: white, linearGreen: white, linearBlue: white, opacity: opacity)
+            self.provider = ResolvedColor(linearRed: white, linearGreen: white, linearBlue: white, opacity: opacity)
         case .displayP3:
             self.provider = DisplayP3(red: white, green: white, blue: white, opacity: opacity)
         }
     }
-    
+
     public init(hue: Double, saturation: Double, brightness: Double, opacity: Double = 1) {
         let rgb = Color.hsbToRGB(hue: hue, saturation: saturation, brightness: brightness)
-        self.provider = _Resolved(linearRed: rgb.red, linearGreen: rgb.green, linearBlue: rgb.blue, opacity: opacity)
+        self.provider = ResolvedColor(linearRed: rgb.red,
+                                      linearGreen: rgb.green,
+                                      linearBlue: rgb.blue,
+                                      opacity: opacity)
     }
-    
+
     fileprivate init(_ systemColor: SystemColorType.SystemColor) {
         self.provider = SystemColorType(value: systemColor)
     }
-        
+
     public var description: String {
         return "\(provider)"
     }
@@ -144,7 +154,6 @@ extension Color {
     public static let accentColor: Color = Color(.accentColor)
 }
 
-
 // TODO: TBD
 /*
 extension View {
@@ -165,23 +174,24 @@ extension EnvironmentValues {
     }
 }
 
-
 extension Color {
-    internal static func hsbToRGB(hue: Double, saturation: Double, brightness: Double) -> (red: Double, green: Double, blue: Double) {
+    internal static func hsbToRGB(hue: Double,
+                                  saturation: Double,
+                                  brightness: Double) -> (red: Double, green: Double, blue: Double) {
         // Based on:
         // http://mjijackson.com/2008/02/rgb-to-hsl-and-rgb-to-hsv-color-model-conversion-algorithms-in-javascript
-        
+
         var red: Double = 0
         var green: Double = 0
         var blue: Double = 0
-        
+
         let i = floor(hue * 6)
         let f = hue * 6 - i
         let p = brightness * (1 - saturation)
         let q = brightness * (1 - f * saturation)
         let t = brightness * (1 - (1 - f) * saturation)
-        
-        switch(i.truncatingRemainder(dividingBy: 6)) {
+
+        switch i.truncatingRemainder(dividingBy: 6) {
         case 0:
             red = brightness
             green = t
@@ -209,7 +219,7 @@ extension Color {
         default:
             break
         }
-        
+
         return (red, green, blue)
     }
 }
