@@ -1,13 +1,15 @@
 import Flynn
 
-class SwColor: Actor, Viewable {
-
-    lazy var beRender = Behavior(self) { [unowned self] (args: BehaviorArgs) in
-        // flynnlint:parameter String - string to print
-        let value: String = args[x:0]
-        print(value)
+extension Color: Nodeable {
+    public func newNode() -> YogaNode {
+        let node = YogaNode()
+        node.fill().grow().shrink()
+            .view(SwColor(self))
+        return node
     }
+}
 
+class SwColor: Actor, Viewable {
     private var color: Color
 
     init(_ color: Color) {
@@ -15,4 +17,11 @@ class SwColor: Actor, Viewable {
         super.init()
         safeViewableInit()
     }
+
+    lazy var beRender = Behavior(self) { [unowned self] (args: BehaviorArgs) in
+        // flynnlint:parameter String - string to print
+        let value: String = args[x:0]
+        print(value)
+    }
+
 }

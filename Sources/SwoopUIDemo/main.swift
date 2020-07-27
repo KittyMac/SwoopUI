@@ -30,6 +30,16 @@ import SwoopUI
     }
 }*/
 
-var body = Color.green
+/*
+var body = VStack {
+    HStack {
+        Color.red
+        Color.green
+        Color.blue
+        Color.yellow
+    }
+}*/
+
+var body = Color.red
 
 swoopUITest(CGSize(width: 600, height: 800), body)

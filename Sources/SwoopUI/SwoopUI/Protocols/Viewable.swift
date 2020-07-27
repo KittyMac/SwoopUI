@@ -1,10 +1,14 @@
 import Flynn
 
-public protocol Viewable: Actor {
+internal protocol Nodeable: View {
+    func newNode() -> YogaNode
+}
+
+internal protocol Viewable: Actor {
     var beRender: Behavior { get }
 }
 
-public extension Viewable {
+internal extension Viewable {
     func safeViewableInit() {
         unsafeCoreAffinity = .onlyEfficiency
     }

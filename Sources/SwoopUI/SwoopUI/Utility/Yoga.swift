@@ -21,6 +21,9 @@ public class YogaNode {
 
     private var yogaID: YogaID
 
+    private var views: [Viewable] = []
+    private var children: [YogaNode] = []
+
     private var name: String = ""
 
     private var _usesLeft: Bool = true
@@ -47,16 +50,29 @@ public class YogaNode {
     // MARK: - Yoga Setters
 
     @discardableResult public func removeAll() -> Self {
+        children.removeAll()
         YGNodeRemoveAllChildren(node)
         return self
     }
 
+    @discardableResult func view(_ view: Viewable) -> Self {
+        views.append(view)
+        return self
+    }
+
+    @discardableResult func views(_ view: [Viewable]) -> Self {
+        views.append(contentsOf: views)
+        return self
+    }
+
     @discardableResult public func child(_ yoga: YogaNode) -> Self {
+        children.append(yoga)
         YGNodeInsertChild(node, yoga.node, YGNodeGetChildCount(node))
         return self
     }
 
     @discardableResult public func children(_ yogas: [YogaNode]) -> Self {
+        children.append(contentsOf: yogas)
         for yoga in yogas {
             YGNodeInsertChild(node, yoga.node, YGNodeGetChildCount(node))
         }
@@ -109,7 +125,7 @@ public class YogaNode {
         return self
     }
 
-    @discardableResult public func grow(_ vvv: Float = 1.0) -> Self { YGNodeStyleSetFlexGrow(node, vvv); return self }
+    @discardableResult public func grow(_ vvv: Float = 0.0) -> Self { YGNodeStyleSetFlexGrow(node, vvv); return self }
     @discardableResult public func shrink(_ vvv: Float = 1.0) -> Self { YGNodeStyleSetFlexShrink(node, vvv); return self }
 
     @discardableResult public func safeTop(_ vvv: Bool=true) -> Self { _safeTop = vvv; return self }
