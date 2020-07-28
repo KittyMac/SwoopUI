@@ -26,5 +26,6 @@ public func swoopUITest<Content>(_ size: CGSize, _ view: Content) where Content:
     recurseView(root, view)
 
     root.layout()
-    root.print()
+
+    BitmapRenderer(root).beRender()
 }
