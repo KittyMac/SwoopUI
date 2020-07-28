@@ -62,9 +62,9 @@ public class DisplayP3: AnyColorBox {
 
         super.init()
         let r = (UInt32(red * 255) & 0xFF) << 24
-        let g = (UInt32(green * 255) & 0xFF) << 24
-        let b = (UInt32(blue * 255) & 0xFF) << 24
-        let a = (UInt32(opacity * 255) & 0xFF) << 24
+        let g = (UInt32(green * 255) & 0xFF) << 16
+        let b = (UInt32(blue * 255) & 0xFF) << 8
+        let a = (UInt32(opacity * 255) & 0xFF) << 0
         rgba = r | g | b | a
     }
 }
@@ -89,9 +89,9 @@ public class ResolvedColor: AnyColorBox {
 
         super.init()
         let r = (UInt32(linearRed * 255) & 0xFF) << 24
-        let g = (UInt32(linearGreen * 255) & 0xFF) << 24
-        let b = (UInt32(linearBlue * 255) & 0xFF) << 24
-        let a = (UInt32(opacity * 255) & 0xFF) << 24
+        let g = (UInt32(linearGreen * 255) & 0xFF) << 16
+        let b = (UInt32(linearBlue * 255) & 0xFF) << 8
+        let a = (UInt32(opacity * 255) & 0xFF) << 0
         rgba = r | g | b | a
     }
 
