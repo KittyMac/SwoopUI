@@ -87,6 +87,16 @@ final class BitmapTests: XCTestCase {
         """)
     }
     
+    func testBitmapBlitPerformance() {
+        let s = 2048
+        let s3 = s * 3
+        let bitmap = Bitmap(s, s)
+        measure {
+            bitmap.resize(s3, s3)
+            bitmap.resize(s, s)
+        }
+    }
+    
 
     static var allTests = [
         ("testBitmapEmpty", testBitmapEmpty),

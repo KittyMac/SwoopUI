@@ -211,6 +211,9 @@ public class Bitmap {
         var e = (dy << 1) - dx
         let dx2 = dx != 0 ? dx << 1 : 1
 
+        var dstPtr = dstPtr32
+        var srcPtr = srcPtr32
+
         dy = dy << 1
 
         for _ in 0...dx {
@@ -225,16 +228,17 @@ public class Bitmap {
 
                 dy = dy << 1
 
-                var y = xs1
-                var x = xd1
+                dstPtr = dstPtr32 + yd1 * dstRowOffset + xd1
+                srcPtr = srcPtr32 + ys1 * srcRowOffset + xs1
 
                 for _ in 0...dx {
-                    dstPtr32[yd1 * dstRowOffset + x] = srcPtr32[ys1 * srcRowOffset + y]
+                    dstPtr.pointee = srcPtr.pointee
+
                     while e >= 0 {
-                        y += sy
+                        srcPtr += sy
                         e -= dx2
                     }
-                    x += sx
+                    dstPtr += sx
                     e += dy
                 }
             }
