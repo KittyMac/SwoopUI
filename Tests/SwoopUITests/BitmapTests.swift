@@ -97,6 +97,23 @@ final class BitmapTests: XCTestCase {
         }
     }
     
+    func testBitmapSrcOver() {
+        let bitmap1 = Bitmap(4, 4)
+        bitmap1.fill(Color.black)
+        let bitmap2 = Bitmap(4, 4)
+        bitmap2.fill(Color(rgba32: 0xFFFFFF7F))
+        bitmap1.draw(bitmap2)
+        XCTAssertEqual(bitmap1.ascii(),
+            """
+            +----+
+            |====|
+            |====|
+            |====|
+            |====|
+            +----+\n
+            """)
+    }
+    
 
     static var allTests = [
         ("testBitmapEmpty", testBitmapEmpty),

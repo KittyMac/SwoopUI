@@ -5,6 +5,23 @@ import Flynn
 // swiftlint:disable cyclomatic_complexity
 // swiftlint:disable function_parameter_count
 
+typealias PixelFunc = ((UInt32, UInt32) -> UInt32)
+
+@inline(__always)
+private func pixelCopy(_ dst: UInt32, _ src: UInt32) -> UInt32 {
+    return src
+}
+
+@inline(__always)
+private func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
+    let aSrc = src & 0xFF
+    let aDst = src & 0xFF
+    let r = ((dst >> 24 & 0xFF) * (255 - aSrc) + (src >> 24 & 0xFF) * aSrc) >> 8
+    let g = ((dst >> 16 & 0xFF) * (255 - aSrc) + (src >> 16 & 0xFF) * aSrc) >> 8
+    let b = ((dst >> 8 & 0xFF) * (255 - aSrc) + (src >> 8 & 0xFF) * aSrc) >> 8
+    return (r << 24) | (g << 16) | (b << 8) | ((aSrc + aDst) >> 1)
+}
+
 public class Bitmap {
 
     private var width: Int = 0
@@ -52,7 +69,8 @@ public class Bitmap {
                  rowBytes,
                  old.bytes32,
                  Rect(x: 0, y: 0, width: old.width, height: old.height),
-                 old.rowBytes)
+                 old.rowBytes,
+                 pixelCopy)
         }
     }
 
@@ -120,14 +138,15 @@ public class Bitmap {
         bytes32.initialize(repeating: color.rgba32, count: width * height)
     }
 
-    func copy(_ srcBitmap: Bitmap, _ srcRect: Rect, _ dstRect: Rect) {
+    func draw(_ srcBitmap: Bitmap, _ srcRect: Rect, _ dstRect: Rect, _ function: PixelFunc = pixelSrcOver) {
         if srcRect.width == dstRect.width && srcRect.height == dstRect.height {
             blitExact(bytes32,
                       dstRect,
                       rowBytes,
                       srcBitmap.bytes32,
                       srcRect,
-                      srcBitmap.rowBytes)
+                      srcBitmap.rowBytes,
+                      function)
             return
         }
 
@@ -136,23 +155,28 @@ public class Bitmap {
              rowBytes,
              srcBitmap.bytes32,
              srcRect,
-             srcBitmap.rowBytes)
+             srcBitmap.rowBytes,
+             function)
     }
 
-    func copy(_ srcBitmap: Bitmap, _ dstRect: Rect) {
-        copy(srcBitmap,
-             Rect(x: 0, y: 0, width: srcBitmap.width, height: srcBitmap.height), dstRect)
-    }
-
-    func copy(_ srcBitmap: Bitmap, _ dstPoint: Point) {
-        copy(srcBitmap,
-             Rect(x: dstPoint.x, y: dstPoint.y, width: srcBitmap.width, height: srcBitmap.height))
-    }
-
-    func copy(_ srcBitmap: Bitmap) {
-        copy(srcBitmap,
+    func draw(_ srcBitmap: Bitmap, _ dstRect: Rect, _ function: PixelFunc = pixelSrcOver) {
+        draw(srcBitmap,
              Rect(x: 0, y: 0, width: srcBitmap.width, height: srcBitmap.height),
-             Rect(x: 0, y: 0, width: srcBitmap.width, height: srcBitmap.height))
+             dstRect,
+             function)
+    }
+
+    func draw(_ srcBitmap: Bitmap, _ dstPoint: Point, _ function: PixelFunc = pixelSrcOver) {
+        draw(srcBitmap,
+             Rect(x: dstPoint.x, y: dstPoint.y, width: srcBitmap.width, height: srcBitmap.height),
+             function)
+    }
+
+    func draw(_ srcBitmap: Bitmap, _ function: PixelFunc = pixelSrcOver) {
+        draw(srcBitmap,
+             Rect(x: 0, y: 0, width: srcBitmap.width, height: srcBitmap.height),
+             Rect(x: 0, y: 0, width: srcBitmap.width, height: srcBitmap.height),
+             function)
     }
 
     // MARK: - Private Drawing
@@ -162,7 +186,8 @@ public class Bitmap {
                            _ dstRowBytes: Int,
                            _ srcPtr32: UnsafeMutablePointer<UInt32>,
                            _ srcRect: Rect,
-                           _ srcRowBytes: Int) {
+                           _ srcRowBytes: Int,
+                           _ function: PixelFunc) {
         // Assumes that the two rectangles are the same size and
         // do not exceed the bounds of their respective bitmaps
         let dstRowOffset = (dstRowBytes / 4)
@@ -173,7 +198,7 @@ public class Bitmap {
         let srcDelta = srcRowOffset - srcRect.width
         for _ in 0..<dstRect.height {
             for _ in 0..<dstRect.width {
-                dst.pointee = src.pointee
+                dst.pointee = function(dst.pointee, src.pointee)
                 dst += 1
                 src += 1
             }
@@ -187,7 +212,8 @@ public class Bitmap {
                       _ dstRowBytes: Int,
                       _ srcPtr32: UnsafeMutablePointer<UInt32>,
                       _ srcRect: Rect,
-                      _ srcRowBytes: Int) {
+                      _ srcRowBytes: Int,
+                      _ function: PixelFunc ) {
         // Assumes that the rectangles do not exceed the
         // bounds of their respective bitmaps
         // adapted from: fastBitmap.c in Graphics Gems 2
@@ -232,7 +258,7 @@ public class Bitmap {
                 srcPtr = srcPtr32 + ys1 * srcRowOffset + xs1
 
                 for _ in 0...dx {
-                    dstPtr.pointee = srcPtr.pointee
+                    dstPtr.pointee = function(dstPtr.pointee, srcPtr.pointee)
 
                     while e >= 0 {
                         srcPtr += sy
@@ -251,5 +277,4 @@ public class Bitmap {
             e += dy
         }
     }
-
 }
