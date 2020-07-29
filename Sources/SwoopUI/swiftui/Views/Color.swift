@@ -1,5 +1,6 @@
-//swiftlint:disable identifier_name
-//swiftlint:disable large_tuple
+// swiftlint:disable identifier_name
+// swiftlint:disable large_tuple
+// swiftlint:disable file_length
 
 import Foundation
 

@@ -1,7 +1,7 @@
 import Foundation
 import SwoopUI
 
-/*var body: some View {
+var body: some View {
     VStack {
         HStack {
             Color.red
@@ -28,18 +28,6 @@ import SwoopUI
             Color.red
         }
     }
-}*/
+}
 
-/*
-var body = VStack {
-    HStack {
-        Color.red
-        Color.green
-        Color.blue
-        Color.yellow
-    }
-}*/
-
-var body = Color.red
-
-swoopUITest(CGSize(width: 600, height: 800), body)
+swoopUITest(CGSize(width: 120, height: 40), body)

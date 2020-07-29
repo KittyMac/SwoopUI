@@ -27,5 +27,10 @@ public func swoopUITest<Content>(_ size: CGSize, _ view: Content) where Content:
 
     root.layout()
 
-    BitmapRenderer(root).beRender()
+    root.print()
+
+    let renderer = BitmapRenderer(root)
+    root.render(renderer.buffer)
+    print(renderer.buffer.ascii())
+
 }

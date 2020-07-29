@@ -15,11 +15,11 @@ public func pixelCopy(_ dst: UInt32, _ src: UInt32) -> UInt32 {
 @inline(__always)
 public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
     let aSrc = src & 0xFF
-    let aDst = src & 0xFF
+    let aDst = dst & 0xFF
     let r = ((dst >> 24 & 0xFF) * (255 - aSrc) + (src >> 24 & 0xFF) * aSrc) >> 8
     let g = ((dst >> 16 & 0xFF) * (255 - aSrc) + (src >> 16 & 0xFF) * aSrc) >> 8
     let b = ((dst >> 8 & 0xFF) * (255 - aSrc) + (src >> 8 & 0xFF) * aSrc) >> 8
-    return (r << 24) | (g << 16) | (b << 8) | ((aSrc + aDst) >> 1)
+    return (r << 24) | (g << 16) | (b << 8) | ((aSrc + aDst) & 0xFF )
 }
 
 public class Bitmap {
@@ -80,8 +80,9 @@ public class Bitmap {
 
     func ascii() -> String {
         // Convert each pixel to greyscale value 0-9, then print each pixel as single ascii digit
-        var ptr = bytes
+        var ptr = bytes32
         var string = String()
+
         for y in 0..<height {
 
             if y == 0 {
@@ -95,8 +96,13 @@ public class Bitmap {
             string.append("|")
 
             for _ in 0..<width {
-                let v = (ptr[0] / 3 + ptr[1] / 3 + ptr[2] / 3)
-                switch v / 25 {
+                let color = ptr.pointee
+                let red = Float( (color >> 24) & 0xFF ) / 255.0
+                let green = Float( (color >> 16) & 0xFF ) / 255.0
+                let blue = Float( (color >> 8) & 0xFF ) / 255.0
+
+                let v = Int((red * 0.299 + green * 0.587 + blue * 0.114) * 10.0)
+                switch v {
                 case 0: string.append("@")
                 case 1: string.append("%")
                 case 2: string.append("#")
@@ -108,7 +114,7 @@ public class Bitmap {
                 case 8: string.append(".")
                 default: string.append(" ")
                 }
-                ptr += channels
+                ptr += 1
             }
             string.append("|")
             string.append("\n")
@@ -134,9 +140,21 @@ public class Bitmap {
         bytes32[y * width + x] = color.rgba32
     }
 
+    // MARK: - Fill
+
     func fill(_ color: Color) {
         bytes32.initialize(repeating: color.rgba32, count: width * height)
     }
+
+    func fill(_ color: Color, _ dstRect: Rect, _ function: PixelFunc = pixelSrcOver) {
+        blitColor(bytes32,
+                  dstRect,
+                  rowBytes,
+                  color.rgba32,
+                  function)
+    }
+
+    // MARK: - Draw
 
     func draw(_ srcBitmap: Bitmap, _ srcRect: Rect, _ dstRect: Rect, _ function: PixelFunc = pixelSrcOver) {
         if srcRect.width == dstRect.width && srcRect.height == dstRect.height {
@@ -180,6 +198,25 @@ public class Bitmap {
     }
 
     // MARK: - Private Drawing
+
+    private func blitColor(_ dstPtr32: UnsafeMutablePointer<UInt32>,
+                           _ dstRect: Rect,
+                           _ dstRowBytes: Int,
+                           _ color: UInt32,
+                           _ function: PixelFunc) {
+        // Assumes that the two rectangles are the same size and
+        // do not exceed the bounds of their respective bitmaps
+        let dstRowOffset = (dstRowBytes / 4)
+        var dst = dstPtr32 + (dstRect.y * dstRowOffset) + dstRect.x
+        let dstDelta = dstRowOffset - dstRect.width
+        for _ in 0..<dstRect.height {
+            for _ in 0..<dstRect.width {
+                dst.pointee = function(dst.pointee, color)
+                dst += 1
+            }
+            dst += dstDelta
+        }
+    }
 
     private func blitExact(_ dstPtr32: UnsafeMutablePointer<UInt32>,
                            _ dstRect: Rect,

@@ -32,14 +32,14 @@ final class BitmapTests: XCTestCase {
     
     func testBitmapFill2() {
         let bitmap = Bitmap(4, 4)
-        bitmap.fill(Color.white)
+        bitmap.fill(Color.white, Rect(x: 1, y: 1, width: 2, height: 2))
         XCTAssertEqual(bitmap.ascii(),
             """
             +----+
-            |    |
-            |    |
-            |    |
-            |    |
+            |@@@@|
+            |@  @|
+            |@  @|
+            |@@@@|
             +----+\n
             """)
     }
@@ -132,8 +132,7 @@ final class BitmapTests: XCTestCase {
             |====|
             +----+\n
             """)
-    }
-    
+    }    
 
     static var allTests = [
         ("testBitmapEmpty", testBitmapEmpty),

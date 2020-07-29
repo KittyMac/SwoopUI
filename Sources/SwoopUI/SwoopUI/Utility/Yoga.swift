@@ -7,6 +7,7 @@
 //
 
 // swiftlint:disable line_length
+// swiftlint:disable identifier_name
 
 import Foundation
 import Flynn
@@ -45,6 +46,28 @@ public class YogaNode {
 
     public func layout() {
         YGNodeCalculateLayout(node, YGNodeStyleGetWidth(node).value, YGNodeStyleGetHeight(node).value, .LTR)
+    }
+
+    // MARK: - Render
+
+    public func render(_ bitmap: Bitmap) {
+        recurseRender(0, 0, bitmap)
+    }
+
+    private func recurseRender(_ pX: Int, _ pY: Int, _ bitmap: Bitmap) {
+
+        let x = pX + Int(YGNodeLayoutGetLeft(node))
+        let y = pY + Int(YGNodeLayoutGetTop(node))
+        let w = Int(YGNodeLayoutGetWidth(node))
+        let h = Int(YGNodeLayoutGetHeight(node))
+
+        for view in views {
+            view.render(bitmap, Rect(x: x, y: y, width: w, height: h))
+        }
+
+        for child in children {
+            child.recurseRender(x, y, bitmap)
+        }
     }
 
     // MARK: - Yoga Setters

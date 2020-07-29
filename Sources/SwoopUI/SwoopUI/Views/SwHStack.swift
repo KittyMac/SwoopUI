@@ -1,7 +1,7 @@
 extension HStack: Nodeable {
     func newNode() -> YogaNode {
         let node = YogaNode()
-        node.fill().columns().itemsStart()
+        node.fill().columns().grow().shrink().itemsStart()
 
         switch alignment {
         case .center: node.justifyCenter()

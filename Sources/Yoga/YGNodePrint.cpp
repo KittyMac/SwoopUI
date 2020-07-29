@@ -217,7 +217,7 @@ void YGNodeToString(
     appendFormatedString(str, "\n");
     indent(str, level);
   }
-  appendFormatedString(str, "</div>");
+  appendFormatedString(str, "</div>\n");
 }
 } // namespace yoga
 } // namespace facebook

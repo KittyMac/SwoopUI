@@ -9,6 +9,19 @@ extension Color: Nodeable {
     }
 }
 
+class SwColor: Viewable {
+    private var color: Color
+
+    init(_ color: Color) {
+        self.color = color
+    }
+
+    func render(_ bitmap: Bitmap, _ bounds: Rect) {
+        bitmap.fill(color, bounds)
+    }
+}
+
+/*
 class SwColor: Actor, Viewable {
     private var color: Color
 
@@ -25,3 +38,4 @@ class SwColor: Actor, Viewable {
     }
 
 }
+*/
