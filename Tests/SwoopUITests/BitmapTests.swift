@@ -87,13 +87,33 @@ final class BitmapTests: XCTestCase {
         """)
     }
     
-    func testBitmapBlitPerformance() {
+    func testBitmapResizePerformance() {
         let s = 2048
         let s3 = s * 3
         let bitmap = Bitmap(s, s)
         measure {
             bitmap.resize(s3, s3)
             bitmap.resize(s, s)
+        }
+    }
+    
+    func testBitmapCopyPerformance() {
+        let s = 2048
+        let bitmap1 = Bitmap(s, s)
+        let bitmap2 = Bitmap(s, s)
+        bitmap2.fill(Color(rgba32: 0xFFFFFF10))
+        measure {
+            bitmap1.draw(bitmap2, pixelCopy)
+        }
+    }
+    
+    func testBitmapSrcOverPerformance() {
+        let s = 2048
+        let bitmap1 = Bitmap(s, s)
+        let bitmap2 = Bitmap(s, s)
+        bitmap2.fill(Color(rgba32: 0xFFFFFF10))
+        measure {
+            bitmap1.draw(bitmap2, pixelSrcOver)
         }
     }
     
@@ -119,5 +139,6 @@ final class BitmapTests: XCTestCase {
         ("testBitmapEmpty", testBitmapEmpty),
         ("testBitmapFill1", testBitmapFill1),
         ("testBitmapFill2", testBitmapFill2),
+        ("testBitmapResize", testBitmapResize),
     ]
 }

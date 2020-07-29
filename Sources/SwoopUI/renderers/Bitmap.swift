@@ -8,12 +8,12 @@ import Flynn
 typealias PixelFunc = ((UInt32, UInt32) -> UInt32)
 
 @inline(__always)
-private func pixelCopy(_ dst: UInt32, _ src: UInt32) -> UInt32 {
+public func pixelCopy(_ dst: UInt32, _ src: UInt32) -> UInt32 {
     return src
 }
 
 @inline(__always)
-private func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
+public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
     let aSrc = src & 0xFF
     let aDst = src & 0xFF
     let r = ((dst >> 24 & 0xFF) * (255 - aSrc) + (src >> 24 & 0xFF) * aSrc) >> 8
