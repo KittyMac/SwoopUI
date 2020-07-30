@@ -30,4 +30,4 @@ var body: some View {
     }
 }
 
-swoopUITest(CGSize(width: 120, height: 40), body)
+swoopUITest(Size(width: 120, height: 40), body)

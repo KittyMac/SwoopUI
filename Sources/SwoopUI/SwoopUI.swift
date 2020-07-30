@@ -18,7 +18,7 @@ public func recurseView(_ parent: YogaNode, _ view: View) -> YogaNode {
     return node
 }
 
-public func swoopUITest<Content>(_ size: CGSize, _ view: Content) where Content: View {
+public func swoopUITest<Content>(_ size: Size, _ view: Content) where Content: View {
 
     let root = YogaNode()
     root.size(Pixel(size.width), Pixel(size.height)).leftToRight()
@@ -32,5 +32,8 @@ public func swoopUITest<Content>(_ size: CGSize, _ view: Content) where Content:
     let renderer = BitmapRenderer(root)
     root.render(renderer.buffer)
     print(renderer.buffer.ascii())
+
+    let raw = renderer.buffer.raw()
+    try? raw.write(to: URL(fileURLWithPath: "/tmp/bitmap_\(size.width)_\(size.height)_4.raw"))
 
 }

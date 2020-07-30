@@ -5,6 +5,10 @@ import Flynn
 // swiftlint:disable cyclomatic_complexity
 // swiftlint:disable function_parameter_count
 
+// We work in RGBA 32-bit color values. This means we need to worry about endianness
+// On big endian, that's R-G-B-A
+// On little endian, that's A-B-G-R
+
 typealias PixelFunc = ((UInt32, UInt32) -> UInt32)
 
 @inline(__always)
@@ -14,12 +18,12 @@ public func pixelCopy(_ dst: UInt32, _ src: UInt32) -> UInt32 {
 
 @inline(__always)
 public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
-    let aSrc = src & 0xFF
-    let aDst = dst & 0xFF
-    let r = ((dst >> 24 & 0xFF) * (255 - aSrc) + (src >> 24 & 0xFF) * aSrc) >> 8
-    let g = ((dst >> 16 & 0xFF) * (255 - aSrc) + (src >> 16 & 0xFF) * aSrc) >> 8
-    let b = ((dst >> 8 & 0xFF) * (255 - aSrc) + (src >> 8 & 0xFF) * aSrc) >> 8
-    return (r << 24) | (g << 16) | (b << 8) | ((aSrc + aDst) & 0xFF )
+    let aSrc = ((src >> BYTE_ALPHA) & 0xFF)
+    let aDst = ((dst >> BYTE_ALPHA) & 0xFF)
+    let r = (((dst >> BYTE_RED) & 0xFF) * (255 - aSrc) + ((src >> BYTE_RED) & 0xFF) * aSrc) >> 8
+    let g = (((dst >> BYTE_GREEN) & 0xFF) * (255 - aSrc) + ((src >> BYTE_GREEN) & 0xFF) * aSrc) >> 8
+    let b = (((dst >> BYTE_BLUE) & 0xFF) * (255 - aSrc) + ((src >> BYTE_BLUE) & 0xFF) * aSrc) >> 8
+    return (r << BYTE_RED) | (g << BYTE_GREEN) | (b << BYTE_BLUE) | (((aSrc + aDst) & 0xFF ) << BYTE_ALPHA)
 }
 
 public class Bitmap {
@@ -28,7 +32,6 @@ public class Bitmap {
     private var height: Int = 0
     private let channels: Int = 4
 
-    private var bytes: UnsafeMutablePointer<UInt8>
     private var bytes32: UnsafeMutablePointer<UInt32>
 
     public var rowBytes: Int {
@@ -39,20 +42,18 @@ public class Bitmap {
         self.width = width
         self.height = height
 
-        bytes = UnsafeMutablePointer<UInt8>.allocate(capacity: width * height * channels)
-        bytes32 = bytes.withMemoryRebound(to: UInt32.self, capacity: width * height) { ptr in return ptr }
+        bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
 
         clear()
     }
 
     deinit {
-        bytes.deallocate()
+        bytes32.deallocate()
     }
 
     fileprivate init(reference: Bitmap) {
         self.width = reference.width
         self.height = reference.height
-        bytes = reference.bytes
         bytes32 = reference.bytes32
     }
 
@@ -61,8 +62,7 @@ public class Bitmap {
             let old = Bitmap(reference: self)
             self.width = width
             self.height = height
-            bytes = UnsafeMutablePointer<UInt8>.allocate(capacity: width * height * channels)
-            bytes32 = bytes.withMemoryRebound(to: UInt32.self, capacity: width * height) { ptr in return ptr }
+            bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
 
             blit(bytes32,
                  Rect(x: 0, y: 0, width: width, height: height),
@@ -76,6 +76,18 @@ public class Bitmap {
 
     func clear() {
         bytes32.initialize(repeating: 0, count: width * height)
+    }
+
+    func raw() -> Data {
+        var data = Data(bytes: bytes32, count: width * height * channels)
+        data.withUnsafeMutableBytes({ (bytes: UnsafeMutablePointer<UInt32>) -> Void in
+            var ptr = bytes
+            for _ in 0..<(width*height) {
+                ptr.pointee = ptr.pointee.bigEndian
+                ptr += 1
+            }
+        })
+        return data
     }
 
     func ascii() -> String {
@@ -97,9 +109,9 @@ public class Bitmap {
 
             for _ in 0..<width {
                 let color = ptr.pointee
-                let red = Float( (color >> 24) & 0xFF ) / 255.0
-                let green = Float( (color >> 16) & 0xFF ) / 255.0
-                let blue = Float( (color >> 8) & 0xFF ) / 255.0
+                let red = Float( (color >> BYTE_RED) & 0xFF ) / 255.0
+                let green = Float( (color >> BYTE_GREEN) & 0xFF ) / 255.0
+                let blue = Float( (color >> BYTE_BLUE) & 0xFF ) / 255.0
 
                 let v = Int((red * 0.299 + green * 0.587 + blue * 0.114) * 10.0)
                 switch v {

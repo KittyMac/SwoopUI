@@ -1,13 +1,12 @@
 extension HStack: Nodeable {
     func newNode() -> YogaNode {
         let node = YogaNode()
-        node.fill().columns().grow().shrink().itemsStart()
+        node.fill().rows().grow().shrink().itemsStart()
 
         switch alignment {
         case .center: node.justifyCenter()
-        case .top: node.justifyStart()
-        case .bottom: node.justifyEnd()
-        default: fatalError()
+        case .leading: node.justifyStart()
+        case .trailing: node.justifyEnd()
         }
 
         return node

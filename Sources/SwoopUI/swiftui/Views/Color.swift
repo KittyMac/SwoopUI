@@ -4,6 +4,18 @@
 
 import Foundation
 
+#if arch(x86_64)
+let BYTE_RED = 24
+let BYTE_GREEN = 16
+let BYTE_BLUE = 8
+let BYTE_ALPHA = 0
+#else
+let BYTE_RED = 24
+let BYTE_GREEN = 16
+let BYTE_BLUE = 8
+let BYTE_ALPHA = 0
+#endif
+
 public class AnyColorBox {
     var rgba: UInt32 = 0
 }
@@ -111,12 +123,14 @@ public struct Color: View, Hashable, CustomStringConvertible {
         case displayP3
     }
 
-    internal init(_ colorSpace: Color.RGBColorSpace = .sRGB,
-                  rgba32: UInt32) {
-        let red = Double((rgba32 >> 24) & 0xFF) / 255.0
-        let green = Double((rgba32 >> 16) & 0xFF) / 255.0
-        let blue = Double((rgba32 >> 8) & 0xFF) / 255.0
-        let opacity = Double((rgba32 >> 0) & 0xFF) / 255.0
+    public init(_ colorSpace: Color.RGBColorSpace = .sRGB,
+                rgba32: UInt32) {
+        let red = Double((rgba32 >> BYTE_RED) & 0xFF) / 255.0
+        let green = Double((rgba32 >> BYTE_GREEN) & 0xFF) / 255.0
+        let blue = Double((rgba32 >> BYTE_BLUE) & 0xFF) / 255.0
+        let opacity = Double((rgba32 >> BYTE_ALPHA) & 0xFF) / 255.0
+
+        print(red, green, blue, opacity)
 
         switch colorSpace {
         case .sRGB:
@@ -196,7 +210,7 @@ extension Color {
     public static let yellow = Color(rgba32: 0xFFFF00FF)
     public static let olive = Color(rgba32: 0x808000FF)
     public static let lime = Color(rgba32: 0x00FF00FF)
-    public static let green = Color(rgba32: 0x008000FF)
+    public static let green = Color(rgba32: 0x00FF00FF)
     public static let aqua = Color(rgba32: 0x00FFFFFF)
     public static let teal = Color(rgba32: 0x008080FF)
     public static let blue = Color(rgba32: 0x0000FFFF)
