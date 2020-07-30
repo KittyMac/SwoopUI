@@ -130,8 +130,6 @@ public struct Color: View, Hashable, CustomStringConvertible {
         let blue = Double((rgba32 >> BYTE_BLUE) & 0xFF) / 255.0
         let opacity = Double((rgba32 >> BYTE_ALPHA) & 0xFF) / 255.0
 
-        print(red, green, blue, opacity)
-
         switch colorSpace {
         case .sRGB:
             self.provider = ResolvedColor(linearRed: red, linearGreen: green, linearBlue: blue, opacity: opacity)

@@ -1,20 +1,26 @@
 SWIFT_BUILD_FLAGS=--configuration release
 
-.PHONY: all build flynn clean xcode
+.PHONY: all build clean xcode
 
-all: build
+all: fix_bad_header_files build
+	
+fix_bad_header_files:
+	-@find  . -name '._*.h' -exec rm {} \;
 
 build:
 	swift build $(SWIFT_BUILD_FLAGS)
-
-flynn: build
-	cp ./.build/release/flynnlint ../flynn/meta/flynnlint
 
 clean:
 	rm -rf .build
 
 update:
 	swift package update
+
+test:
+	swift test
+
+run:
+	swift run
 
 xcode:
 	swift package generate-xcodeproj
