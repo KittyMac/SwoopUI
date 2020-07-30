@@ -22,10 +22,10 @@ final class BitmapTests: XCTestCase {
         XCTAssertEqual(bitmap.ascii(),
             """
             +----+
-            |****|
-            |****|
-            |****|
-            |****|
+            |++++|
+            |++++|
+            |++++|
+            |++++|
             +----+\n
             """)
     }
@@ -53,36 +53,36 @@ final class BitmapTests: XCTestCase {
         XCTAssertEqual(bitmap.ascii(),
         """
         +--+
-        |*=|
-        |-.|
+        |@#|
+        |+:|
         +--+\n
         """)
         bitmap.resize(7, 7)
         XCTAssertEqual(bitmap.ascii(),
             """
             +-------+
-            |***====|
-            |***====|
-            |***====|
-            |---....|
-            |---....|
-            |---....|
-            |---....|
+            |@@@####|
+            |@@@####|
+            |@@@####|
+            |+++::::|
+            |+++::::|
+            |+++::::|
+            |+++::::|
             +-------+\n
             """)
         bitmap.resize(5, 2)
         XCTAssertEqual(bitmap.ascii(),
         """
         +-----+
-        |**===|
-        |--...|
+        |@@###|
+        |++:::|
         +-----+\n
         """)
         bitmap.resize(1, 1)
         XCTAssertEqual(bitmap.ascii(),
         """
         +-+
-        |*|
+        |@|
         +-+\n
         """)
     }
@@ -126,10 +126,10 @@ final class BitmapTests: XCTestCase {
         XCTAssertEqual(bitmap1.ascii(),
             """
             +----+
-            |====|
-            |====|
-            |====|
-            |====|
+            |++++|
+            |++++|
+            |++++|
+            |++++|
             +----+\n
             """)
     }    

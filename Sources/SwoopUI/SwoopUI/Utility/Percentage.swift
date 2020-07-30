@@ -12,7 +12,7 @@ public struct Percentage: PercentageNumericType {
     public init(_ value: Float) {
         self.value = value
     }
-    
+
 #if canImport(CoreGraphics)
     public init(_ value: CGFloat) {
         self.value = Float(value)

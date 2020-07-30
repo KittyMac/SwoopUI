@@ -12,6 +12,7 @@ build:
 
 clean:
 	rm -rf .build
+	rm -rf .swiftpm
 
 update:
 	swift package update
