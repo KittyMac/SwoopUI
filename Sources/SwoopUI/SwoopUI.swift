@@ -1,21 +1,30 @@
 import Foundation
 
-private func newNode(from view: View) -> YogaNode {
+private func newNode(from view: View) -> YogaNode? {
     if let nodeable = view as? Nodeable {
         return nodeable.newNode()
     }
-    return YogaNode()
+    return nil
 }
 
 @discardableResult
 public func recurseView(_ parent: YogaNode, _ view: View) -> YogaNode {
-    let node = newNode(from: view)
+
+    // Not all SwiftUI structs result in a view in the hierarchy. If this
+    // is one which doesn't then we still need to process the children
+    if let node = newNode(from: view) {
+        for view in view.iterate() {
+            recurseView(node, view)
+        }
+        parent.child(node)
+        return node
+    }
 
     for view in view.iterate() {
-        recurseView(node, view)
+        recurseView(parent, view)
     }
-    parent.child(node)
-    return node
+
+    return parent
 }
 
 public func swoopUITest<Content>(_ size: Size, _ view: Content) where Content: View {
