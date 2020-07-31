@@ -1,6 +1,6 @@
 import Flynn
 
-internal protocol Nodeable: View {
+internal protocol Nodeable {
     func newNode() -> YogaNode
 }
 

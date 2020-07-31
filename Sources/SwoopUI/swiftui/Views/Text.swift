@@ -102,7 +102,5 @@ extension Text {
 }
 
 extension Text {
-    public var body: Never {
-        fatalError()
-    }
+
 }

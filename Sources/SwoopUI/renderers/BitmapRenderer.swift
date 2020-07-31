@@ -11,8 +11,12 @@ public class BitmapRenderer {
 
     private var root: YogaNode
 
-    public var buffer: Bitmap {
+    public var renderBuffer: Bitmap {
         return backBuffer
+    }
+
+    public var viewBuffer: Bitmap {
+        return frontBuffer
     }
 
     init(_ root: YogaNode) {
@@ -29,6 +33,17 @@ public class BitmapRenderer {
         let temp = self.frontBuffer
         self.frontBuffer = self.backBuffer
         self.backBuffer = temp
+    }
+
+    func layout(_ newWidth: Int, _ newHeight: Int) {
+        if width != newWidth || height != newHeight {
+            width = newWidth
+            height = newHeight
+            root.size(Pixel(width), Pixel(height))
+            frontBuffer.resize(width, height)
+            backBuffer.resize(width, height)
+        }
+        root.layout()
     }
 
     /*

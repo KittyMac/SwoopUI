@@ -28,6 +28,14 @@ public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
 
 public class Bitmap {
 
+    public struct BitmapInfo {
+        let width: Int
+        let height: Int
+        let channels: Int
+        let rowBytes: Int
+        let bytes: UnsafeMutablePointer<UInt32>
+    }
+
     private var width: Int = 0
     private var height: Int = 0
     private let channels: Int = 4
@@ -36,6 +44,10 @@ public class Bitmap {
 
     public var rowBytes: Int {
         return width * channels
+    }
+
+    public var info: BitmapInfo {
+        return BitmapInfo(width: width, height: height, channels: channels, rowBytes: rowBytes, bytes: bytes32)
     }
 
     init(_ width: Int, _ height: Int) {

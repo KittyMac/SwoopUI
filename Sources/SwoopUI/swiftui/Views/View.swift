@@ -1,5 +1,7 @@
 public protocol View {
     func iterate() -> AnyIterator<View>
+
+    var body: View { get }
 }
 
 public extension View {
@@ -16,5 +18,9 @@ public extension View {
             }
             return nil
         })
+    }
+
+    var body: View {
+        fatalError()
     }
 }

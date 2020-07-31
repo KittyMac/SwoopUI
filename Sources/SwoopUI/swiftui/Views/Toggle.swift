@@ -9,7 +9,7 @@ public struct Toggle<Label>: View where Label: View {
         self.label = label()
     }
 
-    public var body: some View {
+    public var body: View {
         return label
     }
 }
@@ -39,8 +39,7 @@ public protocol ToggleStyle {
 
 public struct ToggleStyleConfiguration {
     public struct Label: View {
-        public var body: Never
-        public typealias Body = Never
+
     }
 
     public let label: ToggleStyleConfiguration.Label
