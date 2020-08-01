@@ -36,7 +36,7 @@ class SwoopLayer: CALayer {
     }
     
     override func layoutSublayers() {
-        renderer.layout(Int(bounds.width), Int(bounds.height))
+        renderer.layout(Int(bounds.width) / 2, Int(bounds.height) / 2)
     }
     
     override func display() {

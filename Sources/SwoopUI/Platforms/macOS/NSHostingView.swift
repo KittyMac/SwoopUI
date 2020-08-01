@@ -18,7 +18,7 @@ public class NSHostingView: NSView {
         super.init(frame: CGRect.zero)
         self.wantsLayer = true
         self.layerContentsRedrawPolicy = .duringViewResize
-        self.layerContentsPlacement = .topLeft
+        self.layerContentsPlacement = .scaleAxesIndependently
     }
 
     required init?(coder aDecoder: NSCoder) {
