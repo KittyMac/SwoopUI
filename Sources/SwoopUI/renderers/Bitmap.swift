@@ -33,7 +33,7 @@ public class Bitmap {
         let height: Int
         let channels: Int
         let rowBytes: Int
-        let bytes: UnsafeMutablePointer<UInt32>
+        let bytes32: UnsafeMutablePointer<UInt32>
     }
 
     private var width: Int = 0
@@ -47,7 +47,7 @@ public class Bitmap {
     }
 
     public var info: BitmapInfo {
-        return BitmapInfo(width: width, height: height, channels: channels, rowBytes: rowBytes, bytes: bytes32)
+        return BitmapInfo(width: width, height: height, channels: channels, rowBytes: rowBytes, bytes32: bytes32)
     }
 
     init(_ width: Int, _ height: Int) {
@@ -63,15 +63,19 @@ public class Bitmap {
         bytes32.deallocate()
     }
 
-    fileprivate init(reference: Bitmap) {
-        self.width = reference.width
-        self.height = reference.height
-        bytes32 = reference.bytes32
-    }
-
     func resize(_ width: Int, _ height: Int) {
         if self.width != width || self.height != height {
-            let old = Bitmap(reference: self)
+            self.width = width
+            self.height = height
+            bytes32.deallocate()
+            bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
+        }
+    }
+    
+    func scaleTo(_ width: Int, _ height: Int) {
+        if self.width != width || self.height != height {
+            let old = self.info
+            
             self.width = width
             self.height = height
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
@@ -171,11 +175,19 @@ public class Bitmap {
     }
 
     func fill(_ color: Color, _ dstRect: Rect, _ function: PixelFunc = pixelSrcOver) {
-        blitColor(bytes32,
-                  dstRect,
-                  rowBytes,
-                  color.rgba32,
-                  function)
+        if ((color.rgba32 >> BYTE_ALPHA) & 0xFF) == 255 {
+            blitColor(bytes32,
+                      dstRect,
+                      rowBytes,
+                      color.rgba32,
+                      pixelCopy)
+        } else {
+            blitColor(bytes32,
+                      dstRect,
+                      rowBytes,
+                      color.rgba32,
+                      function)
+        }
     }
 
     // MARK: - Draw
