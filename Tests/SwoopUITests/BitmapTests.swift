@@ -57,7 +57,7 @@ final class BitmapTests: XCTestCase {
         |+:|
         +--+\n
         """)
-        bitmap.resize(7, 7)
+        bitmap.scaleTo(7, 7)
         XCTAssertEqual(bitmap.ascii(),
             """
             +-------+
@@ -70,7 +70,7 @@ final class BitmapTests: XCTestCase {
             |+++::::|
             +-------+\n
             """)
-        bitmap.resize(5, 2)
+        bitmap.scaleTo(5, 2)
         XCTAssertEqual(bitmap.ascii(),
         """
         +-----+
@@ -78,7 +78,7 @@ final class BitmapTests: XCTestCase {
         |++:::|
         +-----+\n
         """)
-        bitmap.resize(1, 1)
+        bitmap.scaleTo(1, 1)
         XCTAssertEqual(bitmap.ascii(),
         """
         +-+

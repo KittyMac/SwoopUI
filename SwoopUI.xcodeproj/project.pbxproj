@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"SwoopUI::SwoopUIPackageTests::ProductTarget" /* SwoopUIPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_253 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */;
+			buildConfigurationList = OBJ_261 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_256 /* PBXTargetDependency */,
+				OBJ_264 /* PBXTargetDependency */,
 			);
 			name = SwoopUIPackageTests;
 			productName = SwoopUIPackageTests;
@@ -21,165 +21,168 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		OBJ_146 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_120 /* Actor.swift */; };
-		OBJ_147 /* Atomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_121 /* Atomics.swift */; };
-		OBJ_148 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_122 /* Behavior.swift */; };
-		OBJ_149 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Device.swift */; };
-		OBJ_150 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Extensions.swift */; };
-		OBJ_151 /* Flowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Flowable.swift */; };
-		OBJ_152 /* Flynn+RegisteredActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* Flynn+RegisteredActors.swift */; };
-		OBJ_153 /* Flynn+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* Flynn+Timer.swift */; };
-		OBJ_154 /* Flynn.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* Flynn.swift */; };
-		OBJ_155 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Profile.swift */; };
-		OBJ_156 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* Queue.swift */; };
-		OBJ_157 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* Scheduler.swift */; };
-		OBJ_164 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* Package.swift */; };
-		OBJ_170 /* NSHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NSHostingView.swift */; };
-		OBJ_171 /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Bitmap.swift */; };
-		OBJ_172 /* BitmapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* BitmapRenderer.swift */; };
-		OBJ_173 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Animatable.swift */; };
-		OBJ_174 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Binding.swift */; };
-		OBJ_175 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Alignment.swift */; };
-		OBJ_176 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Axis.swift */; };
-		OBJ_177 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* Edge.swift */; };
-		OBJ_178 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* EdgeInsets.swift */; };
-		OBJ_179 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Point.swift */; };
-		OBJ_180 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Rect.swift */; };
-		OBJ_181 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Size.swift */; };
-		OBJ_182 /* ViewDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ViewDimensions.swift */; };
-		OBJ_183 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* LocalizedStringKey.swift */; };
-		OBJ_184 /* EnvironmentKeyWritingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* EnvironmentKeyWritingModifier.swift */; };
-		OBJ_185 /* EnvironmentalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* EnvironmentalModifier.swift */; };
-		OBJ_186 /* PaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* PaddingModifier.swift */; };
-		OBJ_187 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* ViewModifier.swift */; };
-		OBJ_188 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* PropertyList.swift */; };
-		OBJ_189 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* State.swift */; };
-		OBJ_190 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Transaction.swift */; };
-		OBJ_191 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* ViewBuilder.swift */; };
-		OBJ_192 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* AnyView.swift */; };
-		OBJ_193 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Button.swift */; };
-		OBJ_194 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* Color.swift */; };
-		OBJ_195 /* CoreGraphicsShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CoreGraphicsShim.swift */; };
-		OBJ_196 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Divider.swift */; };
-		OBJ_197 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* EmptyView.swift */; };
-		OBJ_198 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Font.swift */; };
-		OBJ_199 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ForEach.swift */; };
-		OBJ_200 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Group.swift */; };
-		OBJ_201 /* HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* HStack.swift */; };
-		OBJ_202 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Image.swift */; };
-		OBJ_203 /* ModifiedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ModifiedContent.swift */; };
-		OBJ_204 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* Never.swift */; };
-		OBJ_205 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Optional.swift */; };
-		OBJ_206 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* Picker.swift */; };
-		OBJ_207 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Shape.swift */; };
-		OBJ_208 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Angle.swift */; };
-		OBJ_209 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Circle.swift */; };
-		OBJ_210 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* Path.swift */; };
-		OBJ_211 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Rectangle.swift */; };
-		OBJ_212 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Spacer.swift */; };
-		OBJ_213 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Stepper.swift */; };
-		OBJ_214 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Text.swift */; };
-		OBJ_215 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Toggle.swift */; };
-		OBJ_216 /* TupleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* TupleView.swift */; };
-		OBJ_217 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* VStack.swift */; };
-		OBJ_218 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* View.swift */; };
-		OBJ_219 /* ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ZStack.swift */; };
-		OBJ_220 /* SwoopUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* SwoopUI.swift */; };
-		OBJ_221 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Viewable.swift */; };
-		OBJ_222 /* Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Percentage.swift */; };
-		OBJ_223 /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Yoga.swift */; };
-		OBJ_224 /* SwColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* SwColor.swift */; };
-		OBJ_225 /* SwHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* SwHStack.swift */; };
-		OBJ_226 /* SwVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* SwVStack.swift */; };
-		OBJ_228 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_229 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_238 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* main.swift */; };
-		OBJ_240 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
-		OBJ_241 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_242 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_251 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_262 /* BitmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* BitmapTests.swift */; };
-		OBJ_263 /* SwoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_115 /* SwoopUITests.swift */; };
-		OBJ_264 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* XCTestManifests.swift */; };
-		OBJ_266 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
-		OBJ_267 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_268 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_276 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_95 /* Utils.cpp */; };
-		OBJ_277 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* YGConfig.cpp */; };
-		OBJ_278 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* YGEnums.cpp */; };
-		OBJ_279 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* YGLayout.cpp */; };
-		OBJ_280 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* YGNode.cpp */; };
-		OBJ_281 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* YGNodePrint.cpp */; };
-		OBJ_282 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* YGStyle.cpp */; };
-		OBJ_283 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* YGValue.cpp */; };
-		OBJ_284 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* Yoga.cpp */; };
-		OBJ_285 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* event.cpp */; };
-		OBJ_286 /* experiments.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* experiments.cpp */; };
-		OBJ_287 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* log.cpp */; };
-		OBJ_289 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_290 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_291 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_110 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_292 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_151 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Actor.swift */; };
+		OBJ_152 /* Atomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Atomics.swift */; };
+		OBJ_153 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Behavior.swift */; };
+		OBJ_154 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* Device.swift */; };
+		OBJ_155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* Extensions.swift */; };
+		OBJ_156 /* Flowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* Flowable.swift */; };
+		OBJ_157 /* Flynn+RegisteredActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Flynn+RegisteredActors.swift */; };
+		OBJ_158 /* Flynn+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* Flynn+Timer.swift */; };
+		OBJ_159 /* Flynn.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* Flynn.swift */; };
+		OBJ_160 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* Profile.swift */; };
+		OBJ_161 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* Queue.swift */; };
+		OBJ_162 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* Scheduler.swift */; };
+		OBJ_169 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* Package.swift */; };
+		OBJ_175 /* NSHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NSHostingView.swift */; };
+		OBJ_176 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PreviewProvider.swift */; };
+		OBJ_177 /* SwoopLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SwoopLayer.swift */; };
+		OBJ_178 /* SwoopMetalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SwoopMetalLayer.swift */; };
+		OBJ_179 /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Bitmap.swift */; };
+		OBJ_180 /* BitmapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* BitmapRenderer.swift */; };
+		OBJ_181 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Animatable.swift */; };
+		OBJ_182 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Binding.swift */; };
+		OBJ_183 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Alignment.swift */; };
+		OBJ_184 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Axis.swift */; };
+		OBJ_185 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Edge.swift */; };
+		OBJ_186 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* EdgeInsets.swift */; };
+		OBJ_187 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Point.swift */; };
+		OBJ_188 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Rect.swift */; };
+		OBJ_189 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Size.swift */; };
+		OBJ_190 /* ViewDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ViewDimensions.swift */; };
+		OBJ_191 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* LocalizedStringKey.swift */; };
+		OBJ_192 /* EnvironmentKeyWritingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* EnvironmentKeyWritingModifier.swift */; };
+		OBJ_193 /* EnvironmentalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* EnvironmentalModifier.swift */; };
+		OBJ_194 /* PaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* PaddingModifier.swift */; };
+		OBJ_195 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ViewModifier.swift */; };
+		OBJ_196 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PropertyList.swift */; };
+		OBJ_197 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* State.swift */; };
+		OBJ_198 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Transaction.swift */; };
+		OBJ_199 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ViewBuilder.swift */; };
+		OBJ_200 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* AnyView.swift */; };
+		OBJ_201 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Button.swift */; };
+		OBJ_202 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Color.swift */; };
+		OBJ_203 /* CoreGraphicsShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* CoreGraphicsShim.swift */; };
+		OBJ_204 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Divider.swift */; };
+		OBJ_205 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* EmptyView.swift */; };
+		OBJ_206 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Font.swift */; };
+		OBJ_207 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* ForEach.swift */; };
+		OBJ_208 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Group.swift */; };
+		OBJ_209 /* HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* HStack.swift */; };
+		OBJ_210 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Image.swift */; };
+		OBJ_211 /* ModifiedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* ModifiedContent.swift */; };
+		OBJ_212 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Never.swift */; };
+		OBJ_213 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Optional.swift */; };
+		OBJ_214 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Picker.swift */; };
+		OBJ_215 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Shape.swift */; };
+		OBJ_216 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Angle.swift */; };
+		OBJ_217 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Circle.swift */; };
+		OBJ_218 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Path.swift */; };
+		OBJ_219 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Rectangle.swift */; };
+		OBJ_220 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Spacer.swift */; };
+		OBJ_221 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Stepper.swift */; };
+		OBJ_222 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Text.swift */; };
+		OBJ_223 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Toggle.swift */; };
+		OBJ_224 /* TupleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* TupleView.swift */; };
+		OBJ_225 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* VStack.swift */; };
+		OBJ_226 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* View.swift */; };
+		OBJ_227 /* ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ZStack.swift */; };
+		OBJ_228 /* SwoopUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* SwoopUI.swift */; };
+		OBJ_229 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Viewable.swift */; };
+		OBJ_230 /* Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Percentage.swift */; };
+		OBJ_231 /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Yoga.swift */; };
+		OBJ_232 /* SwColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* SwColor.swift */; };
+		OBJ_233 /* SwHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* SwHStack.swift */; };
+		OBJ_234 /* SwVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* SwVStack.swift */; };
+		OBJ_236 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
+		OBJ_237 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
+		OBJ_246 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* main.swift */; };
+		OBJ_248 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
+		OBJ_249 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
+		OBJ_250 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
+		OBJ_259 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_270 /* BitmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* BitmapTests.swift */; };
+		OBJ_271 /* SwoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* SwoopUITests.swift */; };
+		OBJ_272 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* XCTestManifests.swift */; };
+		OBJ_274 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
+		OBJ_275 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
+		OBJ_276 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
+		OBJ_284 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Utils.cpp */; };
+		OBJ_285 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* YGConfig.cpp */; };
+		OBJ_286 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* YGEnums.cpp */; };
+		OBJ_287 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* YGLayout.cpp */; };
+		OBJ_288 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* YGNode.cpp */; };
+		OBJ_289 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* YGNodePrint.cpp */; };
+		OBJ_290 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* YGStyle.cpp */; };
+		OBJ_291 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* YGValue.cpp */; };
+		OBJ_292 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Yoga.cpp */; };
+		OBJ_293 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* event.cpp */; };
+		OBJ_294 /* experiments.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* experiments.cpp */; };
+		OBJ_295 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* log.cpp */; };
+		OBJ_297 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_298 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_299 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		OBJ_300 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4603942224D48E7400D22954 /* PBXContainerItemProxy */ = {
+		466136E924D60CBE005DC253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Flynn::Flynn";
+			remoteInfo = Flynn;
+		};
+		466136EA24D60CBE005DC253 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwoopUI::Yoga";
+			remoteInfo = Yoga;
+		};
+		466136EB24D60CBE005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwoopUI::SwoopUI";
 			remoteInfo = SwoopUI;
 		};
-		4603942324D48E7400D22954 /* PBXContainerItemProxy */ = {
+		466136EC24D60CBE005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Flynn::Flynn";
 			remoteInfo = Flynn;
 		};
-		4603942424D48E7400D22954 /* PBXContainerItemProxy */ = {
+		466136ED24D60CBE005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwoopUI::Yoga";
 			remoteInfo = Yoga;
 		};
-		4603942524D48E7400D22954 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Flynn::Flynn";
-			remoteInfo = Flynn;
-		};
-		4603942624D48E7400D22954 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::Yoga";
-			remoteInfo = Yoga;
-		};
-		4603942724D48E7500D22954 /* PBXContainerItemProxy */ = {
+		466136EE24D60CBF005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwoopUI::SwoopUI";
 			remoteInfo = SwoopUI;
 		};
-		4603942824D48E7500D22954 /* PBXContainerItemProxy */ = {
+		466136EF24D60CBF005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Flynn::Flynn";
 			remoteInfo = Flynn;
 		};
-		4603942924D48E7500D22954 /* PBXContainerItemProxy */ = {
+		466136F024D60CBF005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwoopUI::Yoga";
 			remoteInfo = Yoga;
 		};
-		4603942A24D48E7600D22954 /* PBXContainerItemProxy */ = {
+		466136F124D60CC0005DC253 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -190,113 +193,118 @@
 
 /* Begin PBXFileReference section */
 		"Flynn::Flynn::Product" /* Flynn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flynn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_100 /* YGNodePrint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
-		OBJ_101 /* YGStyle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
-		OBJ_102 /* YGValue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
-		OBJ_103 /* Yoga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
-		OBJ_104 /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
-		OBJ_105 /* experiments.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experiments.cpp; sourceTree = "<group>"; };
-		OBJ_106 /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
-		OBJ_108 /* YGEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
-		OBJ_109 /* YGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
+		OBJ_100 /* YGEnums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
+		OBJ_101 /* YGLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
+		OBJ_102 /* YGNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
+		OBJ_103 /* YGNodePrint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
+		OBJ_104 /* YGStyle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
+		OBJ_105 /* YGValue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
+		OBJ_106 /* Yoga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
+		OBJ_107 /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		OBJ_108 /* experiments.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experiments.cpp; sourceTree = "<group>"; };
+		OBJ_109 /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
 		OBJ_11 /* NSHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSHostingView.swift; sourceTree = "<group>"; };
-		OBJ_110 /* YGValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
-		OBJ_111 /* Yoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
-		OBJ_114 /* BitmapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapTests.swift; sourceTree = "<group>"; };
-		OBJ_115 /* SwoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUITests.swift; sourceTree = "<group>"; };
-		OBJ_116 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_120 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
-		OBJ_121 /* Atomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomics.swift; sourceTree = "<group>"; };
-		OBJ_122 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
-		OBJ_123 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		OBJ_124 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		OBJ_125 /* Flowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowable.swift; sourceTree = "<group>"; };
-		OBJ_126 /* Flynn+RegisteredActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+RegisteredActors.swift"; sourceTree = "<group>"; };
-		OBJ_127 /* Flynn+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+Timer.swift"; sourceTree = "<group>"; };
-		OBJ_128 /* Flynn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flynn.swift; sourceTree = "<group>"; };
-		OBJ_129 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		OBJ_13 /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
-		OBJ_130 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		OBJ_131 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
-		OBJ_132 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Volumes/Development/Development/chimerasw2/SwoopUI/.build/checkouts/Flynn/Package.swift; sourceTree = "<group>"; };
-		OBJ_139 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		OBJ_14 /* BitmapRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapRenderer.swift; sourceTree = "<group>"; };
-		OBJ_140 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_16 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		OBJ_17 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
-		OBJ_20 /* Axis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
-		OBJ_21 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
-		OBJ_22 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
-		OBJ_23 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
-		OBJ_25 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		OBJ_26 /* ViewDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDimensions.swift; sourceTree = "<group>"; };
-		OBJ_27 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
-		OBJ_29 /* EnvironmentKeyWritingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeyWritingModifier.swift; sourceTree = "<group>"; };
-		OBJ_30 /* EnvironmentalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentalModifier.swift; sourceTree = "<group>"; };
-		OBJ_31 /* PaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModifier.swift; sourceTree = "<group>"; };
-		OBJ_32 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
-		OBJ_33 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
-		OBJ_34 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		OBJ_35 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		OBJ_36 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
-		OBJ_38 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
-		OBJ_39 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		OBJ_40 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		OBJ_41 /* CoreGraphicsShim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsShim.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
-		OBJ_43 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		OBJ_45 /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
-		OBJ_46 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		OBJ_47 /* HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStack.swift; sourceTree = "<group>"; };
-		OBJ_48 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		OBJ_49 /* ModifiedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedContent.swift; sourceTree = "<group>"; };
-		OBJ_50 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		OBJ_52 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
-		OBJ_53 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		OBJ_55 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
-		OBJ_56 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		OBJ_57 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		OBJ_58 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		OBJ_59 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		OBJ_111 /* YGEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
+		OBJ_112 /* YGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
+		OBJ_113 /* YGValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
+		OBJ_114 /* Yoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
+		OBJ_117 /* BitmapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapTests.swift; sourceTree = "<group>"; };
+		OBJ_118 /* SwoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUITests.swift; sourceTree = "<group>"; };
+		OBJ_119 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_12 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
+		OBJ_123 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		OBJ_124 /* Atomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomics.swift; sourceTree = "<group>"; };
+		OBJ_125 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
+		OBJ_126 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		OBJ_127 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		OBJ_128 /* Flowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowable.swift; sourceTree = "<group>"; };
+		OBJ_129 /* Flynn+RegisteredActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+RegisteredActors.swift"; sourceTree = "<group>"; };
+		OBJ_13 /* SwoopLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopLayer.swift; sourceTree = "<group>"; };
+		OBJ_130 /* Flynn+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+Timer.swift"; sourceTree = "<group>"; };
+		OBJ_131 /* Flynn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flynn.swift; sourceTree = "<group>"; };
+		OBJ_132 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		OBJ_133 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		OBJ_134 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		OBJ_135 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Volumes/Development/Development/chimerasw2/SwoopUI/.build/checkouts/Flynn/Package.swift; sourceTree = "<group>"; };
+		OBJ_14 /* SwoopMetalLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopMetalLayer.swift; sourceTree = "<group>"; };
+		OBJ_142 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = SOURCE_ROOT; };
+		OBJ_143 /* meta */ = {isa = PBXFileReference; lastKnownFileType = folder; path = meta; sourceTree = SOURCE_ROOT; };
+		OBJ_144 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		OBJ_145 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_16 /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
+		OBJ_17 /* BitmapRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapRenderer.swift; sourceTree = "<group>"; };
+		OBJ_19 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		OBJ_20 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Axis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		OBJ_25 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		OBJ_29 /* ViewDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDimensions.swift; sourceTree = "<group>"; };
+		OBJ_30 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
+		OBJ_32 /* EnvironmentKeyWritingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeyWritingModifier.swift; sourceTree = "<group>"; };
+		OBJ_33 /* EnvironmentalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentalModifier.swift; sourceTree = "<group>"; };
+		OBJ_34 /* PaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModifier.swift; sourceTree = "<group>"; };
+		OBJ_35 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		OBJ_36 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
+		OBJ_37 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		OBJ_38 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		OBJ_39 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
+		OBJ_41 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
+		OBJ_42 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		OBJ_43 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		OBJ_44 /* CoreGraphicsShim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsShim.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		OBJ_46 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		OBJ_48 /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
+		OBJ_49 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		OBJ_50 /* HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStack.swift; sourceTree = "<group>"; };
+		OBJ_51 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		OBJ_52 /* ModifiedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedContent.swift; sourceTree = "<group>"; };
+		OBJ_53 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
+		OBJ_55 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		OBJ_56 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
+		OBJ_59 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
-		OBJ_61 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		OBJ_62 /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
-		OBJ_63 /* TupleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleView.swift; sourceTree = "<group>"; };
-		OBJ_64 /* VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStack.swift; sourceTree = "<group>"; };
-		OBJ_65 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		OBJ_66 /* ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStack.swift; sourceTree = "<group>"; };
-		OBJ_67 /* SwoopUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUI.swift; sourceTree = "<group>"; };
-		OBJ_70 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
-		OBJ_72 /* Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percentage.swift; sourceTree = "<group>"; };
-		OBJ_73 /* Yoga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
-		OBJ_75 /* SwColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwColor.swift; sourceTree = "<group>"; };
-		OBJ_76 /* SwHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwHStack.swift; sourceTree = "<group>"; };
-		OBJ_77 /* SwVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwVStack.swift; sourceTree = "<group>"; };
-		OBJ_79 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_81 /* BitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitUtils.h; sourceTree = "<group>"; };
-		OBJ_82 /* CompactValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompactValue.h; sourceTree = "<group>"; };
-		OBJ_83 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
-		OBJ_84 /* experiments-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "experiments-inl.h"; sourceTree = "<group>"; };
-		OBJ_85 /* experiments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experiments.h; sourceTree = "<group>"; };
-		OBJ_86 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		OBJ_87 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		OBJ_88 /* YGConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGConfig.h; sourceTree = "<group>"; };
-		OBJ_89 /* YGFloatOptional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
-		OBJ_90 /* YGLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
-		OBJ_91 /* YGNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
-		OBJ_92 /* YGNodePrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
-		OBJ_93 /* YGStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
-		OBJ_94 /* Yoga-internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
-		OBJ_95 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
-		OBJ_96 /* YGConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
-		OBJ_97 /* YGEnums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
-		OBJ_98 /* YGLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
-		OBJ_99 /* YGNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
+		OBJ_60 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		OBJ_61 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		OBJ_62 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
+		OBJ_63 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		OBJ_64 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		OBJ_65 /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
+		OBJ_66 /* TupleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleView.swift; sourceTree = "<group>"; };
+		OBJ_67 /* VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStack.swift; sourceTree = "<group>"; };
+		OBJ_68 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		OBJ_69 /* ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStack.swift; sourceTree = "<group>"; };
+		OBJ_70 /* SwoopUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUI.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		OBJ_75 /* Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percentage.swift; sourceTree = "<group>"; };
+		OBJ_76 /* Yoga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
+		OBJ_78 /* SwColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwColor.swift; sourceTree = "<group>"; };
+		OBJ_79 /* SwHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwHStack.swift; sourceTree = "<group>"; };
+		OBJ_80 /* SwVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwVStack.swift; sourceTree = "<group>"; };
+		OBJ_82 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_84 /* BitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitUtils.h; sourceTree = "<group>"; };
+		OBJ_85 /* CompactValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompactValue.h; sourceTree = "<group>"; };
+		OBJ_86 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		OBJ_87 /* experiments-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "experiments-inl.h"; sourceTree = "<group>"; };
+		OBJ_88 /* experiments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experiments.h; sourceTree = "<group>"; };
+		OBJ_89 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		OBJ_90 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		OBJ_91 /* YGConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGConfig.h; sourceTree = "<group>"; };
+		OBJ_92 /* YGFloatOptional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
+		OBJ_93 /* YGLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
+		OBJ_94 /* YGNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
+		OBJ_95 /* YGNodePrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
+		OBJ_96 /* YGStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
+		OBJ_97 /* Yoga-internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
+		OBJ_98 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		OBJ_99 /* YGConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
 		"SwoopUI::SwoopUI::Product" /* SwoopUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwoopUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwoopUIDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		"SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,43 +312,43 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_158 /* Frameworks */ = {
+		OBJ_163 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_227 /* Frameworks */ = {
+		OBJ_235 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_228 /* Flynn.framework in Frameworks */,
-				OBJ_229 /* Yoga.framework in Frameworks */,
+				OBJ_236 /* Flynn.framework in Frameworks */,
+				OBJ_237 /* Yoga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_239 /* Frameworks */ = {
+		OBJ_247 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_240 /* SwoopUI.framework in Frameworks */,
-				OBJ_241 /* Flynn.framework in Frameworks */,
-				OBJ_242 /* Yoga.framework in Frameworks */,
+				OBJ_248 /* SwoopUI.framework in Frameworks */,
+				OBJ_249 /* Flynn.framework in Frameworks */,
+				OBJ_250 /* Yoga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_265 /* Frameworks */ = {
+		OBJ_273 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_266 /* SwoopUI.framework in Frameworks */,
-				OBJ_267 /* Flynn.framework in Frameworks */,
-				OBJ_268 /* Yoga.framework in Frameworks */,
+				OBJ_274 /* SwoopUI.framework in Frameworks */,
+				OBJ_275 /* Flynn.framework in Frameworks */,
+				OBJ_276 /* Yoga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_293 /* Frameworks */ = {
+		OBJ_301 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
@@ -354,169 +362,172 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_11 /* NSHostingView.swift */,
+				OBJ_12 /* PreviewProvider.swift */,
+				OBJ_13 /* SwoopLayer.swift */,
+				OBJ_14 /* SwoopMetalLayer.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		OBJ_107 /* include */ = {
+		OBJ_110 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_108 /* YGEnums.h */,
-				OBJ_109 /* YGMacros.h */,
-				OBJ_110 /* YGValue.h */,
-				OBJ_111 /* Yoga.h */,
+				OBJ_111 /* YGEnums.h */,
+				OBJ_112 /* YGMacros.h */,
+				OBJ_113 /* YGValue.h */,
+				OBJ_114 /* Yoga.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		OBJ_112 /* Tests */ = {
+		OBJ_115 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_113 /* SwoopUITests */,
+				OBJ_116 /* SwoopUITests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_113 /* SwoopUITests */ = {
+		OBJ_116 /* SwoopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_114 /* BitmapTests.swift */,
-				OBJ_115 /* SwoopUITests.swift */,
-				OBJ_116 /* XCTestManifests.swift */,
+				OBJ_117 /* BitmapTests.swift */,
+				OBJ_118 /* SwoopUITests.swift */,
+				OBJ_119 /* XCTestManifests.swift */,
 			);
 			name = SwoopUITests;
 			path = Tests/SwoopUITests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_117 /* Dependencies */ = {
+		OBJ_120 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_118 /* Flynn */,
+				OBJ_121 /* Flynn */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_118 /* Flynn */ = {
+		OBJ_121 /* Flynn */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_119 /* Flynn */,
-				OBJ_132 /* Package.swift */,
+				OBJ_122 /* Flynn */,
+				OBJ_135 /* Package.swift */,
 			);
 			name = Flynn;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_119 /* Flynn */ = {
+		OBJ_122 /* Flynn */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_120 /* Actor.swift */,
-				OBJ_121 /* Atomics.swift */,
-				OBJ_122 /* Behavior.swift */,
-				OBJ_123 /* Device.swift */,
-				OBJ_124 /* Extensions.swift */,
-				OBJ_125 /* Flowable.swift */,
-				OBJ_126 /* Flynn+RegisteredActors.swift */,
-				OBJ_127 /* Flynn+Timer.swift */,
-				OBJ_128 /* Flynn.swift */,
-				OBJ_129 /* Profile.swift */,
-				OBJ_130 /* Queue.swift */,
-				OBJ_131 /* Scheduler.swift */,
+				OBJ_123 /* Actor.swift */,
+				OBJ_124 /* Atomics.swift */,
+				OBJ_125 /* Behavior.swift */,
+				OBJ_126 /* Device.swift */,
+				OBJ_127 /* Extensions.swift */,
+				OBJ_128 /* Flowable.swift */,
+				OBJ_129 /* Flynn+RegisteredActors.swift */,
+				OBJ_130 /* Flynn+Timer.swift */,
+				OBJ_131 /* Flynn.swift */,
+				OBJ_132 /* Profile.swift */,
+				OBJ_133 /* Queue.swift */,
+				OBJ_134 /* Scheduler.swift */,
 			);
 			name = Flynn;
 			path = .build/checkouts/Flynn/Sources/Flynn;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_12 /* Renderers */ = {
+		OBJ_136 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_13 /* Bitmap.swift */,
-				OBJ_14 /* BitmapRenderer.swift */,
-			);
-			path = Renderers;
-			sourceTree = "<group>";
-		};
-		OBJ_133 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"SwoopUI::SwoopUI::Product" /* SwoopUI.framework */,
-				"SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */,
-				"SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */,
 				"SwoopUI::Yoga::Product" /* Yoga.framework */,
+				"SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */,
+				"SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */,
+				"SwoopUI::SwoopUI::Product" /* SwoopUI.framework */,
 				"Flynn::Flynn::Product" /* Flynn.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_15 /* SwiftUI */ = {
+		OBJ_15 /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_16 /* Animatable.swift */,
-				OBJ_17 /* Binding.swift */,
-				OBJ_18 /* Layout */,
-				OBJ_27 /* LocalizedStringKey.swift */,
-				OBJ_28 /* Modifiers */,
-				OBJ_33 /* PropertyList.swift */,
-				OBJ_34 /* State.swift */,
-				OBJ_35 /* Transaction.swift */,
-				OBJ_36 /* ViewBuilder.swift */,
-				OBJ_37 /* Views */,
+				OBJ_16 /* Bitmap.swift */,
+				OBJ_17 /* BitmapRenderer.swift */,
+			);
+			path = Renderers;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* Animatable.swift */,
+				OBJ_20 /* Binding.swift */,
+				OBJ_21 /* Layout */,
+				OBJ_30 /* LocalizedStringKey.swift */,
+				OBJ_31 /* Modifiers */,
+				OBJ_36 /* PropertyList.swift */,
+				OBJ_37 /* State.swift */,
+				OBJ_38 /* Transaction.swift */,
+				OBJ_39 /* ViewBuilder.swift */,
+				OBJ_40 /* Views */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		OBJ_18 /* Layout */ = {
+		OBJ_21 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_19 /* Alignment.swift */,
-				OBJ_20 /* Axis.swift */,
-				OBJ_21 /* Edge.swift */,
-				OBJ_22 /* EdgeInsets.swift */,
-				OBJ_23 /* Point.swift */,
-				OBJ_24 /* Rect.swift */,
-				OBJ_25 /* Size.swift */,
-				OBJ_26 /* ViewDimensions.swift */,
+				OBJ_22 /* Alignment.swift */,
+				OBJ_23 /* Axis.swift */,
+				OBJ_24 /* Edge.swift */,
+				OBJ_25 /* EdgeInsets.swift */,
+				OBJ_26 /* Point.swift */,
+				OBJ_27 /* Rect.swift */,
+				OBJ_28 /* Size.swift */,
+				OBJ_29 /* ViewDimensions.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		OBJ_28 /* Modifiers */ = {
+		OBJ_31 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_29 /* EnvironmentKeyWritingModifier.swift */,
-				OBJ_30 /* EnvironmentalModifier.swift */,
-				OBJ_31 /* PaddingModifier.swift */,
-				OBJ_32 /* ViewModifier.swift */,
+				OBJ_32 /* EnvironmentKeyWritingModifier.swift */,
+				OBJ_33 /* EnvironmentalModifier.swift */,
+				OBJ_34 /* PaddingModifier.swift */,
+				OBJ_35 /* ViewModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
-		OBJ_37 /* Views */ = {
+		OBJ_40 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_38 /* AnyView.swift */,
-				OBJ_39 /* Button.swift */,
-				OBJ_40 /* Color.swift */,
-				OBJ_41 /* CoreGraphicsShim.swift */,
-				OBJ_42 /* Divider.swift */,
-				OBJ_43 /* EmptyView.swift */,
-				OBJ_44 /* Font.swift */,
-				OBJ_45 /* ForEach.swift */,
-				OBJ_46 /* Group.swift */,
-				OBJ_47 /* HStack.swift */,
-				OBJ_48 /* Image.swift */,
-				OBJ_49 /* ModifiedContent.swift */,
-				OBJ_50 /* Never.swift */,
-				OBJ_51 /* Optional.swift */,
-				OBJ_52 /* Picker.swift */,
-				OBJ_53 /* Shape.swift */,
-				OBJ_54 /* Shapes */,
-				OBJ_59 /* Spacer.swift */,
-				OBJ_60 /* Stepper.swift */,
-				OBJ_61 /* Text.swift */,
-				OBJ_62 /* Toggle.swift */,
-				OBJ_63 /* TupleView.swift */,
-				OBJ_64 /* VStack.swift */,
-				OBJ_65 /* View.swift */,
-				OBJ_66 /* ZStack.swift */,
+				OBJ_41 /* AnyView.swift */,
+				OBJ_42 /* Button.swift */,
+				OBJ_43 /* Color.swift */,
+				OBJ_44 /* CoreGraphicsShim.swift */,
+				OBJ_45 /* Divider.swift */,
+				OBJ_46 /* EmptyView.swift */,
+				OBJ_47 /* Font.swift */,
+				OBJ_48 /* ForEach.swift */,
+				OBJ_49 /* Group.swift */,
+				OBJ_50 /* HStack.swift */,
+				OBJ_51 /* Image.swift */,
+				OBJ_52 /* ModifiedContent.swift */,
+				OBJ_53 /* Never.swift */,
+				OBJ_54 /* Optional.swift */,
+				OBJ_55 /* Picker.swift */,
+				OBJ_56 /* Shape.swift */,
+				OBJ_57 /* Shapes */,
+				OBJ_62 /* Spacer.swift */,
+				OBJ_63 /* Stepper.swift */,
+				OBJ_64 /* Text.swift */,
+				OBJ_65 /* Toggle.swift */,
+				OBJ_66 /* TupleView.swift */,
+				OBJ_67 /* VStack.swift */,
+				OBJ_68 /* View.swift */,
+				OBJ_69 /* ZStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,125 +537,127 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_112 /* Tests */,
-				OBJ_117 /* Dependencies */,
-				OBJ_133 /* Products */,
-				OBJ_139 /* Makefile */,
-				OBJ_140 /* README.md */,
+				OBJ_115 /* Tests */,
+				OBJ_120 /* Dependencies */,
+				OBJ_136 /* Products */,
+				OBJ_142 /* Examples */,
+				OBJ_143 /* meta */,
+				OBJ_144 /* Makefile */,
+				OBJ_145 /* README.md */,
 			);
 			name = "";
 			sourceTree = "<group>";
 		};
-		OBJ_54 /* Shapes */ = {
+		OBJ_57 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_55 /* Angle.swift */,
-				OBJ_56 /* Circle.swift */,
-				OBJ_57 /* Path.swift */,
-				OBJ_58 /* Rectangle.swift */,
+				OBJ_58 /* Angle.swift */,
+				OBJ_59 /* Circle.swift */,
+				OBJ_60 /* Path.swift */,
+				OBJ_61 /* Rectangle.swift */,
 			);
 			path = Shapes;
-			sourceTree = "<group>";
-		};
-		OBJ_68 /* SwoopUI */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_69 /* Protocols */,
-				OBJ_71 /* Utility */,
-				OBJ_74 /* Views */,
-			);
-			path = SwoopUI;
-			sourceTree = "<group>";
-		};
-		OBJ_69 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_70 /* Viewable.swift */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_8 /* SwoopUI */,
-				OBJ_78 /* SwoopUIDemo */,
-				OBJ_80 /* Yoga */,
+				OBJ_81 /* SwoopUIDemo */,
+				OBJ_83 /* Yoga */,
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_71 /* Utility */ = {
+		OBJ_71 /* SwoopUI */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_72 /* Percentage.swift */,
-				OBJ_73 /* Yoga.swift */,
+				OBJ_72 /* Protocols */,
+				OBJ_74 /* Utility */,
+				OBJ_77 /* Views */,
+			);
+			path = SwoopUI;
+			sourceTree = "<group>";
+		};
+		OBJ_72 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_73 /* Viewable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_74 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_75 /* Percentage.swift */,
+				OBJ_76 /* Yoga.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		OBJ_74 /* Views */ = {
+		OBJ_77 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_75 /* SwColor.swift */,
-				OBJ_76 /* SwHStack.swift */,
-				OBJ_77 /* SwVStack.swift */,
+				OBJ_78 /* SwColor.swift */,
+				OBJ_79 /* SwHStack.swift */,
+				OBJ_80 /* SwVStack.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
-		};
-		OBJ_78 /* SwoopUIDemo */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_79 /* main.swift */,
-			);
-			name = SwoopUIDemo;
-			path = Sources/SwoopUIDemo;
-			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_8 /* SwoopUI */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_9 /* Platforms */,
-				OBJ_12 /* Renderers */,
-				OBJ_15 /* SwiftUI */,
-				OBJ_67 /* SwoopUI.swift */,
-				OBJ_68 /* SwoopUI */,
+				OBJ_15 /* Renderers */,
+				OBJ_18 /* SwiftUI */,
+				OBJ_70 /* SwoopUI.swift */,
+				OBJ_71 /* SwoopUI */,
 			);
 			name = SwoopUI;
 			path = Sources/SwoopUI;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_80 /* Yoga */ = {
+		OBJ_81 /* SwoopUIDemo */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_81 /* BitUtils.h */,
-				OBJ_82 /* CompactValue.h */,
-				OBJ_83 /* event.h */,
-				OBJ_84 /* experiments-inl.h */,
-				OBJ_85 /* experiments.h */,
-				OBJ_86 /* log.h */,
-				OBJ_87 /* Utils.h */,
-				OBJ_88 /* YGConfig.h */,
-				OBJ_89 /* YGFloatOptional.h */,
-				OBJ_90 /* YGLayout.h */,
-				OBJ_91 /* YGNode.h */,
-				OBJ_92 /* YGNodePrint.h */,
-				OBJ_93 /* YGStyle.h */,
-				OBJ_94 /* Yoga-internal.h */,
-				OBJ_95 /* Utils.cpp */,
-				OBJ_96 /* YGConfig.cpp */,
-				OBJ_97 /* YGEnums.cpp */,
-				OBJ_98 /* YGLayout.cpp */,
-				OBJ_99 /* YGNode.cpp */,
-				OBJ_100 /* YGNodePrint.cpp */,
-				OBJ_101 /* YGStyle.cpp */,
-				OBJ_102 /* YGValue.cpp */,
-				OBJ_103 /* Yoga.cpp */,
-				OBJ_104 /* event.cpp */,
-				OBJ_105 /* experiments.cpp */,
-				OBJ_106 /* log.cpp */,
-				OBJ_107 /* include */,
+				OBJ_82 /* main.swift */,
+			);
+			name = SwoopUIDemo;
+			path = Sources/SwoopUIDemo;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_83 /* Yoga */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_84 /* BitUtils.h */,
+				OBJ_85 /* CompactValue.h */,
+				OBJ_86 /* event.h */,
+				OBJ_87 /* experiments-inl.h */,
+				OBJ_88 /* experiments.h */,
+				OBJ_89 /* log.h */,
+				OBJ_90 /* Utils.h */,
+				OBJ_91 /* YGConfig.h */,
+				OBJ_92 /* YGFloatOptional.h */,
+				OBJ_93 /* YGLayout.h */,
+				OBJ_94 /* YGNode.h */,
+				OBJ_95 /* YGNodePrint.h */,
+				OBJ_96 /* YGStyle.h */,
+				OBJ_97 /* Yoga-internal.h */,
+				OBJ_98 /* Utils.cpp */,
+				OBJ_99 /* YGConfig.cpp */,
+				OBJ_100 /* YGEnums.cpp */,
+				OBJ_101 /* YGLayout.cpp */,
+				OBJ_102 /* YGNode.cpp */,
+				OBJ_103 /* YGNodePrint.cpp */,
+				OBJ_104 /* YGStyle.cpp */,
+				OBJ_105 /* YGValue.cpp */,
+				OBJ_106 /* Yoga.cpp */,
+				OBJ_107 /* event.cpp */,
+				OBJ_108 /* experiments.cpp */,
+				OBJ_109 /* log.cpp */,
+				OBJ_110 /* include */,
 			);
 			name = Yoga;
 			path = Sources/Yoga;
@@ -661,14 +674,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		OBJ_288 /* Headers */ = {
+		OBJ_296 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_289 /* YGEnums.h in Headers */,
-				OBJ_290 /* YGMacros.h in Headers */,
-				OBJ_291 /* YGValue.h in Headers */,
-				OBJ_292 /* Yoga.h in Headers */,
+				OBJ_297 /* YGEnums.h in Headers */,
+				OBJ_298 /* YGMacros.h in Headers */,
+				OBJ_299 /* YGValue.h in Headers */,
+				OBJ_300 /* Yoga.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,10 +690,10 @@
 /* Begin PBXNativeTarget section */
 		"Flynn::Flynn" /* Flynn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_142 /* Build configuration list for PBXNativeTarget "Flynn" */;
+			buildConfigurationList = OBJ_147 /* Build configuration list for PBXNativeTarget "Flynn" */;
 			buildPhases = (
-				OBJ_145 /* Sources */,
-				OBJ_158 /* Frameworks */,
+				OBJ_150 /* Sources */,
+				OBJ_163 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -693,9 +706,9 @@
 		};
 		"Flynn::SwiftPMPackageDescription" /* FlynnPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_160 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */;
+			buildConfigurationList = OBJ_165 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */;
 			buildPhases = (
-				OBJ_163 /* Sources */,
+				OBJ_168 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -707,9 +720,9 @@
 		};
 		"SwoopUI::SwiftPMPackageDescription" /* SwoopUIPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_247 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */;
+			buildConfigurationList = OBJ_255 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */;
 			buildPhases = (
-				OBJ_250 /* Sources */,
+				OBJ_258 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -721,18 +734,18 @@
 		};
 		"SwoopUI::SwoopUI" /* SwoopUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_166 /* Build configuration list for PBXNativeTarget "SwoopUI" */;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "SwoopUI" */;
 			buildPhases = (
-				4603942B24D48E7C00D22954 /* FlynnLint */,
-				4603942C24D48E7E00D22954 /* SwiftLint */,
-				OBJ_169 /* Sources */,
-				OBJ_227 /* Frameworks */,
+				466136F224D60CC7005DC253 /* FlynnLint */,
+				466136F324D60CC8005DC253 /* SwiftLint */,
+				OBJ_174 /* Sources */,
+				OBJ_235 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_230 /* PBXTargetDependency */,
-				OBJ_231 /* PBXTargetDependency */,
+				OBJ_238 /* PBXTargetDependency */,
+				OBJ_239 /* PBXTargetDependency */,
 			);
 			name = SwoopUI;
 			productName = SwoopUI;
@@ -741,17 +754,17 @@
 		};
 		"SwoopUI::SwoopUIDemo" /* SwoopUIDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_234 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */;
+			buildConfigurationList = OBJ_242 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */;
 			buildPhases = (
-				OBJ_237 /* Sources */,
-				OBJ_239 /* Frameworks */,
+				OBJ_245 /* Sources */,
+				OBJ_247 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_243 /* PBXTargetDependency */,
-				OBJ_244 /* PBXTargetDependency */,
-				OBJ_245 /* PBXTargetDependency */,
+				OBJ_251 /* PBXTargetDependency */,
+				OBJ_252 /* PBXTargetDependency */,
+				OBJ_253 /* PBXTargetDependency */,
 			);
 			name = SwoopUIDemo;
 			productName = SwoopUIDemo;
@@ -760,17 +773,17 @@
 		};
 		"SwoopUI::SwoopUITests" /* SwoopUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_258 /* Build configuration list for PBXNativeTarget "SwoopUITests" */;
+			buildConfigurationList = OBJ_266 /* Build configuration list for PBXNativeTarget "SwoopUITests" */;
 			buildPhases = (
-				OBJ_261 /* Sources */,
-				OBJ_265 /* Frameworks */,
+				OBJ_269 /* Sources */,
+				OBJ_273 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_269 /* PBXTargetDependency */,
-				OBJ_270 /* PBXTargetDependency */,
-				OBJ_271 /* PBXTargetDependency */,
+				OBJ_277 /* PBXTargetDependency */,
+				OBJ_278 /* PBXTargetDependency */,
+				OBJ_279 /* PBXTargetDependency */,
 			);
 			name = SwoopUITests;
 			productName = SwoopUITests;
@@ -779,11 +792,11 @@
 		};
 		"SwoopUI::Yoga" /* Yoga */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_272 /* Build configuration list for PBXNativeTarget "Yoga" */;
+			buildConfigurationList = OBJ_280 /* Build configuration list for PBXNativeTarget "Yoga" */;
 			buildPhases = (
-				OBJ_275 /* Sources */,
-				OBJ_288 /* Headers */,
-				OBJ_293 /* Frameworks */,
+				OBJ_283 /* Sources */,
+				OBJ_296 /* Headers */,
+				OBJ_301 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -811,7 +824,7 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_133 /* Products */;
+			productRefGroup = OBJ_136 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -828,7 +841,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4603942B24D48E7C00D22954 /* FlynnLint */ = {
+		466136F224D60CC7005DC253 /* FlynnLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -846,7 +859,7 @@
 			shellPath = /bin/sh;
 			shellScript = "FLYNNLINTSWIFTPM=${SRCROOT}/.build/checkouts/flynn/meta/FlynnLint\nFLYNNLINTXCODE=${BUILD_ROOT}/../../SourcePackages/checkouts/flynn/meta/FlynnLint\n\nif [ -f \"${FLYNNLINTSWIFTPM}\" ]; then\n    ${FLYNNLINTSWIFTPM} ${SRCROOT}\nelif [ -f \"${FLYNNLINTXCODE}\" ]; then\n    ${FLYNNLINTXCODE} ${SRCROOT}\nelse\n    echo \"warning: Unable to find FlynnLint, aborting...\"\nfi\n";
 		};
-		4603942C24D48E7E00D22954 /* SwiftLint */ = {
+		466136F324D60CC8005DC253 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -867,194 +880,197 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_145 /* Sources */ = {
+		OBJ_150 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_146 /* Actor.swift in Sources */,
-				OBJ_147 /* Atomics.swift in Sources */,
-				OBJ_148 /* Behavior.swift in Sources */,
-				OBJ_149 /* Device.swift in Sources */,
-				OBJ_150 /* Extensions.swift in Sources */,
-				OBJ_151 /* Flowable.swift in Sources */,
-				OBJ_152 /* Flynn+RegisteredActors.swift in Sources */,
-				OBJ_153 /* Flynn+Timer.swift in Sources */,
-				OBJ_154 /* Flynn.swift in Sources */,
-				OBJ_155 /* Profile.swift in Sources */,
-				OBJ_156 /* Queue.swift in Sources */,
-				OBJ_157 /* Scheduler.swift in Sources */,
+				OBJ_151 /* Actor.swift in Sources */,
+				OBJ_152 /* Atomics.swift in Sources */,
+				OBJ_153 /* Behavior.swift in Sources */,
+				OBJ_154 /* Device.swift in Sources */,
+				OBJ_155 /* Extensions.swift in Sources */,
+				OBJ_156 /* Flowable.swift in Sources */,
+				OBJ_157 /* Flynn+RegisteredActors.swift in Sources */,
+				OBJ_158 /* Flynn+Timer.swift in Sources */,
+				OBJ_159 /* Flynn.swift in Sources */,
+				OBJ_160 /* Profile.swift in Sources */,
+				OBJ_161 /* Queue.swift in Sources */,
+				OBJ_162 /* Scheduler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_163 /* Sources */ = {
+		OBJ_168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_164 /* Package.swift in Sources */,
+				OBJ_169 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_169 /* Sources */ = {
+		OBJ_174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_170 /* NSHostingView.swift in Sources */,
-				OBJ_171 /* Bitmap.swift in Sources */,
-				OBJ_172 /* BitmapRenderer.swift in Sources */,
-				OBJ_173 /* Animatable.swift in Sources */,
-				OBJ_174 /* Binding.swift in Sources */,
-				OBJ_175 /* Alignment.swift in Sources */,
-				OBJ_176 /* Axis.swift in Sources */,
-				OBJ_177 /* Edge.swift in Sources */,
-				OBJ_178 /* EdgeInsets.swift in Sources */,
-				OBJ_179 /* Point.swift in Sources */,
-				OBJ_180 /* Rect.swift in Sources */,
-				OBJ_181 /* Size.swift in Sources */,
-				OBJ_182 /* ViewDimensions.swift in Sources */,
-				OBJ_183 /* LocalizedStringKey.swift in Sources */,
-				OBJ_184 /* EnvironmentKeyWritingModifier.swift in Sources */,
-				OBJ_185 /* EnvironmentalModifier.swift in Sources */,
-				OBJ_186 /* PaddingModifier.swift in Sources */,
-				OBJ_187 /* ViewModifier.swift in Sources */,
-				OBJ_188 /* PropertyList.swift in Sources */,
-				OBJ_189 /* State.swift in Sources */,
-				OBJ_190 /* Transaction.swift in Sources */,
-				OBJ_191 /* ViewBuilder.swift in Sources */,
-				OBJ_192 /* AnyView.swift in Sources */,
-				OBJ_193 /* Button.swift in Sources */,
-				OBJ_194 /* Color.swift in Sources */,
-				OBJ_195 /* CoreGraphicsShim.swift in Sources */,
-				OBJ_196 /* Divider.swift in Sources */,
-				OBJ_197 /* EmptyView.swift in Sources */,
-				OBJ_198 /* Font.swift in Sources */,
-				OBJ_199 /* ForEach.swift in Sources */,
-				OBJ_200 /* Group.swift in Sources */,
-				OBJ_201 /* HStack.swift in Sources */,
-				OBJ_202 /* Image.swift in Sources */,
-				OBJ_203 /* ModifiedContent.swift in Sources */,
-				OBJ_204 /* Never.swift in Sources */,
-				OBJ_205 /* Optional.swift in Sources */,
-				OBJ_206 /* Picker.swift in Sources */,
-				OBJ_207 /* Shape.swift in Sources */,
-				OBJ_208 /* Angle.swift in Sources */,
-				OBJ_209 /* Circle.swift in Sources */,
-				OBJ_210 /* Path.swift in Sources */,
-				OBJ_211 /* Rectangle.swift in Sources */,
-				OBJ_212 /* Spacer.swift in Sources */,
-				OBJ_213 /* Stepper.swift in Sources */,
-				OBJ_214 /* Text.swift in Sources */,
-				OBJ_215 /* Toggle.swift in Sources */,
-				OBJ_216 /* TupleView.swift in Sources */,
-				OBJ_217 /* VStack.swift in Sources */,
-				OBJ_218 /* View.swift in Sources */,
-				OBJ_219 /* ZStack.swift in Sources */,
-				OBJ_220 /* SwoopUI.swift in Sources */,
-				OBJ_221 /* Viewable.swift in Sources */,
-				OBJ_222 /* Percentage.swift in Sources */,
-				OBJ_223 /* Yoga.swift in Sources */,
-				OBJ_224 /* SwColor.swift in Sources */,
-				OBJ_225 /* SwHStack.swift in Sources */,
-				OBJ_226 /* SwVStack.swift in Sources */,
+				OBJ_175 /* NSHostingView.swift in Sources */,
+				OBJ_176 /* PreviewProvider.swift in Sources */,
+				OBJ_177 /* SwoopLayer.swift in Sources */,
+				OBJ_178 /* SwoopMetalLayer.swift in Sources */,
+				OBJ_179 /* Bitmap.swift in Sources */,
+				OBJ_180 /* BitmapRenderer.swift in Sources */,
+				OBJ_181 /* Animatable.swift in Sources */,
+				OBJ_182 /* Binding.swift in Sources */,
+				OBJ_183 /* Alignment.swift in Sources */,
+				OBJ_184 /* Axis.swift in Sources */,
+				OBJ_185 /* Edge.swift in Sources */,
+				OBJ_186 /* EdgeInsets.swift in Sources */,
+				OBJ_187 /* Point.swift in Sources */,
+				OBJ_188 /* Rect.swift in Sources */,
+				OBJ_189 /* Size.swift in Sources */,
+				OBJ_190 /* ViewDimensions.swift in Sources */,
+				OBJ_191 /* LocalizedStringKey.swift in Sources */,
+				OBJ_192 /* EnvironmentKeyWritingModifier.swift in Sources */,
+				OBJ_193 /* EnvironmentalModifier.swift in Sources */,
+				OBJ_194 /* PaddingModifier.swift in Sources */,
+				OBJ_195 /* ViewModifier.swift in Sources */,
+				OBJ_196 /* PropertyList.swift in Sources */,
+				OBJ_197 /* State.swift in Sources */,
+				OBJ_198 /* Transaction.swift in Sources */,
+				OBJ_199 /* ViewBuilder.swift in Sources */,
+				OBJ_200 /* AnyView.swift in Sources */,
+				OBJ_201 /* Button.swift in Sources */,
+				OBJ_202 /* Color.swift in Sources */,
+				OBJ_203 /* CoreGraphicsShim.swift in Sources */,
+				OBJ_204 /* Divider.swift in Sources */,
+				OBJ_205 /* EmptyView.swift in Sources */,
+				OBJ_206 /* Font.swift in Sources */,
+				OBJ_207 /* ForEach.swift in Sources */,
+				OBJ_208 /* Group.swift in Sources */,
+				OBJ_209 /* HStack.swift in Sources */,
+				OBJ_210 /* Image.swift in Sources */,
+				OBJ_211 /* ModifiedContent.swift in Sources */,
+				OBJ_212 /* Never.swift in Sources */,
+				OBJ_213 /* Optional.swift in Sources */,
+				OBJ_214 /* Picker.swift in Sources */,
+				OBJ_215 /* Shape.swift in Sources */,
+				OBJ_216 /* Angle.swift in Sources */,
+				OBJ_217 /* Circle.swift in Sources */,
+				OBJ_218 /* Path.swift in Sources */,
+				OBJ_219 /* Rectangle.swift in Sources */,
+				OBJ_220 /* Spacer.swift in Sources */,
+				OBJ_221 /* Stepper.swift in Sources */,
+				OBJ_222 /* Text.swift in Sources */,
+				OBJ_223 /* Toggle.swift in Sources */,
+				OBJ_224 /* TupleView.swift in Sources */,
+				OBJ_225 /* VStack.swift in Sources */,
+				OBJ_226 /* View.swift in Sources */,
+				OBJ_227 /* ZStack.swift in Sources */,
+				OBJ_228 /* SwoopUI.swift in Sources */,
+				OBJ_229 /* Viewable.swift in Sources */,
+				OBJ_230 /* Percentage.swift in Sources */,
+				OBJ_231 /* Yoga.swift in Sources */,
+				OBJ_232 /* SwColor.swift in Sources */,
+				OBJ_233 /* SwHStack.swift in Sources */,
+				OBJ_234 /* SwVStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_237 /* Sources */ = {
+		OBJ_245 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_238 /* main.swift in Sources */,
+				OBJ_246 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_250 /* Sources */ = {
+		OBJ_258 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_251 /* Package.swift in Sources */,
+				OBJ_259 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_261 /* Sources */ = {
+		OBJ_269 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_262 /* BitmapTests.swift in Sources */,
-				OBJ_263 /* SwoopUITests.swift in Sources */,
-				OBJ_264 /* XCTestManifests.swift in Sources */,
+				OBJ_270 /* BitmapTests.swift in Sources */,
+				OBJ_271 /* SwoopUITests.swift in Sources */,
+				OBJ_272 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_275 /* Sources */ = {
+		OBJ_283 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_276 /* Utils.cpp in Sources */,
-				OBJ_277 /* YGConfig.cpp in Sources */,
-				OBJ_278 /* YGEnums.cpp in Sources */,
-				OBJ_279 /* YGLayout.cpp in Sources */,
-				OBJ_280 /* YGNode.cpp in Sources */,
-				OBJ_281 /* YGNodePrint.cpp in Sources */,
-				OBJ_282 /* YGStyle.cpp in Sources */,
-				OBJ_283 /* YGValue.cpp in Sources */,
-				OBJ_284 /* Yoga.cpp in Sources */,
-				OBJ_285 /* event.cpp in Sources */,
-				OBJ_286 /* experiments.cpp in Sources */,
-				OBJ_287 /* log.cpp in Sources */,
+				OBJ_284 /* Utils.cpp in Sources */,
+				OBJ_285 /* YGConfig.cpp in Sources */,
+				OBJ_286 /* YGEnums.cpp in Sources */,
+				OBJ_287 /* YGLayout.cpp in Sources */,
+				OBJ_288 /* YGNode.cpp in Sources */,
+				OBJ_289 /* YGNodePrint.cpp in Sources */,
+				OBJ_290 /* YGStyle.cpp in Sources */,
+				OBJ_291 /* YGValue.cpp in Sources */,
+				OBJ_292 /* Yoga.cpp in Sources */,
+				OBJ_293 /* event.cpp in Sources */,
+				OBJ_294 /* experiments.cpp in Sources */,
+				OBJ_295 /* log.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_230 /* PBXTargetDependency */ = {
+		OBJ_238 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 4603942324D48E7400D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136E924D60CBE005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_231 /* PBXTargetDependency */ = {
+		OBJ_239 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 4603942424D48E7400D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136EA24D60CBE005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_243 /* PBXTargetDependency */ = {
+		OBJ_251 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::SwoopUI" /* SwoopUI */;
-			targetProxy = 4603942224D48E7400D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136EB24D60CBE005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_244 /* PBXTargetDependency */ = {
+		OBJ_252 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 4603942524D48E7400D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136EC24D60CBE005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_245 /* PBXTargetDependency */ = {
+		OBJ_253 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 4603942624D48E7400D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136ED24D60CBE005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_256 /* PBXTargetDependency */ = {
+		OBJ_264 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::SwoopUITests" /* SwoopUITests */;
-			targetProxy = 4603942A24D48E7600D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136F124D60CC0005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_269 /* PBXTargetDependency */ = {
+		OBJ_277 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::SwoopUI" /* SwoopUI */;
-			targetProxy = 4603942724D48E7500D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136EE24D60CBF005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_270 /* PBXTargetDependency */ = {
+		OBJ_278 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 4603942824D48E7500D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136EF24D60CBF005DC253 /* PBXContainerItemProxy */;
 		};
-		OBJ_271 /* PBXTargetDependency */ = {
+		OBJ_279 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 4603942924D48E7500D22954 /* PBXContainerItemProxy */;
+			targetProxy = 466136F024D60CBF005DC253 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_143 /* Debug */ = {
+		OBJ_148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1082,7 +1098,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_144 /* Release */ = {
+		OBJ_149 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1110,7 +1126,7 @@
 			};
 			name = Release;
 		};
-		OBJ_161 /* Debug */ = {
+		OBJ_166 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1119,7 +1135,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_162 /* Release */ = {
+		OBJ_167 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1128,7 +1144,7 @@
 			};
 			name = Release;
 		};
-		OBJ_167 /* Debug */ = {
+		OBJ_172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1159,7 +1175,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_168 /* Release */ = {
+		OBJ_173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1190,7 +1206,7 @@
 			};
 			name = Release;
 		};
-		OBJ_235 /* Debug */ = {
+		OBJ_243 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1218,7 +1234,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_236 /* Release */ = {
+		OBJ_244 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1246,7 +1262,7 @@
 			};
 			name = Release;
 		};
-		OBJ_248 /* Debug */ = {
+		OBJ_256 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1255,7 +1271,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_249 /* Release */ = {
+		OBJ_257 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1264,19 +1280,19 @@
 			};
 			name = Release;
 		};
-		OBJ_254 /* Debug */ = {
+		OBJ_262 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		OBJ_255 /* Release */ = {
+		OBJ_263 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		OBJ_259 /* Debug */ = {
+		OBJ_267 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1304,7 +1320,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_260 /* Release */ = {
+		OBJ_268 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1332,7 +1348,7 @@
 			};
 			name = Release;
 		};
-		OBJ_273 /* Debug */ = {
+		OBJ_281 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1365,7 +1381,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_274 /* Release */ = {
+		OBJ_282 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1452,29 +1468,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_142 /* Build configuration list for PBXNativeTarget "Flynn" */ = {
+		OBJ_147 /* Build configuration list for PBXNativeTarget "Flynn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_143 /* Debug */,
-				OBJ_144 /* Release */,
+				OBJ_148 /* Debug */,
+				OBJ_149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_160 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */ = {
+		OBJ_165 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_161 /* Debug */,
-				OBJ_162 /* Release */,
+				OBJ_166 /* Debug */,
+				OBJ_167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_166 /* Build configuration list for PBXNativeTarget "SwoopUI" */ = {
+		OBJ_171 /* Build configuration list for PBXNativeTarget "SwoopUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_167 /* Debug */,
-				OBJ_168 /* Release */,
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1488,47 +1504,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_234 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */ = {
+		OBJ_242 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_235 /* Debug */,
-				OBJ_236 /* Release */,
+				OBJ_243 /* Debug */,
+				OBJ_244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_247 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */ = {
+		OBJ_255 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_248 /* Debug */,
-				OBJ_249 /* Release */,
+				OBJ_256 /* Debug */,
+				OBJ_257 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_253 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */ = {
+		OBJ_261 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_254 /* Debug */,
-				OBJ_255 /* Release */,
+				OBJ_262 /* Debug */,
+				OBJ_263 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_258 /* Build configuration list for PBXNativeTarget "SwoopUITests" */ = {
+		OBJ_266 /* Build configuration list for PBXNativeTarget "SwoopUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_259 /* Debug */,
-				OBJ_260 /* Release */,
+				OBJ_267 /* Debug */,
+				OBJ_268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_272 /* Build configuration list for PBXNativeTarget "Yoga" */ = {
+		OBJ_280 /* Build configuration list for PBXNativeTarget "Yoga" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_273 /* Debug */,
-				OBJ_274 /* Release */,
+				OBJ_281 /* Debug */,
+				OBJ_282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

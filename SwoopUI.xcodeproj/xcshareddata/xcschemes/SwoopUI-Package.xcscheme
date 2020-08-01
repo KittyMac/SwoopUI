@@ -14,20 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "SwoopUI::SwoopUIDemo"
-               BuildableName = "SwoopUIDemo"
-               BlueprintName = "SwoopUIDemo"
-               ReferencedContainer = "container:SwoopUI.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "SwoopUI::SwoopUI"
                BuildableName = "SwoopUI.framework"
                BlueprintName = "SwoopUI"
@@ -45,6 +31,20 @@
                BlueprintIdentifier = "SwoopUI::Yoga"
                BuildableName = "Yoga.framework"
                BlueprintName = "Yoga"
+               ReferencedContainer = "container:SwoopUI.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "SwoopUI::SwoopUIDemo"
+               BuildableName = "SwoopUIDemo"
+               BlueprintName = "SwoopUIDemo"
                ReferencedContainer = "container:SwoopUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

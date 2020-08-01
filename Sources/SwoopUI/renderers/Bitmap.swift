@@ -30,6 +30,8 @@ public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
 
 public class Bitmap {
 
+    private static var zeroBytes = UnsafeMutablePointer<UInt32>.allocate(capacity: 0)
+
     public struct BitmapInfo {
         let width: Int
         let height: Int
@@ -65,7 +67,13 @@ public class Bitmap {
     }
 
     deinit {
-        bytes32.deallocate()
+        deallocate(bytes32)
+    }
+
+    private func deallocate(_ bytePtr: UnsafeMutablePointer<UInt32>) {
+        if bytePtr != Bitmap.zeroBytes {
+            bytePtr.deallocate()
+        }
     }
 
     func resize(_ width: Int, _ height: Int) {
@@ -78,7 +86,7 @@ public class Bitmap {
                 return
             }
 
-            bytes32.deallocate()
+            deallocate(bytes32)
             allocated = newAllocatedSize
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
         }
@@ -87,6 +95,7 @@ public class Bitmap {
     func scaleTo(_ width: Int, _ height: Int) {
         if self.width != width || self.height != height {
             let old = self.info
+            bytes32 = Bitmap.zeroBytes
 
             resize(width, height)
 
@@ -97,6 +106,7 @@ public class Bitmap {
     func recoverMemory() {
         if allocated > width * height * channels {
             let old = self.info
+            bytes32 = Bitmap.zeroBytes
 
             allocated = width * height * channels
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
@@ -114,7 +124,7 @@ public class Bitmap {
              old.bytesPerRow,
              pixelCopy)
 
-        old.bytes32.deallocate()
+        deallocate(old.bytes32)
     }
 
     func clear() {
