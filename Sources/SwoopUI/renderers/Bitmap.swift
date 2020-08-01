@@ -4,6 +4,8 @@ import Flynn
 // swiftlint:disable identifier_name
 // swiftlint:disable cyclomatic_complexity
 // swiftlint:disable function_parameter_count
+// swiftlint:disable function_body_length
+// swiftlint:disable type_body_length
 
 // We work in RGBA 32-bit color values. This means we need to worry about endianness
 // On big endian, that's R-G-B-A
@@ -32,10 +34,10 @@ public class Bitmap {
         let width: Int
         let height: Int
         let channels: Int
-        let rowBytes: Int
+        let bytesPerRow: Int
         let bytes32: UnsafeMutablePointer<UInt32>
     }
-    
+
     private var allocated: Int = 0
 
     private var width: Int = 0
@@ -44,12 +46,12 @@ public class Bitmap {
 
     private var bytes32: UnsafeMutablePointer<UInt32>
 
-    public var rowBytes: Int {
+    public var bytesPerRow: Int {
         return width * channels
     }
 
     public var info: BitmapInfo {
-        return BitmapInfo(width: width, height: height, channels: channels, rowBytes: rowBytes, bytes32: bytes32)
+        return BitmapInfo(width: width, height: height, channels: channels, bytesPerRow: bytesPerRow, bytes32: bytes32)
     }
 
     init(_ width: Int, _ height: Int) {
@@ -75,43 +77,43 @@ public class Bitmap {
             if newAllocatedSize <= allocated {
                 return
             }
-            
+
             bytes32.deallocate()
             allocated = newAllocatedSize
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
         }
     }
-    
+
     func scaleTo(_ width: Int, _ height: Int) {
         if self.width != width || self.height != height {
             let old = self.info
-            
+
             resize(width, height)
 
             copyAndDeallocateFromOldBitmap(old)
         }
     }
-    
+
     func recoverMemory() {
         if allocated > width * height * channels {
             let old = self.info
-            
+
             allocated = width * height * channels
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
-            
+
             copyAndDeallocateFromOldBitmap(old)
         }
     }
-    
+
     private func copyAndDeallocateFromOldBitmap(_ old: BitmapInfo) {
         blit(bytes32,
              Rect(x: 0, y: 0, width: width, height: height),
-             rowBytes,
+             bytesPerRow,
              old.bytes32,
              Rect(x: 0, y: 0, width: old.width, height: old.height),
-             old.rowBytes,
+             old.bytesPerRow,
              pixelCopy)
-        
+
         old.bytes32.deallocate()
     }
 
@@ -120,6 +122,10 @@ public class Bitmap {
     }
 
     func raw() -> Data {
+        return Data(bytesNoCopy: bytes32, count: width * height * channels, deallocator: .none)
+    }
+
+    func rawRGBA() -> Data {
         var data = Data(bytes: bytes32, count: width * height * channels)
         data.withUnsafeMutableBytes({ (bytes: UnsafeMutablePointer<UInt32>) -> Void in
             var ptr = bytes
@@ -203,13 +209,13 @@ public class Bitmap {
         if ((color.rgba32 >> BYTE_ALPHA) & 0xFF) == 255 {
             blitColor(bytes32,
                       dstRect,
-                      rowBytes,
+                      bytesPerRow,
                       color.rgba32,
                       pixelCopy)
         } else {
             blitColor(bytes32,
                       dstRect,
-                      rowBytes,
+                      bytesPerRow,
                       color.rgba32,
                       function)
         }
@@ -221,20 +227,20 @@ public class Bitmap {
         if srcRect.width == dstRect.width && srcRect.height == dstRect.height {
             blitExact(bytes32,
                       dstRect,
-                      rowBytes,
+                      bytesPerRow,
                       srcBitmap.bytes32,
                       srcRect,
-                      srcBitmap.rowBytes,
+                      srcBitmap.bytesPerRow,
                       function)
             return
         }
 
         blit(bytes32,
              dstRect,
-             rowBytes,
+             bytesPerRow,
              srcBitmap.bytes32,
              srcRect,
-             srcBitmap.rowBytes,
+             srcBitmap.bytesPerRow,
              function)
     }
 

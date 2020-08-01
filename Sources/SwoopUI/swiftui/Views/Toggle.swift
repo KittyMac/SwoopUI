@@ -1,5 +1,3 @@
-// swiftlint:disable nesting
-
 public struct Toggle<Label>: View where Label: View {
     public var isOnValue: Binding<Bool>
     public var label: Label

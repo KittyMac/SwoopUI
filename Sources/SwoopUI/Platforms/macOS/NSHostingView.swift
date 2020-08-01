@@ -5,10 +5,10 @@ import Cocoa
 
 public class NSHostingView: NSView {
     let rootView: View?
-    
+
     public override func makeBackingLayer() -> CALayer {
         if let rootView = rootView {
-            return SwoopLayer(rootView: rootView)
+            return SwoopMetalLayer(rootView: rootView)
         }
         return CALayer()
     }

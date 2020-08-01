@@ -4,17 +4,10 @@
 
 import Foundation
 
-#if arch(x86_64)
 let BYTE_RED = 24
 let BYTE_GREEN = 16
 let BYTE_BLUE = 8
 let BYTE_ALPHA = 0
-#else
-let BYTE_RED = 24
-let BYTE_GREEN = 16
-let BYTE_BLUE = 8
-let BYTE_ALPHA = 0
-#endif
 
 public class AnyColorBox {
     var rgba: UInt32 = 0
