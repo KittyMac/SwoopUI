@@ -35,6 +35,8 @@ public class Bitmap {
         let rowBytes: Int
         let bytes32: UnsafeMutablePointer<UInt32>
     }
+    
+    private var allocated: Int = 0
 
     private var width: Int = 0
     private var height: Int = 0
@@ -54,6 +56,7 @@ public class Bitmap {
         self.width = width
         self.height = height
 
+        allocated = width * height * channels
         bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
 
         clear()
@@ -67,7 +70,14 @@ public class Bitmap {
         if self.width != width || self.height != height {
             self.width = width
             self.height = height
+
+            let newAllocatedSize = width * height * channels
+            if newAllocatedSize <= allocated {
+                return
+            }
+            
             bytes32.deallocate()
+            allocated = newAllocatedSize
             bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
         }
     }
@@ -76,18 +86,33 @@ public class Bitmap {
         if self.width != width || self.height != height {
             let old = self.info
             
-            self.width = width
-            self.height = height
-            bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
+            resize(width, height)
 
-            blit(bytes32,
-                 Rect(x: 0, y: 0, width: width, height: height),
-                 rowBytes,
-                 old.bytes32,
-                 Rect(x: 0, y: 0, width: old.width, height: old.height),
-                 old.rowBytes,
-                 pixelCopy)
+            copyAndDeallocateFromOldBitmap(old)
         }
+    }
+    
+    func recoverMemory() {
+        if allocated > width * height * channels {
+            let old = self.info
+            
+            allocated = width * height * channels
+            bytes32 = UnsafeMutablePointer<UInt32>.allocate(capacity: width * height)
+            
+            copyAndDeallocateFromOldBitmap(old)
+        }
+    }
+    
+    private func copyAndDeallocateFromOldBitmap(_ old: BitmapInfo) {
+        blit(bytes32,
+             Rect(x: 0, y: 0, width: width, height: height),
+             rowBytes,
+             old.bytes32,
+             Rect(x: 0, y: 0, width: old.width, height: old.height),
+             old.rowBytes,
+             pixelCopy)
+        
+        old.bytes32.deallocate()
     }
 
     func clear() {
