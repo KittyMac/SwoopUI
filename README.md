@@ -22,4 +22,5 @@ SwoopUI is incredibly now so we don't have a definitive answer. However, here ar
 
 ### SwoopUI (linux)
 
-(soon)
+![](meta/linux.png)
+
