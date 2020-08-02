@@ -1,6 +1,14 @@
 import SDL2
 import SwoopUI
 
+#if os(Linux)
+extension Int {
+    var rawValue: UInt32 {
+        return UInt32(self)
+    }
+}
+#endif
+
 class SwoopUIDemo {
     let window: OpaquePointer?
     let renderer: OpaquePointer
@@ -76,16 +84,8 @@ class SwoopUIDemo {
     
     func run() {
         while true {
-            let timeStart = SDL_GetTicks()
-            
             events()
             draw()
-            
-            // limit to 30 fps
-            let timeTaken = Int(SDL_GetTicks() - timeStart)
-            if timeTaken < 33 {
-                SDL_Delay(UInt32(33 - timeTaken))
-            }
         }
     }
 }

@@ -21,7 +21,7 @@ test:
 	swift test
 
 run:
-	swift run
+	swift run $(SWIFT_BUILD_FLAGS)
 
 xcode:
 	swift package generate-xcodeproj
