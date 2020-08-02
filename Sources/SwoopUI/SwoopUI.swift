@@ -30,7 +30,7 @@ struct Swoop {
 
 }
 
-public func swoopUITest<Content>(_ size: Size, _ view: Content) where Content: View {
+public func swoopUITest(_ size: Size, _ view: View) {
 
     let root = YogaNode()
     root.size(Pixel(size.width), Pixel(size.height)).leftToRight()

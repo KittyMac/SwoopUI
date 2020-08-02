@@ -57,6 +57,7 @@ fragment float4 textured_fragment(VertexOut vert [[stage_in]],
 }
 """
 
+@available(OSX 10.11, *)
 @available(iOS 13.0, *)
 class SwoopMetalLayer: CAMetalLayer {
 
@@ -88,7 +89,7 @@ class SwoopMetalLayer: CAMetalLayer {
         super.init(coder: aDecoder)
         initMetal()
     }
-    
+
     func initMetal() {
         device = MTLCreateSystemDefaultDevice()
         pixelFormat = .bgra8Unorm
@@ -119,10 +120,10 @@ class SwoopMetalLayer: CAMetalLayer {
         normalSamplerDesc.mipFilter = .notMipmapped
         normalSamplerState = metalDevice.makeSamplerState(descriptor: normalSamplerDesc)
     }
-    
+
     func setRootView(rootView: View) {
         root.size(100, 100).leftToRight()
-        
+
         Swoop.loadView(into: root, rootView.body)
         root.layout()
     }

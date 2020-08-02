@@ -8,7 +8,11 @@ public class NSHostingView: NSView {
 
     public override func makeBackingLayer() -> CALayer {
         if let rootView = rootView {
-            return SwoopMetalLayer(rootView: rootView)
+            if #available(OSX 10.11, *) {
+                return SwoopMetalLayer(rootView: rootView)
+            } else {
+                return SwoopLayer(rootView: rootView)
+            }
         }
         return CALayer()
     }

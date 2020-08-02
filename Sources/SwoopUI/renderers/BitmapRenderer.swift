@@ -21,7 +21,7 @@ public class BitmapRenderer {
 
     init(_ root: YogaNode) {
         self.root = root
-        
+
         if root.getWidth().isNaN {
             width = 10
             height = 10

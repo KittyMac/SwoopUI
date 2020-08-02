@@ -3,9 +3,6 @@ import PackageDescription
 
 let package = Package(
     name: "SwoopUI",
-    platforms: [
-        .macOS(.v10_15)
-    ],
     products: [
 		.executable(name: "SwoopUIDemo", targets: ["SwoopUIDemo"]),
         .library(name: "SwoopUI", targets: ["SwoopUI"]),

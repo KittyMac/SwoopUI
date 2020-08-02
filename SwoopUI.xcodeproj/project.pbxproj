@@ -1,1554 +1,2424 @@
 // !$*UTF8*$!
 {
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXAggregateTarget section */
-		"SwoopUI::SwoopUIPackageTests::ProductTarget" /* SwoopUIPackageTests */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_261 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */;
-			buildPhases = (
-			);
-			dependencies = (
-				OBJ_264 /* PBXTargetDependency */,
-			);
-			name = SwoopUIPackageTests;
-			productName = SwoopUIPackageTests;
-		};
-/* End PBXAggregateTarget section */
-
-/* Begin PBXBuildFile section */
-		OBJ_151 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_123 /* Actor.swift */; };
-		OBJ_152 /* Atomics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_124 /* Atomics.swift */; };
-		OBJ_153 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_125 /* Behavior.swift */; };
-		OBJ_154 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_126 /* Device.swift */; };
-		OBJ_155 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_127 /* Extensions.swift */; };
-		OBJ_156 /* Flowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_128 /* Flowable.swift */; };
-		OBJ_157 /* Flynn+RegisteredActors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_129 /* Flynn+RegisteredActors.swift */; };
-		OBJ_158 /* Flynn+Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_130 /* Flynn+Timer.swift */; };
-		OBJ_159 /* Flynn.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_131 /* Flynn.swift */; };
-		OBJ_160 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_132 /* Profile.swift */; };
-		OBJ_161 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_133 /* Queue.swift */; };
-		OBJ_162 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_134 /* Scheduler.swift */; };
-		OBJ_169 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_135 /* Package.swift */; };
-		OBJ_175 /* NSHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* NSHostingView.swift */; };
-		OBJ_176 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* PreviewProvider.swift */; };
-		OBJ_177 /* SwoopLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* SwoopLayer.swift */; };
-		OBJ_178 /* SwoopMetalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* SwoopMetalLayer.swift */; };
-		OBJ_179 /* Bitmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* Bitmap.swift */; };
-		OBJ_180 /* BitmapRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* BitmapRenderer.swift */; };
-		OBJ_181 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Animatable.swift */; };
-		OBJ_182 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* Binding.swift */; };
-		OBJ_183 /* Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Alignment.swift */; };
-		OBJ_184 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Axis.swift */; };
-		OBJ_185 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Edge.swift */; };
-		OBJ_186 /* EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* EdgeInsets.swift */; };
-		OBJ_187 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Point.swift */; };
-		OBJ_188 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Rect.swift */; };
-		OBJ_189 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Size.swift */; };
-		OBJ_190 /* ViewDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ViewDimensions.swift */; };
-		OBJ_191 /* LocalizedStringKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* LocalizedStringKey.swift */; };
-		OBJ_192 /* EnvironmentKeyWritingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* EnvironmentKeyWritingModifier.swift */; };
-		OBJ_193 /* EnvironmentalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* EnvironmentalModifier.swift */; };
-		OBJ_194 /* PaddingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* PaddingModifier.swift */; };
-		OBJ_195 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ViewModifier.swift */; };
-		OBJ_196 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PropertyList.swift */; };
-		OBJ_197 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* State.swift */; };
-		OBJ_198 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* Transaction.swift */; };
-		OBJ_199 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ViewBuilder.swift */; };
-		OBJ_200 /* AnyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* AnyView.swift */; };
-		OBJ_201 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* Button.swift */; };
-		OBJ_202 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Color.swift */; };
-		OBJ_203 /* CoreGraphicsShim.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* CoreGraphicsShim.swift */; };
-		OBJ_204 /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Divider.swift */; };
-		OBJ_205 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* EmptyView.swift */; };
-		OBJ_206 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Font.swift */; };
-		OBJ_207 /* ForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* ForEach.swift */; };
-		OBJ_208 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Group.swift */; };
-		OBJ_209 /* HStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* HStack.swift */; };
-		OBJ_210 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Image.swift */; };
-		OBJ_211 /* ModifiedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* ModifiedContent.swift */; };
-		OBJ_212 /* Never.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* Never.swift */; };
-		OBJ_213 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Optional.swift */; };
-		OBJ_214 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Picker.swift */; };
-		OBJ_215 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* Shape.swift */; };
-		OBJ_216 /* Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Angle.swift */; };
-		OBJ_217 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* Circle.swift */; };
-		OBJ_218 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Path.swift */; };
-		OBJ_219 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* Rectangle.swift */; };
-		OBJ_220 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Spacer.swift */; };
-		OBJ_221 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Stepper.swift */; };
-		OBJ_222 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* Text.swift */; };
-		OBJ_223 /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Toggle.swift */; };
-		OBJ_224 /* TupleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* TupleView.swift */; };
-		OBJ_225 /* VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* VStack.swift */; };
-		OBJ_226 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* View.swift */; };
-		OBJ_227 /* ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* ZStack.swift */; };
-		OBJ_228 /* SwoopUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* SwoopUI.swift */; };
-		OBJ_229 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Viewable.swift */; };
-		OBJ_230 /* Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Percentage.swift */; };
-		OBJ_231 /* Yoga.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Yoga.swift */; };
-		OBJ_232 /* SwColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* SwColor.swift */; };
-		OBJ_233 /* SwHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* SwHStack.swift */; };
-		OBJ_234 /* SwVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* SwVStack.swift */; };
-		OBJ_236 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_237 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_246 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* main.swift */; };
-		OBJ_248 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
-		OBJ_249 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_250 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_259 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_270 /* BitmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_117 /* BitmapTests.swift */; };
-		OBJ_271 /* SwoopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_118 /* SwoopUITests.swift */; };
-		OBJ_272 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_119 /* XCTestManifests.swift */; };
-		OBJ_274 /* SwoopUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */; };
-		OBJ_275 /* Flynn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Flynn::Flynn::Product" /* Flynn.framework */; };
-		OBJ_276 /* Yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwoopUI::Yoga::Product" /* Yoga.framework */; };
-		OBJ_284 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Utils.cpp */; };
-		OBJ_285 /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_99 /* YGConfig.cpp */; };
-		OBJ_286 /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_100 /* YGEnums.cpp */; };
-		OBJ_287 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_101 /* YGLayout.cpp */; };
-		OBJ_288 /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_102 /* YGNode.cpp */; };
-		OBJ_289 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_103 /* YGNodePrint.cpp */; };
-		OBJ_290 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_104 /* YGStyle.cpp */; };
-		OBJ_291 /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* YGValue.cpp */; };
-		OBJ_292 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* Yoga.cpp */; };
-		OBJ_293 /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* event.cpp */; };
-		OBJ_294 /* experiments.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_108 /* experiments.cpp */; };
-		OBJ_295 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_109 /* log.cpp */; };
-		OBJ_297 /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_111 /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_298 /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_112 /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_299 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_300 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_114 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		466136E924D60CBE005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Flynn::Flynn";
-			remoteInfo = Flynn;
-		};
-		466136EA24D60CBE005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::Yoga";
-			remoteInfo = Yoga;
-		};
-		466136EB24D60CBE005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::SwoopUI";
-			remoteInfo = SwoopUI;
-		};
-		466136EC24D60CBE005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Flynn::Flynn";
-			remoteInfo = Flynn;
-		};
-		466136ED24D60CBE005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::Yoga";
-			remoteInfo = Yoga;
-		};
-		466136EE24D60CBF005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::SwoopUI";
-			remoteInfo = SwoopUI;
-		};
-		466136EF24D60CBF005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Flynn::Flynn";
-			remoteInfo = Flynn;
-		};
-		466136F024D60CBF005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::Yoga";
-			remoteInfo = Yoga;
-		};
-		466136F124D60CC0005DC253 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwoopUI::SwoopUITests";
-			remoteInfo = SwoopUITests;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		"Flynn::Flynn::Product" /* Flynn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Flynn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_100 /* YGEnums.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGEnums.cpp; sourceTree = "<group>"; };
-		OBJ_101 /* YGLayout.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGLayout.cpp; sourceTree = "<group>"; };
-		OBJ_102 /* YGNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNode.cpp; sourceTree = "<group>"; };
-		OBJ_103 /* YGNodePrint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGNodePrint.cpp; sourceTree = "<group>"; };
-		OBJ_104 /* YGStyle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGStyle.cpp; sourceTree = "<group>"; };
-		OBJ_105 /* YGValue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGValue.cpp; sourceTree = "<group>"; };
-		OBJ_106 /* Yoga.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Yoga.cpp; sourceTree = "<group>"; };
-		OBJ_107 /* event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
-		OBJ_108 /* experiments.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = experiments.cpp; sourceTree = "<group>"; };
-		OBJ_109 /* log.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = log.cpp; sourceTree = "<group>"; };
-		OBJ_11 /* NSHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSHostingView.swift; sourceTree = "<group>"; };
-		OBJ_111 /* YGEnums.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGEnums.h; sourceTree = "<group>"; };
-		OBJ_112 /* YGMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGMacros.h; sourceTree = "<group>"; };
-		OBJ_113 /* YGValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGValue.h; sourceTree = "<group>"; };
-		OBJ_114 /* Yoga.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Yoga.h; sourceTree = "<group>"; };
-		OBJ_117 /* BitmapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapTests.swift; sourceTree = "<group>"; };
-		OBJ_118 /* SwoopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUITests.swift; sourceTree = "<group>"; };
-		OBJ_119 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_12 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
-		OBJ_123 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
-		OBJ_124 /* Atomics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomics.swift; sourceTree = "<group>"; };
-		OBJ_125 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
-		OBJ_126 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		OBJ_127 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		OBJ_128 /* Flowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flowable.swift; sourceTree = "<group>"; };
-		OBJ_129 /* Flynn+RegisteredActors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+RegisteredActors.swift"; sourceTree = "<group>"; };
-		OBJ_13 /* SwoopLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopLayer.swift; sourceTree = "<group>"; };
-		OBJ_130 /* Flynn+Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flynn+Timer.swift"; sourceTree = "<group>"; };
-		OBJ_131 /* Flynn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flynn.swift; sourceTree = "<group>"; };
-		OBJ_132 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		OBJ_133 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		OBJ_134 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
-		OBJ_135 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Volumes/Development/Development/chimerasw2/SwoopUI/.build/checkouts/Flynn/Package.swift; sourceTree = "<group>"; };
-		OBJ_14 /* SwoopMetalLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopMetalLayer.swift; sourceTree = "<group>"; };
-		OBJ_142 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = SOURCE_ROOT; };
-		OBJ_143 /* meta */ = {isa = PBXFileReference; lastKnownFileType = folder; path = meta; sourceTree = SOURCE_ROOT; };
-		OBJ_144 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		OBJ_145 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		OBJ_16 /* Bitmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmap.swift; sourceTree = "<group>"; };
-		OBJ_17 /* BitmapRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitmapRenderer.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
-		OBJ_20 /* Binding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
-		OBJ_22 /* Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alignment.swift; sourceTree = "<group>"; };
-		OBJ_23 /* Axis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
-		OBJ_25 /* EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeInsets.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
-		OBJ_27 /* Rect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
-		OBJ_28 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
-		OBJ_29 /* ViewDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDimensions.swift; sourceTree = "<group>"; };
-		OBJ_30 /* LocalizedStringKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringKey.swift; sourceTree = "<group>"; };
-		OBJ_32 /* EnvironmentKeyWritingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentKeyWritingModifier.swift; sourceTree = "<group>"; };
-		OBJ_33 /* EnvironmentalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentalModifier.swift; sourceTree = "<group>"; };
-		OBJ_34 /* PaddingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingModifier.swift; sourceTree = "<group>"; };
-		OBJ_35 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
-		OBJ_36 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
-		OBJ_37 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		OBJ_38 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		OBJ_39 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
-		OBJ_41 /* AnyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyView.swift; sourceTree = "<group>"; };
-		OBJ_42 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		OBJ_44 /* CoreGraphicsShim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsShim.swift; sourceTree = "<group>"; };
-		OBJ_45 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
-		OBJ_46 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		OBJ_47 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		OBJ_48 /* ForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEach.swift; sourceTree = "<group>"; };
-		OBJ_49 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		OBJ_50 /* HStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HStack.swift; sourceTree = "<group>"; };
-		OBJ_51 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		OBJ_52 /* ModifiedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiedContent.swift; sourceTree = "<group>"; };
-		OBJ_53 /* Never.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Never.swift; sourceTree = "<group>"; };
-		OBJ_54 /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
-		OBJ_55 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
-		OBJ_56 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
-		OBJ_58 /* Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Angle.swift; sourceTree = "<group>"; };
-		OBJ_59 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
-		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		OBJ_61 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		OBJ_62 /* Spacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacer.swift; sourceTree = "<group>"; };
-		OBJ_63 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
-		OBJ_64 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		OBJ_65 /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
-		OBJ_66 /* TupleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TupleView.swift; sourceTree = "<group>"; };
-		OBJ_67 /* VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VStack.swift; sourceTree = "<group>"; };
-		OBJ_68 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		OBJ_69 /* ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZStack.swift; sourceTree = "<group>"; };
-		OBJ_70 /* SwoopUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwoopUI.swift; sourceTree = "<group>"; };
-		OBJ_73 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
-		OBJ_75 /* Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Percentage.swift; sourceTree = "<group>"; };
-		OBJ_76 /* Yoga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yoga.swift; sourceTree = "<group>"; };
-		OBJ_78 /* SwColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwColor.swift; sourceTree = "<group>"; };
-		OBJ_79 /* SwHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwHStack.swift; sourceTree = "<group>"; };
-		OBJ_80 /* SwVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwVStack.swift; sourceTree = "<group>"; };
-		OBJ_82 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		OBJ_84 /* BitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitUtils.h; sourceTree = "<group>"; };
-		OBJ_85 /* CompactValue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompactValue.h; sourceTree = "<group>"; };
-		OBJ_86 /* event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
-		OBJ_87 /* experiments-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "experiments-inl.h"; sourceTree = "<group>"; };
-		OBJ_88 /* experiments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = experiments.h; sourceTree = "<group>"; };
-		OBJ_89 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
-		OBJ_90 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
-		OBJ_91 /* YGConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGConfig.h; sourceTree = "<group>"; };
-		OBJ_92 /* YGFloatOptional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGFloatOptional.h; sourceTree = "<group>"; };
-		OBJ_93 /* YGLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
-		OBJ_94 /* YGNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNode.h; sourceTree = "<group>"; };
-		OBJ_95 /* YGNodePrint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGNodePrint.h; sourceTree = "<group>"; };
-		OBJ_96 /* YGStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YGStyle.h; sourceTree = "<group>"; };
-		OBJ_97 /* Yoga-internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yoga-internal.h"; sourceTree = "<group>"; };
-		OBJ_98 /* Utils.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
-		OBJ_99 /* YGConfig.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = YGConfig.cpp; sourceTree = "<group>"; };
-		"SwoopUI::SwoopUI::Product" /* SwoopUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwoopUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwoopUIDemo; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		"SwoopUI::Yoga::Product" /* Yoga.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		OBJ_163 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_235 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_236 /* Flynn.framework in Frameworks */,
-				OBJ_237 /* Yoga.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_247 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_248 /* SwoopUI.framework in Frameworks */,
-				OBJ_249 /* Flynn.framework in Frameworks */,
-				OBJ_250 /* Yoga.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_273 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_274 /* SwoopUI.framework in Frameworks */,
-				OBJ_275 /* Flynn.framework in Frameworks */,
-				OBJ_276 /* Yoga.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_301 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		OBJ_10 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_11 /* NSHostingView.swift */,
-				OBJ_12 /* PreviewProvider.swift */,
-				OBJ_13 /* SwoopLayer.swift */,
-				OBJ_14 /* SwoopMetalLayer.swift */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
-		OBJ_110 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_111 /* YGEnums.h */,
-				OBJ_112 /* YGMacros.h */,
-				OBJ_113 /* YGValue.h */,
-				OBJ_114 /* Yoga.h */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		OBJ_115 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_116 /* SwoopUITests */,
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_116 /* SwoopUITests */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_117 /* BitmapTests.swift */,
-				OBJ_118 /* SwoopUITests.swift */,
-				OBJ_119 /* XCTestManifests.swift */,
-			);
-			name = SwoopUITests;
-			path = Tests/SwoopUITests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_120 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_121 /* Flynn */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_121 /* Flynn */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_122 /* Flynn */,
-				OBJ_135 /* Package.swift */,
-			);
-			name = Flynn;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_122 /* Flynn */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_123 /* Actor.swift */,
-				OBJ_124 /* Atomics.swift */,
-				OBJ_125 /* Behavior.swift */,
-				OBJ_126 /* Device.swift */,
-				OBJ_127 /* Extensions.swift */,
-				OBJ_128 /* Flowable.swift */,
-				OBJ_129 /* Flynn+RegisteredActors.swift */,
-				OBJ_130 /* Flynn+Timer.swift */,
-				OBJ_131 /* Flynn.swift */,
-				OBJ_132 /* Profile.swift */,
-				OBJ_133 /* Queue.swift */,
-				OBJ_134 /* Scheduler.swift */,
-			);
-			name = Flynn;
-			path = .build/checkouts/Flynn/Sources/Flynn;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_136 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"SwoopUI::Yoga::Product" /* Yoga.framework */,
-				"SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */,
-				"SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */,
-				"SwoopUI::SwoopUI::Product" /* SwoopUI.framework */,
-				"Flynn::Flynn::Product" /* Flynn.framework */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		OBJ_15 /* Renderers */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_16 /* Bitmap.swift */,
-				OBJ_17 /* BitmapRenderer.swift */,
-			);
-			path = Renderers;
-			sourceTree = "<group>";
-		};
-		OBJ_18 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_19 /* Animatable.swift */,
-				OBJ_20 /* Binding.swift */,
-				OBJ_21 /* Layout */,
-				OBJ_30 /* LocalizedStringKey.swift */,
-				OBJ_31 /* Modifiers */,
-				OBJ_36 /* PropertyList.swift */,
-				OBJ_37 /* State.swift */,
-				OBJ_38 /* Transaction.swift */,
-				OBJ_39 /* ViewBuilder.swift */,
-				OBJ_40 /* Views */,
-			);
-			path = SwiftUI;
-			sourceTree = "<group>";
-		};
-		OBJ_21 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_22 /* Alignment.swift */,
-				OBJ_23 /* Axis.swift */,
-				OBJ_24 /* Edge.swift */,
-				OBJ_25 /* EdgeInsets.swift */,
-				OBJ_26 /* Point.swift */,
-				OBJ_27 /* Rect.swift */,
-				OBJ_28 /* Size.swift */,
-				OBJ_29 /* ViewDimensions.swift */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
-		OBJ_31 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_32 /* EnvironmentKeyWritingModifier.swift */,
-				OBJ_33 /* EnvironmentalModifier.swift */,
-				OBJ_34 /* PaddingModifier.swift */,
-				OBJ_35 /* ViewModifier.swift */,
-			);
-			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		OBJ_40 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_41 /* AnyView.swift */,
-				OBJ_42 /* Button.swift */,
-				OBJ_43 /* Color.swift */,
-				OBJ_44 /* CoreGraphicsShim.swift */,
-				OBJ_45 /* Divider.swift */,
-				OBJ_46 /* EmptyView.swift */,
-				OBJ_47 /* Font.swift */,
-				OBJ_48 /* ForEach.swift */,
-				OBJ_49 /* Group.swift */,
-				OBJ_50 /* HStack.swift */,
-				OBJ_51 /* Image.swift */,
-				OBJ_52 /* ModifiedContent.swift */,
-				OBJ_53 /* Never.swift */,
-				OBJ_54 /* Optional.swift */,
-				OBJ_55 /* Picker.swift */,
-				OBJ_56 /* Shape.swift */,
-				OBJ_57 /* Shapes */,
-				OBJ_62 /* Spacer.swift */,
-				OBJ_63 /* Stepper.swift */,
-				OBJ_64 /* Text.swift */,
-				OBJ_65 /* Toggle.swift */,
-				OBJ_66 /* TupleView.swift */,
-				OBJ_67 /* VStack.swift */,
-				OBJ_68 /* View.swift */,
-				OBJ_69 /* ZStack.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		OBJ_5 = {
-			isa = PBXGroup;
-			children = (
-				OBJ_6 /* Package.swift */,
-				OBJ_7 /* Sources */,
-				OBJ_115 /* Tests */,
-				OBJ_120 /* Dependencies */,
-				OBJ_136 /* Products */,
-				OBJ_142 /* Examples */,
-				OBJ_143 /* meta */,
-				OBJ_144 /* Makefile */,
-				OBJ_145 /* README.md */,
-			);
-			sourceTree = "<group>";
-		};
-		OBJ_57 /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_58 /* Angle.swift */,
-				OBJ_59 /* Circle.swift */,
-				OBJ_60 /* Path.swift */,
-				OBJ_61 /* Rectangle.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
-		OBJ_7 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_8 /* SwoopUI */,
-				OBJ_81 /* SwoopUIDemo */,
-				OBJ_83 /* Yoga */,
-			);
-			name = Sources;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_71 /* SwoopUI */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_72 /* Protocols */,
-				OBJ_74 /* Utility */,
-				OBJ_77 /* Views */,
-			);
-			path = SwoopUI;
-			sourceTree = "<group>";
-		};
-		OBJ_72 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_73 /* Viewable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		OBJ_74 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_75 /* Percentage.swift */,
-				OBJ_76 /* Yoga.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		OBJ_77 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_78 /* SwColor.swift */,
-				OBJ_79 /* SwHStack.swift */,
-				OBJ_80 /* SwVStack.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		OBJ_8 /* SwoopUI */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_70 /* SwoopUI.swift */,
-				OBJ_9 /* Platforms */,
-				OBJ_15 /* Renderers */,
-				OBJ_18 /* SwiftUI */,
-				OBJ_71 /* SwoopUI */,
-			);
-			name = SwoopUI;
-			path = Sources/SwoopUI;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_81 /* SwoopUIDemo */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_82 /* main.swift */,
-			);
-			name = SwoopUIDemo;
-			path = Sources/SwoopUIDemo;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_83 /* Yoga */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_84 /* BitUtils.h */,
-				OBJ_85 /* CompactValue.h */,
-				OBJ_86 /* event.h */,
-				OBJ_87 /* experiments-inl.h */,
-				OBJ_88 /* experiments.h */,
-				OBJ_89 /* log.h */,
-				OBJ_90 /* Utils.h */,
-				OBJ_91 /* YGConfig.h */,
-				OBJ_92 /* YGFloatOptional.h */,
-				OBJ_93 /* YGLayout.h */,
-				OBJ_94 /* YGNode.h */,
-				OBJ_95 /* YGNodePrint.h */,
-				OBJ_96 /* YGStyle.h */,
-				OBJ_97 /* Yoga-internal.h */,
-				OBJ_98 /* Utils.cpp */,
-				OBJ_99 /* YGConfig.cpp */,
-				OBJ_100 /* YGEnums.cpp */,
-				OBJ_101 /* YGLayout.cpp */,
-				OBJ_102 /* YGNode.cpp */,
-				OBJ_103 /* YGNodePrint.cpp */,
-				OBJ_104 /* YGStyle.cpp */,
-				OBJ_105 /* YGValue.cpp */,
-				OBJ_106 /* Yoga.cpp */,
-				OBJ_107 /* event.cpp */,
-				OBJ_108 /* experiments.cpp */,
-				OBJ_109 /* log.cpp */,
-				OBJ_110 /* include */,
-			);
-			name = Yoga;
-			path = Sources/Yoga;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_9 /* Platforms */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_10 /* macOS */,
-			);
-			path = Platforms;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		OBJ_296 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_297 /* YGEnums.h in Headers */,
-				OBJ_298 /* YGMacros.h in Headers */,
-				OBJ_299 /* YGValue.h in Headers */,
-				OBJ_300 /* Yoga.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		"Flynn::Flynn" /* Flynn */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_147 /* Build configuration list for PBXNativeTarget "Flynn" */;
-			buildPhases = (
-				OBJ_150 /* Sources */,
-				OBJ_163 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Flynn;
-			productName = Flynn;
-			productReference = "Flynn::Flynn::Product" /* Flynn.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"Flynn::SwiftPMPackageDescription" /* FlynnPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_165 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */;
-			buildPhases = (
-				OBJ_168 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FlynnPackageDescription;
-			productName = FlynnPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"SwoopUI::SwiftPMPackageDescription" /* SwoopUIPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_255 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */;
-			buildPhases = (
-				OBJ_258 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwoopUIPackageDescription;
-			productName = SwoopUIPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"SwoopUI::SwoopUI" /* SwoopUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "SwoopUI" */;
-			buildPhases = (
-				466136F224D60CC7005DC253 /* FlynnLint */,
-				466136F324D60CC8005DC253 /* SwiftLint */,
-				OBJ_174 /* Sources */,
-				OBJ_235 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_238 /* PBXTargetDependency */,
-				OBJ_239 /* PBXTargetDependency */,
-			);
-			name = SwoopUI;
-			productName = SwoopUI;
-			productReference = "SwoopUI::SwoopUI::Product" /* SwoopUI.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"SwoopUI::SwoopUIDemo" /* SwoopUIDemo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_242 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */;
-			buildPhases = (
-				OBJ_245 /* Sources */,
-				OBJ_247 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_251 /* PBXTargetDependency */,
-				OBJ_252 /* PBXTargetDependency */,
-				OBJ_253 /* PBXTargetDependency */,
-			);
-			name = SwoopUIDemo;
-			productName = SwoopUIDemo;
-			productReference = "SwoopUI::SwoopUIDemo::Product" /* SwoopUIDemo */;
-			productType = "com.apple.product-type.tool";
-		};
-		"SwoopUI::SwoopUITests" /* SwoopUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_266 /* Build configuration list for PBXNativeTarget "SwoopUITests" */;
-			buildPhases = (
-				OBJ_269 /* Sources */,
-				OBJ_273 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_277 /* PBXTargetDependency */,
-				OBJ_278 /* PBXTargetDependency */,
-				OBJ_279 /* PBXTargetDependency */,
-			);
-			name = SwoopUITests;
-			productName = SwoopUITests;
-			productReference = "SwoopUI::SwoopUITests::Product" /* SwoopUITests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		"SwoopUI::Yoga" /* Yoga */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_280 /* Build configuration list for PBXNativeTarget "Yoga" */;
-			buildPhases = (
-				OBJ_283 /* Sources */,
-				OBJ_296 /* Headers */,
-				OBJ_301 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Yoga;
-			productName = Yoga;
-			productReference = "SwoopUI::Yoga::Product" /* Yoga.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		OBJ_1 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftMigration = 9999;
-				LastUpgradeCheck = 9999;
-			};
-			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SwoopUI" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = OBJ_5;
-			productRefGroup = OBJ_136 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				"Flynn::Flynn" /* Flynn */,
-				"Flynn::SwiftPMPackageDescription" /* FlynnPackageDescription */,
-				"SwoopUI::SwoopUI" /* SwoopUI */,
-				"SwoopUI::SwoopUIDemo" /* SwoopUIDemo */,
-				"SwoopUI::SwiftPMPackageDescription" /* SwoopUIPackageDescription */,
-				"SwoopUI::SwoopUIPackageTests::ProductTarget" /* SwoopUIPackageTests */,
-				"SwoopUI::SwoopUITests" /* SwoopUITests */,
-				"SwoopUI::Yoga" /* Yoga */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		466136F224D60CC7005DC253 /* FlynnLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = FlynnLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FLYNNLINTSWIFTPM=${SRCROOT}/.build/checkouts/flynn/meta/FlynnLint\nFLYNNLINTXCODE=${BUILD_ROOT}/../../SourcePackages/checkouts/flynn/meta/FlynnLint\n\nif [ -f \"${FLYNNLINTSWIFTPM}\" ]; then\n    ${FLYNNLINTSWIFTPM} ${SRCROOT}\nelif [ -f \"${FLYNNLINTXCODE}\" ]; then\n    ${FLYNNLINTXCODE} ${SRCROOT}\nelse\n    echo \"warning: Unable to find FlynnLint, aborting...\"\nfi\n";
-		};
-		466136F324D60CC8005DC253 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect --path ${SRCROOT}/Sources/\n  swiftlint --path ${SRCROOT}/Sources/\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		OBJ_150 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_151 /* Actor.swift in Sources */,
-				OBJ_152 /* Atomics.swift in Sources */,
-				OBJ_153 /* Behavior.swift in Sources */,
-				OBJ_154 /* Device.swift in Sources */,
-				OBJ_155 /* Extensions.swift in Sources */,
-				OBJ_156 /* Flowable.swift in Sources */,
-				OBJ_157 /* Flynn+RegisteredActors.swift in Sources */,
-				OBJ_158 /* Flynn+Timer.swift in Sources */,
-				OBJ_159 /* Flynn.swift in Sources */,
-				OBJ_160 /* Profile.swift in Sources */,
-				OBJ_161 /* Queue.swift in Sources */,
-				OBJ_162 /* Scheduler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_168 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_169 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_174 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_175 /* NSHostingView.swift in Sources */,
-				OBJ_176 /* PreviewProvider.swift in Sources */,
-				OBJ_177 /* SwoopLayer.swift in Sources */,
-				OBJ_178 /* SwoopMetalLayer.swift in Sources */,
-				OBJ_179 /* Bitmap.swift in Sources */,
-				OBJ_180 /* BitmapRenderer.swift in Sources */,
-				OBJ_181 /* Animatable.swift in Sources */,
-				OBJ_182 /* Binding.swift in Sources */,
-				OBJ_183 /* Alignment.swift in Sources */,
-				OBJ_184 /* Axis.swift in Sources */,
-				OBJ_185 /* Edge.swift in Sources */,
-				OBJ_186 /* EdgeInsets.swift in Sources */,
-				OBJ_187 /* Point.swift in Sources */,
-				OBJ_188 /* Rect.swift in Sources */,
-				OBJ_189 /* Size.swift in Sources */,
-				OBJ_190 /* ViewDimensions.swift in Sources */,
-				OBJ_191 /* LocalizedStringKey.swift in Sources */,
-				OBJ_192 /* EnvironmentKeyWritingModifier.swift in Sources */,
-				OBJ_193 /* EnvironmentalModifier.swift in Sources */,
-				OBJ_194 /* PaddingModifier.swift in Sources */,
-				OBJ_195 /* ViewModifier.swift in Sources */,
-				OBJ_196 /* PropertyList.swift in Sources */,
-				OBJ_197 /* State.swift in Sources */,
-				OBJ_198 /* Transaction.swift in Sources */,
-				OBJ_199 /* ViewBuilder.swift in Sources */,
-				OBJ_200 /* AnyView.swift in Sources */,
-				OBJ_201 /* Button.swift in Sources */,
-				OBJ_202 /* Color.swift in Sources */,
-				OBJ_203 /* CoreGraphicsShim.swift in Sources */,
-				OBJ_204 /* Divider.swift in Sources */,
-				OBJ_205 /* EmptyView.swift in Sources */,
-				OBJ_206 /* Font.swift in Sources */,
-				OBJ_207 /* ForEach.swift in Sources */,
-				OBJ_208 /* Group.swift in Sources */,
-				OBJ_209 /* HStack.swift in Sources */,
-				OBJ_210 /* Image.swift in Sources */,
-				OBJ_211 /* ModifiedContent.swift in Sources */,
-				OBJ_212 /* Never.swift in Sources */,
-				OBJ_213 /* Optional.swift in Sources */,
-				OBJ_214 /* Picker.swift in Sources */,
-				OBJ_215 /* Shape.swift in Sources */,
-				OBJ_216 /* Angle.swift in Sources */,
-				OBJ_217 /* Circle.swift in Sources */,
-				OBJ_218 /* Path.swift in Sources */,
-				OBJ_219 /* Rectangle.swift in Sources */,
-				OBJ_220 /* Spacer.swift in Sources */,
-				OBJ_221 /* Stepper.swift in Sources */,
-				OBJ_222 /* Text.swift in Sources */,
-				OBJ_223 /* Toggle.swift in Sources */,
-				OBJ_224 /* TupleView.swift in Sources */,
-				OBJ_225 /* VStack.swift in Sources */,
-				OBJ_226 /* View.swift in Sources */,
-				OBJ_227 /* ZStack.swift in Sources */,
-				OBJ_228 /* SwoopUI.swift in Sources */,
-				OBJ_229 /* Viewable.swift in Sources */,
-				OBJ_230 /* Percentage.swift in Sources */,
-				OBJ_231 /* Yoga.swift in Sources */,
-				OBJ_232 /* SwColor.swift in Sources */,
-				OBJ_233 /* SwHStack.swift in Sources */,
-				OBJ_234 /* SwVStack.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_245 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_246 /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_258 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_259 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_269 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_270 /* BitmapTests.swift in Sources */,
-				OBJ_271 /* SwoopUITests.swift in Sources */,
-				OBJ_272 /* XCTestManifests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_283 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_284 /* Utils.cpp in Sources */,
-				OBJ_285 /* YGConfig.cpp in Sources */,
-				OBJ_286 /* YGEnums.cpp in Sources */,
-				OBJ_287 /* YGLayout.cpp in Sources */,
-				OBJ_288 /* YGNode.cpp in Sources */,
-				OBJ_289 /* YGNodePrint.cpp in Sources */,
-				OBJ_290 /* YGStyle.cpp in Sources */,
-				OBJ_291 /* YGValue.cpp in Sources */,
-				OBJ_292 /* Yoga.cpp in Sources */,
-				OBJ_293 /* event.cpp in Sources */,
-				OBJ_294 /* experiments.cpp in Sources */,
-				OBJ_295 /* log.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		OBJ_238 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 466136E924D60CBE005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_239 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 466136EA24D60CBE005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_251 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::SwoopUI" /* SwoopUI */;
-			targetProxy = 466136EB24D60CBE005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_252 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 466136EC24D60CBE005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_253 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 466136ED24D60CBE005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_264 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::SwoopUITests" /* SwoopUITests */;
-			targetProxy = 466136F124D60CC0005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_277 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::SwoopUI" /* SwoopUI */;
-			targetProxy = 466136EE24D60CBF005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_278 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Flynn::Flynn" /* Flynn */;
-			targetProxy = 466136EF24D60CBF005DC253 /* PBXContainerItemProxy */;
-		};
-		OBJ_279 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "SwoopUI::Yoga" /* Yoga */;
-			targetProxy = 466136F024D60CBF005DC253 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		OBJ_148 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SwoopUI.xcodeproj/Flynn_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Flynn;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Flynn;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_149 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = SwoopUI.xcodeproj/Flynn_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Flynn;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = Flynn;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_166 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.0.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_167 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.0.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_172 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUI_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwoopUI;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUI;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_173 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUI_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = SwoopUI;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUI;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_243 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUIDemo_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
-				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUIDemo;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_244 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUIDemo_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
-				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUIDemo;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_256 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_257 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.2.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_262 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_263 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_267 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUITests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUITests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_268 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/SwoopUITests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = SwoopUITests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_281 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/Yoga_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Yoga;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				TARGET_NAME = Yoga;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_282 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Sources/Yoga/include",
-				);
-				INFOPLIST_FILE = SwoopUI.xcodeproj/Yoga_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = Yoga;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				TARGET_NAME = Yoga;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-					"DEBUG=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				USE_HEADERMAP = NO;
-			};
-			name = Debug;
-		};
-		OBJ_4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"SWIFT_PACKAGE=1",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		OBJ_147 /* Build configuration list for PBXNativeTarget "Flynn" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_148 /* Debug */,
-				OBJ_149 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_165 /* Build configuration list for PBXNativeTarget "FlynnPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_166 /* Debug */,
-				OBJ_167 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_171 /* Build configuration list for PBXNativeTarget "SwoopUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_172 /* Debug */,
-				OBJ_173 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_2 /* Build configuration list for PBXProject "SwoopUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_3 /* Debug */,
-				OBJ_4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_242 /* Build configuration list for PBXNativeTarget "SwoopUIDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_243 /* Debug */,
-				OBJ_244 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_255 /* Build configuration list for PBXNativeTarget "SwoopUIPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_256 /* Debug */,
-				OBJ_257 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_261 /* Build configuration list for PBXAggregateTarget "SwoopUIPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_262 /* Debug */,
-				OBJ_263 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_266 /* Build configuration list for PBXNativeTarget "SwoopUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_267 /* Debug */,
-				OBJ_268 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_280 /* Build configuration list for PBXNativeTarget "Yoga" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_281 /* Debug */,
-				OBJ_282 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = OBJ_1 /* Project object */;
+   archiveVersion = "1";
+   objectVersion = "46";
+   objects = {
+      "Flynn::Flynn" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_153";
+         buildPhases = (
+            "OBJ_156",
+            "OBJ_169"
+         );
+         dependencies = (
+         );
+         name = "Flynn";
+         productName = "Flynn";
+         productReference = "Flynn::Flynn::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "Flynn::Flynn::Product" = {
+         isa = "PBXFileReference";
+         path = "Flynn.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "Flynn::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_171";
+         buildPhases = (
+            "OBJ_174"
+         );
+         dependencies = (
+         );
+         name = "FlynnPackageDescription";
+         productName = "FlynnPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "OBJ_1" = {
+         isa = "PBXProject";
+         attributes = {
+            LastSwiftMigration = "9999";
+            LastUpgradeCheck = "9999";
+         };
+         buildConfigurationList = "OBJ_2";
+         compatibilityVersion = "Xcode 3.2";
+         developmentRegion = "en";
+         hasScannedForEncodings = "0";
+         knownRegions = (
+            "en"
+         );
+         mainGroup = "OBJ_5";
+         productRefGroup = "OBJ_142";
+         projectDirPath = ".";
+         targets = (
+            "Flynn::Flynn",
+            "Flynn::SwiftPMPackageDescription",
+            "SwoopUI::SwoopUI",
+            "SwoopUI::SwoopUIDemo",
+            "SwoopUI::SwiftPMPackageDescription",
+            "SwoopUI::SwoopUIPackageTests::ProductTarget",
+            "SwoopUI::SwoopUITests",
+            "SwoopUI::Yoga"
+         );
+      };
+      "OBJ_10" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_11",
+            "OBJ_13",
+            "OBJ_15"
+         );
+         name = "Apple";
+         path = "Apple";
+         sourceTree = "<group>";
+      };
+      "OBJ_100" = {
+         isa = "PBXFileReference";
+         path = "YGNode.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_101" = {
+         isa = "PBXFileReference";
+         path = "YGNodePrint.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_102" = {
+         isa = "PBXFileReference";
+         path = "YGStyle.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_103" = {
+         isa = "PBXFileReference";
+         path = "Yoga-internal.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_104" = {
+         isa = "PBXFileReference";
+         path = "Utils.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_105" = {
+         isa = "PBXFileReference";
+         path = "YGConfig.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_106" = {
+         isa = "PBXFileReference";
+         path = "YGEnums.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_107" = {
+         isa = "PBXFileReference";
+         path = "YGLayout.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_108" = {
+         isa = "PBXFileReference";
+         path = "YGNode.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_109" = {
+         isa = "PBXFileReference";
+         path = "YGNodePrint.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_11" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_12"
+         );
+         name = "iOS";
+         path = "iOS";
+         sourceTree = "<group>";
+      };
+      "OBJ_110" = {
+         isa = "PBXFileReference";
+         path = "YGStyle.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_111" = {
+         isa = "PBXFileReference";
+         path = "YGValue.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_112" = {
+         isa = "PBXFileReference";
+         path = "Yoga.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_113" = {
+         isa = "PBXFileReference";
+         path = "event.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_114" = {
+         isa = "PBXFileReference";
+         path = "experiments.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_115" = {
+         isa = "PBXFileReference";
+         path = "log.cpp";
+         sourceTree = "<group>";
+      };
+      "OBJ_116" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_117",
+            "OBJ_118",
+            "OBJ_119",
+            "OBJ_120"
+         );
+         name = "include";
+         path = "include";
+         sourceTree = "<group>";
+      };
+      "OBJ_117" = {
+         isa = "PBXFileReference";
+         path = "YGEnums.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_118" = {
+         isa = "PBXFileReference";
+         path = "YGMacros.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_119" = {
+         isa = "PBXFileReference";
+         path = "YGValue.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_12" = {
+         isa = "PBXFileReference";
+         path = "UIHostingController.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_120" = {
+         isa = "PBXFileReference";
+         path = "Yoga.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_121" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_122"
+         );
+         name = "Tests";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_122" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_123",
+            "OBJ_124",
+            "OBJ_125"
+         );
+         name = "SwoopUITests";
+         path = "Tests/SwoopUITests";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_123" = {
+         isa = "PBXFileReference";
+         path = "BitmapTests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_124" = {
+         isa = "PBXFileReference";
+         path = "SwoopUITests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_125" = {
+         isa = "PBXFileReference";
+         path = "XCTestManifests.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_126" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_127"
+         );
+         name = "Dependencies";
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_127" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_128",
+            "OBJ_141"
+         );
+         name = "Flynn";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_128" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_129",
+            "OBJ_130",
+            "OBJ_131",
+            "OBJ_132",
+            "OBJ_133",
+            "OBJ_134",
+            "OBJ_135",
+            "OBJ_136",
+            "OBJ_137",
+            "OBJ_138",
+            "OBJ_139",
+            "OBJ_140"
+         );
+         name = "Flynn";
+         path = ".build/checkouts/Flynn/Sources/Flynn";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_129" = {
+         isa = "PBXFileReference";
+         path = "Actor.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_13" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_14"
+         );
+         name = "macOS";
+         path = "macOS";
+         sourceTree = "<group>";
+      };
+      "OBJ_130" = {
+         isa = "PBXFileReference";
+         path = "Atomics.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_131" = {
+         isa = "PBXFileReference";
+         path = "Behavior.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_132" = {
+         isa = "PBXFileReference";
+         path = "Device.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_133" = {
+         isa = "PBXFileReference";
+         path = "Extensions.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_134" = {
+         isa = "PBXFileReference";
+         path = "Flowable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_135" = {
+         isa = "PBXFileReference";
+         path = "Flynn+RegisteredActors.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_136" = {
+         isa = "PBXFileReference";
+         path = "Flynn+Timer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_137" = {
+         isa = "PBXFileReference";
+         path = "Flynn.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_138" = {
+         isa = "PBXFileReference";
+         path = "Profile.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_139" = {
+         isa = "PBXFileReference";
+         path = "Queue.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_14" = {
+         isa = "PBXFileReference";
+         path = "NSHostingView.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_140" = {
+         isa = "PBXFileReference";
+         path = "Scheduler.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_141" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         name = "Package.swift";
+         path = "/Volumes/Development/Development/chimerasw2/SwoopUI/.build/checkouts/Flynn/Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_142" = {
+         isa = "PBXGroup";
+         children = (
+            "Flynn::Flynn::Product",
+            "SwoopUI::SwoopUI::Product",
+            "SwoopUI::Yoga::Product",
+            "SwoopUI::SwoopUIDemo::Product",
+            "SwoopUI::SwoopUITests::Product"
+         );
+         name = "Products";
+         path = "";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "OBJ_148" = {
+         isa = "PBXFileReference";
+         path = "Examples";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_149" = {
+         isa = "PBXFileReference";
+         path = "meta";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_15" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_16",
+            "OBJ_17",
+            "OBJ_18"
+         );
+         name = "shared";
+         path = "shared";
+         sourceTree = "<group>";
+      };
+      "OBJ_150" = {
+         isa = "PBXFileReference";
+         path = "Makefile";
+         sourceTree = "<group>";
+      };
+      "OBJ_151" = {
+         isa = "PBXFileReference";
+         path = "README.md";
+         sourceTree = "<group>";
+      };
+      "OBJ_153" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_154",
+            "OBJ_155"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_154" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/Flynn_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Flynn";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Flynn";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_155" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/Flynn_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Flynn";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Flynn";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_156" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_157",
+            "OBJ_158",
+            "OBJ_159",
+            "OBJ_160",
+            "OBJ_161",
+            "OBJ_162",
+            "OBJ_163",
+            "OBJ_164",
+            "OBJ_165",
+            "OBJ_166",
+            "OBJ_167",
+            "OBJ_168"
+         );
+      };
+      "OBJ_157" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_129";
+      };
+      "OBJ_158" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_130";
+      };
+      "OBJ_159" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_131";
+      };
+      "OBJ_16" = {
+         isa = "PBXFileReference";
+         path = "PreviewProvider.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_160" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_132";
+      };
+      "OBJ_161" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_133";
+      };
+      "OBJ_162" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_134";
+      };
+      "OBJ_163" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_135";
+      };
+      "OBJ_164" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_136";
+      };
+      "OBJ_165" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_137";
+      };
+      "OBJ_166" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_138";
+      };
+      "OBJ_167" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_139";
+      };
+      "OBJ_168" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_140";
+      };
+      "OBJ_169" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_17" = {
+         isa = "PBXFileReference";
+         path = "SwoopLayer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_171" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_172",
+            "OBJ_173"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_172" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.0.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_173" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.0.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_174" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_175"
+         );
+      };
+      "OBJ_175" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_141";
+      };
+      "OBJ_177" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_178",
+            "OBJ_179"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_178" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUI_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "SwoopUI";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUI";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_179" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUI_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "SwoopUI";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUI";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_18" = {
+         isa = "PBXFileReference";
+         path = "SwoopMetalLayer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_180" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_181",
+            "OBJ_182",
+            "OBJ_183",
+            "OBJ_184",
+            "OBJ_185",
+            "OBJ_186",
+            "OBJ_187",
+            "OBJ_188",
+            "OBJ_189",
+            "OBJ_190",
+            "OBJ_191",
+            "OBJ_192",
+            "OBJ_193",
+            "OBJ_194",
+            "OBJ_195",
+            "OBJ_196",
+            "OBJ_197",
+            "OBJ_198",
+            "OBJ_199",
+            "OBJ_200",
+            "OBJ_201",
+            "OBJ_202",
+            "OBJ_203",
+            "OBJ_204",
+            "OBJ_205",
+            "OBJ_206",
+            "OBJ_207",
+            "OBJ_208",
+            "OBJ_209",
+            "OBJ_210",
+            "OBJ_211",
+            "OBJ_212",
+            "OBJ_213",
+            "OBJ_214",
+            "OBJ_215",
+            "OBJ_216",
+            "OBJ_217",
+            "OBJ_218",
+            "OBJ_219",
+            "OBJ_220",
+            "OBJ_221",
+            "OBJ_222",
+            "OBJ_223",
+            "OBJ_224",
+            "OBJ_225",
+            "OBJ_226",
+            "OBJ_227",
+            "OBJ_228",
+            "OBJ_229",
+            "OBJ_230",
+            "OBJ_231",
+            "OBJ_232",
+            "OBJ_233",
+            "OBJ_234",
+            "OBJ_235",
+            "OBJ_236",
+            "OBJ_237",
+            "OBJ_238",
+            "OBJ_239",
+            "OBJ_240",
+            "OBJ_241",
+            "OBJ_242"
+         );
+      };
+      "OBJ_181" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_12";
+      };
+      "OBJ_182" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_14";
+      };
+      "OBJ_183" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_16";
+      };
+      "OBJ_184" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_185" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_18";
+      };
+      "OBJ_186" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
+      };
+      "OBJ_187" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
+      };
+      "OBJ_188" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_23";
+      };
+      "OBJ_189" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_25";
+      };
+      "OBJ_19" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_20"
+         );
+         name = "Linux";
+         path = "Linux";
+         sourceTree = "<group>";
+      };
+      "OBJ_190" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_26";
+      };
+      "OBJ_191" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_28";
+      };
+      "OBJ_192" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_29";
+      };
+      "OBJ_193" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_30";
+      };
+      "OBJ_194" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_31";
+      };
+      "OBJ_195" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_32";
+      };
+      "OBJ_196" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_33";
+      };
+      "OBJ_197" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_34";
+      };
+      "OBJ_198" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_35";
+      };
+      "OBJ_199" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_36";
+      };
+      "OBJ_2" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_3",
+            "OBJ_4"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_20" = {
+         isa = "PBXFileReference";
+         path = "BitmapHostingView.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_200" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_201" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_202" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_40";
+      };
+      "OBJ_203" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_41";
+      };
+      "OBJ_204" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_42";
+      };
+      "OBJ_205" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_43";
+      };
+      "OBJ_206" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_44";
+      };
+      "OBJ_207" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_45";
+      };
+      "OBJ_208" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_47";
+      };
+      "OBJ_209" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_48";
+      };
+      "OBJ_21" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_22",
+            "OBJ_23"
+         );
+         name = "Renderers";
+         path = "Renderers";
+         sourceTree = "<group>";
+      };
+      "OBJ_210" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_49";
+      };
+      "OBJ_211" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_50";
+      };
+      "OBJ_212" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_51";
+      };
+      "OBJ_213" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_52";
+      };
+      "OBJ_214" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_53";
+      };
+      "OBJ_215" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_54";
+      };
+      "OBJ_216" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_55";
+      };
+      "OBJ_217" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_56";
+      };
+      "OBJ_218" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_57";
+      };
+      "OBJ_219" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_58";
+      };
+      "OBJ_22" = {
+         isa = "PBXFileReference";
+         path = "Bitmap.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_220" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_59";
+      };
+      "OBJ_221" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_60";
+      };
+      "OBJ_222" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_61";
+      };
+      "OBJ_223" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_62";
+      };
+      "OBJ_224" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_64";
+      };
+      "OBJ_225" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_65";
+      };
+      "OBJ_226" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_66";
+      };
+      "OBJ_227" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_67";
+      };
+      "OBJ_228" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_68";
+      };
+      "OBJ_229" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_69";
+      };
+      "OBJ_23" = {
+         isa = "PBXFileReference";
+         path = "BitmapRenderer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_230" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_70";
+      };
+      "OBJ_231" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_71";
+      };
+      "OBJ_232" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_72";
+      };
+      "OBJ_233" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_73";
+      };
+      "OBJ_234" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_74";
+      };
+      "OBJ_235" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_75";
+      };
+      "OBJ_236" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_76";
+      };
+      "OBJ_237" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_79";
+      };
+      "OBJ_238" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_81";
+      };
+      "OBJ_239" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_82";
+      };
+      "OBJ_24" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_25",
+            "OBJ_26",
+            "OBJ_27",
+            "OBJ_36",
+            "OBJ_37",
+            "OBJ_42",
+            "OBJ_43",
+            "OBJ_44",
+            "OBJ_45",
+            "OBJ_46"
+         );
+         name = "SwiftUI";
+         path = "SwiftUI";
+         sourceTree = "<group>";
+      };
+      "OBJ_240" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_84";
+      };
+      "OBJ_241" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_85";
+      };
+      "OBJ_242" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_86";
+      };
+      "OBJ_243" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_244",
+            "OBJ_245"
+         );
+      };
+      "OBJ_244" = {
+         isa = "PBXBuildFile";
+         fileRef = "Flynn::Flynn::Product";
+      };
+      "OBJ_245" = {
+         isa = "PBXBuildFile";
+         fileRef = "SwoopUI::Yoga::Product";
+      };
+      "OBJ_246" = {
+         isa = "PBXTargetDependency";
+         target = "Flynn::Flynn";
+      };
+      "OBJ_247" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::Yoga";
+      };
+      "OBJ_25" = {
+         isa = "PBXFileReference";
+         path = "Animatable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_250" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_251",
+            "OBJ_252"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_251" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUIDemo_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUIDemo";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_252" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUIDemo_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUIDemo";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_253" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_254"
+         );
+      };
+      "OBJ_254" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_88";
+      };
+      "OBJ_255" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_256",
+            "OBJ_257",
+            "OBJ_258"
+         );
+      };
+      "OBJ_256" = {
+         isa = "PBXBuildFile";
+         fileRef = "SwoopUI::SwoopUI::Product";
+      };
+      "OBJ_257" = {
+         isa = "PBXBuildFile";
+         fileRef = "Flynn::Flynn::Product";
+      };
+      "OBJ_258" = {
+         isa = "PBXBuildFile";
+         fileRef = "SwoopUI::Yoga::Product";
+      };
+      "OBJ_259" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::SwoopUI";
+      };
+      "OBJ_26" = {
+         isa = "PBXFileReference";
+         path = "Binding.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_260" = {
+         isa = "PBXTargetDependency";
+         target = "Flynn::Flynn";
+      };
+      "OBJ_261" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::Yoga";
+      };
+      "OBJ_263" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_264",
+            "OBJ_265"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_264" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.2.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_265" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.2.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Release";
+      };
+      "OBJ_266" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_267"
+         );
+      };
+      "OBJ_267" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
+      };
+      "OBJ_269" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_270",
+            "OBJ_271"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_27" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_28",
+            "OBJ_29",
+            "OBJ_30",
+            "OBJ_31",
+            "OBJ_32",
+            "OBJ_33",
+            "OBJ_34",
+            "OBJ_35"
+         );
+         name = "Layout";
+         path = "Layout";
+         sourceTree = "<group>";
+      };
+      "OBJ_270" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_271" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_272" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::SwoopUITests";
+      };
+      "OBJ_274" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_275",
+            "OBJ_276"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_275" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUITests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUITests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_276" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/SwoopUITests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "SwoopUITests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_277" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_278",
+            "OBJ_279",
+            "OBJ_280"
+         );
+      };
+      "OBJ_278" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_123";
+      };
+      "OBJ_279" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_124";
+      };
+      "OBJ_28" = {
+         isa = "PBXFileReference";
+         path = "Alignment.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_280" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_125";
+      };
+      "OBJ_281" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_282",
+            "OBJ_283",
+            "OBJ_284"
+         );
+      };
+      "OBJ_282" = {
+         isa = "PBXBuildFile";
+         fileRef = "SwoopUI::SwoopUI::Product";
+      };
+      "OBJ_283" = {
+         isa = "PBXBuildFile";
+         fileRef = "Flynn::Flynn::Product";
+      };
+      "OBJ_284" = {
+         isa = "PBXBuildFile";
+         fileRef = "SwoopUI::Yoga::Product";
+      };
+      "OBJ_285" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::SwoopUI";
+      };
+      "OBJ_286" = {
+         isa = "PBXTargetDependency";
+         target = "Flynn::Flynn";
+      };
+      "OBJ_287" = {
+         isa = "PBXTargetDependency";
+         target = "SwoopUI::Yoga";
+      };
+      "OBJ_288" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_289",
+            "OBJ_290"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_289" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+            CLANG_ENABLE_MODULES = "YES";
+            DEFINES_MODULE = "YES";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/Yoga_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Yoga";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "Yoga";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_29" = {
+         isa = "PBXFileReference";
+         path = "Axis.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_290" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+            CLANG_ENABLE_MODULES = "YES";
+            DEFINES_MODULE = "YES";
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(SRCROOT)/Sources/Yoga/include"
+            );
+            INFOPLIST_FILE = "SwoopUI.xcodeproj/Yoga_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "Yoga";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            TARGET_NAME = "Yoga";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_291" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_292",
+            "OBJ_293",
+            "OBJ_294",
+            "OBJ_295",
+            "OBJ_296",
+            "OBJ_297",
+            "OBJ_298",
+            "OBJ_299",
+            "OBJ_300",
+            "OBJ_301",
+            "OBJ_302",
+            "OBJ_303"
+         );
+      };
+      "OBJ_292" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_104";
+      };
+      "OBJ_293" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_105";
+      };
+      "OBJ_294" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_106";
+      };
+      "OBJ_295" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_107";
+      };
+      "OBJ_296" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_108";
+      };
+      "OBJ_297" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_109";
+      };
+      "OBJ_298" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_110";
+      };
+      "OBJ_299" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_111";
+      };
+      "OBJ_3" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "NO";
+            DEBUG_INFORMATION_FORMAT = "dwarf";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            ENABLE_NS_ASSERTIONS = "YES";
+            GCC_OPTIMIZATION_LEVEL = "0";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1",
+               "DEBUG=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            ONLY_ACTIVE_ARCH = "YES";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE",
+               "DEBUG"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Debug";
+      };
+      "OBJ_30" = {
+         isa = "PBXFileReference";
+         path = "Edge.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_300" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_112";
+      };
+      "OBJ_301" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_113";
+      };
+      "OBJ_302" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_114";
+      };
+      "OBJ_303" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_115";
+      };
+      "OBJ_304" = {
+         isa = "PBXHeadersBuildPhase";
+         files = (
+            "OBJ_305",
+            "OBJ_306",
+            "OBJ_307",
+            "OBJ_308"
+         );
+      };
+      "OBJ_305" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_117";
+         settings = {
+            ATTRIBUTES = (
+               "Public"
+            );
+         };
+      };
+      "OBJ_306" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_118";
+         settings = {
+            ATTRIBUTES = (
+               "Public"
+            );
+         };
+      };
+      "OBJ_307" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_119";
+         settings = {
+            ATTRIBUTES = (
+               "Public"
+            );
+         };
+      };
+      "OBJ_308" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_120";
+         settings = {
+            ATTRIBUTES = (
+               "Public"
+            );
+         };
+      };
+      "OBJ_309" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
+      };
+      "OBJ_31" = {
+         isa = "PBXFileReference";
+         path = "EdgeInsets.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_32" = {
+         isa = "PBXFileReference";
+         path = "Point.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_33" = {
+         isa = "PBXFileReference";
+         path = "Rect.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_34" = {
+         isa = "PBXFileReference";
+         path = "Size.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_35" = {
+         isa = "PBXFileReference";
+         path = "ViewDimensions.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_36" = {
+         isa = "PBXFileReference";
+         path = "LocalizedStringKey.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_37" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_38",
+            "OBJ_39",
+            "OBJ_40",
+            "OBJ_41"
+         );
+         name = "Modifiers";
+         path = "Modifiers";
+         sourceTree = "<group>";
+      };
+      "OBJ_38" = {
+         isa = "PBXFileReference";
+         path = "EnvironmentKeyWritingModifier.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_39" = {
+         isa = "PBXFileReference";
+         path = "EnvironmentalModifier.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_4" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_OBJC_ARC = "YES";
+            COMBINE_HIDPI_IMAGES = "YES";
+            COPY_PHASE_STRIP = "YES";
+            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+            DYLIB_INSTALL_NAME_BASE = "@rpath";
+            GCC_OPTIMIZATION_LEVEL = "s";
+            GCC_PREPROCESSOR_DEFINITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE=1"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)",
+               "-DXcode"
+            );
+            PRODUCT_NAME = "$(TARGET_NAME)";
+            SDKROOT = "macosx";
+            SUPPORTED_PLATFORMS = (
+               "macosx",
+               "iphoneos",
+               "iphonesimulator",
+               "appletvos",
+               "appletvsimulator",
+               "watchos",
+               "watchsimulator"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)",
+               "SWIFT_PACKAGE"
+            );
+            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+            USE_HEADERMAP = "NO";
+         };
+         name = "Release";
+      };
+      "OBJ_40" = {
+         isa = "PBXFileReference";
+         path = "PaddingModifier.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_41" = {
+         isa = "PBXFileReference";
+         path = "ViewModifier.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_42" = {
+         isa = "PBXFileReference";
+         path = "PropertyList.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_43" = {
+         isa = "PBXFileReference";
+         path = "State.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_44" = {
+         isa = "PBXFileReference";
+         path = "Transaction.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_45" = {
+         isa = "PBXFileReference";
+         path = "ViewBuilder.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_46" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_47",
+            "OBJ_48",
+            "OBJ_49",
+            "OBJ_50",
+            "OBJ_51",
+            "OBJ_52",
+            "OBJ_53",
+            "OBJ_54",
+            "OBJ_55",
+            "OBJ_56",
+            "OBJ_57",
+            "OBJ_58",
+            "OBJ_59",
+            "OBJ_60",
+            "OBJ_61",
+            "OBJ_62",
+            "OBJ_63",
+            "OBJ_68",
+            "OBJ_69",
+            "OBJ_70",
+            "OBJ_71",
+            "OBJ_72",
+            "OBJ_73",
+            "OBJ_74",
+            "OBJ_75"
+         );
+         name = "Views";
+         path = "Views";
+         sourceTree = "<group>";
+      };
+      "OBJ_47" = {
+         isa = "PBXFileReference";
+         path = "AnyView.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_48" = {
+         isa = "PBXFileReference";
+         path = "Button.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_49" = {
+         isa = "PBXFileReference";
+         path = "Color.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_5" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_6",
+            "OBJ_7",
+            "OBJ_121",
+            "OBJ_126",
+            "OBJ_142",
+            "OBJ_148",
+            "OBJ_149",
+            "OBJ_150",
+            "OBJ_151"
+         );
+         path = "";
+         sourceTree = "<group>";
+      };
+      "OBJ_50" = {
+         isa = "PBXFileReference";
+         path = "CoreGraphicsShim.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_51" = {
+         isa = "PBXFileReference";
+         path = "Divider.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_52" = {
+         isa = "PBXFileReference";
+         path = "EmptyView.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_53" = {
+         isa = "PBXFileReference";
+         path = "Font.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_54" = {
+         isa = "PBXFileReference";
+         path = "ForEach.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_55" = {
+         isa = "PBXFileReference";
+         path = "Group.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_56" = {
+         isa = "PBXFileReference";
+         path = "HStack.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_57" = {
+         isa = "PBXFileReference";
+         path = "Image.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_58" = {
+         isa = "PBXFileReference";
+         path = "ModifiedContent.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_59" = {
+         isa = "PBXFileReference";
+         path = "Never.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_6" = {
+         isa = "PBXFileReference";
+         explicitFileType = "sourcecode.swift";
+         path = "Package.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_60" = {
+         isa = "PBXFileReference";
+         path = "Optional.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_61" = {
+         isa = "PBXFileReference";
+         path = "Picker.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_62" = {
+         isa = "PBXFileReference";
+         path = "Shape.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_63" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_64",
+            "OBJ_65",
+            "OBJ_66",
+            "OBJ_67"
+         );
+         name = "Shapes";
+         path = "Shapes";
+         sourceTree = "<group>";
+      };
+      "OBJ_64" = {
+         isa = "PBXFileReference";
+         path = "Angle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_65" = {
+         isa = "PBXFileReference";
+         path = "Circle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_66" = {
+         isa = "PBXFileReference";
+         path = "Path.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_67" = {
+         isa = "PBXFileReference";
+         path = "Rectangle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_68" = {
+         isa = "PBXFileReference";
+         path = "Spacer.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_69" = {
+         isa = "PBXFileReference";
+         path = "Stepper.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_7" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_8",
+            "OBJ_87",
+            "OBJ_89"
+         );
+         name = "Sources";
+         path = "";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_70" = {
+         isa = "PBXFileReference";
+         path = "Text.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_71" = {
+         isa = "PBXFileReference";
+         path = "Toggle.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_72" = {
+         isa = "PBXFileReference";
+         path = "TupleView.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_73" = {
+         isa = "PBXFileReference";
+         path = "VStack.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_74" = {
+         isa = "PBXFileReference";
+         path = "View.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_75" = {
+         isa = "PBXFileReference";
+         path = "ZStack.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_76" = {
+         isa = "PBXFileReference";
+         path = "SwoopUI.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_77" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_78",
+            "OBJ_80",
+            "OBJ_83"
+         );
+         name = "SwoopUI";
+         path = "SwoopUI";
+         sourceTree = "<group>";
+      };
+      "OBJ_78" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_79"
+         );
+         name = "Protocols";
+         path = "Protocols";
+         sourceTree = "<group>";
+      };
+      "OBJ_79" = {
+         isa = "PBXFileReference";
+         path = "Viewable.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_8" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_9",
+            "OBJ_21",
+            "OBJ_24",
+            "OBJ_76",
+            "OBJ_77"
+         );
+         name = "SwoopUI";
+         path = "Sources/SwoopUI";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_80" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_81",
+            "OBJ_82"
+         );
+         name = "Utility";
+         path = "Utility";
+         sourceTree = "<group>";
+      };
+      "OBJ_81" = {
+         isa = "PBXFileReference";
+         path = "Percentage.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_82" = {
+         isa = "PBXFileReference";
+         path = "Yoga.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_83" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_84",
+            "OBJ_85",
+            "OBJ_86"
+         );
+         name = "Views";
+         path = "Views";
+         sourceTree = "<group>";
+      };
+      "OBJ_84" = {
+         isa = "PBXFileReference";
+         path = "SwColor.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_85" = {
+         isa = "PBXFileReference";
+         path = "SwHStack.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_86" = {
+         isa = "PBXFileReference";
+         path = "SwVStack.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_87" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_88"
+         );
+         name = "SwoopUIDemo";
+         path = "Sources/SwoopUIDemo";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_88" = {
+         isa = "PBXFileReference";
+         path = "main.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_89" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_90",
+            "OBJ_91",
+            "OBJ_92",
+            "OBJ_93",
+            "OBJ_94",
+            "OBJ_95",
+            "OBJ_96",
+            "OBJ_97",
+            "OBJ_98",
+            "OBJ_99",
+            "OBJ_100",
+            "OBJ_101",
+            "OBJ_102",
+            "OBJ_103",
+            "OBJ_104",
+            "OBJ_105",
+            "OBJ_106",
+            "OBJ_107",
+            "OBJ_108",
+            "OBJ_109",
+            "OBJ_110",
+            "OBJ_111",
+            "OBJ_112",
+            "OBJ_113",
+            "OBJ_114",
+            "OBJ_115",
+            "OBJ_116"
+         );
+         name = "Yoga";
+         path = "Sources/Yoga";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_9" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_10",
+            "OBJ_19"
+         );
+         name = "Platforms";
+         path = "Platforms";
+         sourceTree = "<group>";
+      };
+      "OBJ_90" = {
+         isa = "PBXFileReference";
+         path = "BitUtils.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_91" = {
+         isa = "PBXFileReference";
+         path = "CompactValue.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_92" = {
+         isa = "PBXFileReference";
+         path = "event.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_93" = {
+         isa = "PBXFileReference";
+         path = "experiments-inl.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_94" = {
+         isa = "PBXFileReference";
+         path = "experiments.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_95" = {
+         isa = "PBXFileReference";
+         path = "log.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_96" = {
+         isa = "PBXFileReference";
+         path = "Utils.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_97" = {
+         isa = "PBXFileReference";
+         path = "YGConfig.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_98" = {
+         isa = "PBXFileReference";
+         path = "YGFloatOptional.h";
+         sourceTree = "<group>";
+      };
+      "OBJ_99" = {
+         isa = "PBXFileReference";
+         path = "YGLayout.h";
+         sourceTree = "<group>";
+      };
+      "SwoopUI::SwiftPMPackageDescription" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_263";
+         buildPhases = (
+            "OBJ_266"
+         );
+         dependencies = (
+         );
+         name = "SwoopUIPackageDescription";
+         productName = "SwoopUIPackageDescription";
+         productType = "com.apple.product-type.framework";
+      };
+      "SwoopUI::SwoopUI" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_177";
+         buildPhases = (
+            "OBJ_180",
+            "OBJ_243"
+         );
+         dependencies = (
+            "OBJ_246",
+            "OBJ_247"
+         );
+         name = "SwoopUI";
+         productName = "SwoopUI";
+         productReference = "SwoopUI::SwoopUI::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "SwoopUI::SwoopUI::Product" = {
+         isa = "PBXFileReference";
+         path = "SwoopUI.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "SwoopUI::SwoopUIDemo" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_250";
+         buildPhases = (
+            "OBJ_253",
+            "OBJ_255"
+         );
+         dependencies = (
+            "OBJ_259",
+            "OBJ_260",
+            "OBJ_261"
+         );
+         name = "SwoopUIDemo";
+         productName = "SwoopUIDemo";
+         productReference = "SwoopUI::SwoopUIDemo::Product";
+         productType = "com.apple.product-type.tool";
+      };
+      "SwoopUI::SwoopUIDemo::Product" = {
+         isa = "PBXFileReference";
+         path = "SwoopUIDemo";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "SwoopUI::SwoopUIPackageTests::ProductTarget" = {
+         isa = "PBXAggregateTarget";
+         buildConfigurationList = "OBJ_269";
+         buildPhases = (
+         );
+         dependencies = (
+            "OBJ_272"
+         );
+         name = "SwoopUIPackageTests";
+         productName = "SwoopUIPackageTests";
+      };
+      "SwoopUI::SwoopUITests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_274";
+         buildPhases = (
+            "OBJ_277",
+            "OBJ_281"
+         );
+         dependencies = (
+            "OBJ_285",
+            "OBJ_286",
+            "OBJ_287"
+         );
+         name = "SwoopUITests";
+         productName = "SwoopUITests";
+         productReference = "SwoopUI::SwoopUITests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "SwoopUI::SwoopUITests::Product" = {
+         isa = "PBXFileReference";
+         path = "SwoopUITests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+      "SwoopUI::Yoga" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_288";
+         buildPhases = (
+            "OBJ_291",
+            "OBJ_304",
+            "OBJ_309"
+         );
+         dependencies = (
+         );
+         name = "Yoga";
+         productName = "Yoga";
+         productReference = "SwoopUI::Yoga::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "SwoopUI::Yoga::Product" = {
+         isa = "PBXFileReference";
+         path = "Yoga.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
+   };
+   rootObject = "OBJ_1";
 }

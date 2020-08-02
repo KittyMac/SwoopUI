@@ -29,15 +29,24 @@ public func pixelSrcOver(_ dst: UInt32, _ src: UInt32) -> UInt32 {
 }
 
 public class Bitmap {
-
+    private static var debugWarning = false
     private static var zeroBytes = UnsafeMutablePointer<UInt32>.allocate(capacity: 0)
 
+    private static func checkDebugWarning() {
+        #if DEBUG
+        if debugWarning == false {
+            debugWarning = true
+            print("warning: using Bitmap in debug mode will be extremely slow")
+        }
+        #endif
+    }
+
     public struct BitmapInfo {
-        let width: Int
-        let height: Int
-        let channels: Int
-        let bytesPerRow: Int
-        let bytes32: UnsafeMutablePointer<UInt32>
+        public let width: Int
+        public let height: Int
+        public let channels: Int
+        public let bytesPerRow: Int
+        public let bytes32: UnsafeMutablePointer<UInt32>
     }
 
     private var allocated: Int = 0
@@ -57,6 +66,8 @@ public class Bitmap {
     }
 
     init(_ width: Int, _ height: Int) {
+        Bitmap.checkDebugWarning()
+
         self.width = width
         self.height = height
 

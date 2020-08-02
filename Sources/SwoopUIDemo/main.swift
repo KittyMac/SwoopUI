@@ -1,7 +1,7 @@
 import Foundation
 import SwoopUI
 
-var body: some View {
+var body: View {
     VStack {
         HStack {
             Color.red

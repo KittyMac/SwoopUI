@@ -24,7 +24,7 @@ class SwoopLayer: CALayer {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     func setRootView(rootView: View) {
         root.size(100, 100).leftToRight()
         Swoop.loadView(into: root, rootView.body)
@@ -33,7 +33,7 @@ class SwoopLayer: CALayer {
 
     override func layoutSublayers() {
         renderer.layout(Int(bounds.width) / 2, Int(bounds.height) / 2)
-        
+
         setNeedsDisplay()
     }
 
