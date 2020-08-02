@@ -1,9 +1,14 @@
-#if os(macOS)
+#if os(macOS) || os(iOS)
 
 import Foundation
-import Cocoa
 import GLKit
 import MetalKit
+
+#if os(macOS)
+import Cocoa
+#else
+import UIKit
+#endif
 
 private struct SceneMatrices {
     var projectionMatrix: GLKMatrix4 = GLKMatrix4Identity
@@ -52,10 +57,11 @@ fragment float4 textured_fragment(VertexOut vert [[stage_in]],
 }
 """
 
+@available(iOS 13.0, *)
 class SwoopMetalLayer: CAMetalLayer {
 
-    let root: YogaNode
-    let renderer: BitmapRenderer
+    var root = YogaNode()
+    lazy var renderer = BitmapRenderer(root)
 
     private var metalDevice: MTLDevice!
     private var commandQueue: MTLCommandQueue!
@@ -68,15 +74,22 @@ class SwoopMetalLayer: CAMetalLayer {
     private let floatSize: Int = MemoryLayout<Float>.size
 
     init(rootView: View) {
-        root = YogaNode()
-        root.size(100, 100).leftToRight()
-
-        Swoop.loadView(into: root, rootView.body)
-        root.layout()
-
-        renderer = BitmapRenderer(root)
         super.init()
+        initMetal()
+        setRootView(rootView: rootView)
+    }
 
+    override init() {
+        super.init()
+        initMetal()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initMetal()
+    }
+    
+    func initMetal() {
         device = MTLCreateSystemDefaultDevice()
         pixelFormat = .bgra8Unorm
 
@@ -106,21 +119,17 @@ class SwoopMetalLayer: CAMetalLayer {
         normalSamplerDesc.mipFilter = .notMipmapped
         normalSamplerState = metalDevice.makeSamplerState(descriptor: normalSamplerDesc)
     }
-
-    override init() {
-        fatalError()
-    }
-
-    override init(layer: Any) {
-        fatalError()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
+    
+    func setRootView(rootView: View) {
+        root.size(100, 100).leftToRight()
+        
+        Swoop.loadView(into: root, rootView.body)
+        root.layout()
     }
 
     override func layoutSublayers() {
         renderer.layout(Int(bounds.width) / 2, Int(bounds.height) / 2)
+        setNeedsDisplay()
     }
 
     override func display() {

@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 public struct VStack<Content>: View where Content: View {
     public let child: Content

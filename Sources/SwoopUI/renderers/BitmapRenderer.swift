@@ -21,12 +21,20 @@ public class BitmapRenderer {
 
     init(_ root: YogaNode) {
         self.root = root
+        
+        if root.getWidth().isNaN {
+            width = 10
+            height = 10
 
-        width = Int(root.getWidth())
-        height = Int(root.getHeight())
+            frontBuffer = Bitmap(10, 10)
+            backBuffer = Bitmap(10, 10)
+        } else {
+            width = Int(root.getWidth())
+            height = Int(root.getHeight())
 
-        frontBuffer = Bitmap(width, height)
-        backBuffer = Bitmap(width, height)
+            frontBuffer = Bitmap(width, height)
+            backBuffer = Bitmap(width, height)
+        }
     }
 
     func swap() {

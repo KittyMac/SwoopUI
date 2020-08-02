@@ -1,6 +1,9 @@
 // swiftlint:disable identifier_name
 
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 internal struct FixedRoundedRect: Equatable {
     var rect: CGRect

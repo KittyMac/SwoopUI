@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 public protocol Shape: Animatable, View {
     func path(in rect: CGRect) -> Path

@@ -59,19 +59,21 @@ public struct ToggleStyleConfiguration {
 }
 
 extension View {
-    public func toggleStyle<S>(_ style: S) -> some View where S: ToggleStyle {
+    public func toggleStyle<S>(_ style: S) -> View where S: ToggleStyle {
         return self.modifier(ToggleStyleModifier(style))
     }
 }
-
+/*
 public struct CheckboxToggleStyle: ToggleStyle {
-    public init() { }
-
-    public func makeBody(configuration: CheckboxToggleStyle.Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> Label {
         return configuration.label
     }
+    
+    public typealias Body = Label
+    
+    public init() { }
 }
-
+*/
 public struct ToggleStyleModifier<Style>: ViewModifier {
     public typealias Body = Never
     public typealias Content = View

@@ -45,7 +45,7 @@ public func swoopUITest<Content>(_ size: Size, _ view: Content) where Content: V
     root.render(renderer.renderBuffer)
     print(renderer.renderBuffer.ascii())
 
-    let raw = renderer.renderBuffer.raw()
+    let raw = renderer.renderBuffer.rawRGBA()
     try? raw.write(to: URL(fileURLWithPath: "/tmp/bitmap_\(size.width)_\(size.height)_4.raw"))
 
 }

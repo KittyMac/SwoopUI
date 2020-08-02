@@ -532,7 +532,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -545,7 +545,6 @@
 				OBJ_144 /* Makefile */,
 				OBJ_145 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_57 /* Shapes */ = {
@@ -609,10 +608,10 @@
 		OBJ_8 /* SwoopUI */ = {
 			isa = PBXGroup;
 			children = (
+				OBJ_70 /* SwoopUI.swift */,
 				OBJ_9 /* Platforms */,
 				OBJ_15 /* Renderers */,
 				OBJ_18 /* SwiftUI */,
-				OBJ_70 /* SwoopUI.swift */,
 				OBJ_71 /* SwoopUI */,
 			);
 			name = SwoopUI;
@@ -823,7 +822,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_136 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

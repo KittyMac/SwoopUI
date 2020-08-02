@@ -5,7 +5,7 @@ public protocol PickerStyle {
 }
 
 extension View {
-    public func pickerStyle<S>(_ style: S) -> some View where S: PickerStyle {
+    public func pickerStyle<S>(_ style: S) -> View where S: PickerStyle {
         return self.modifier(PickerStyleWriter(style))
     }
 }
@@ -33,7 +33,7 @@ public struct Picker<Label, SelectionValue, Content>: View where Label: View, Se
         self.content = content()
     }
 
-    public var body: some View {
+    public var body: View {
         HStack {
             label
             content

@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 public class AnyTextStorage<Storage: StringProtocol> {
     public var storage: Storage

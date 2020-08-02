@@ -1,42 +1,40 @@
-#if os(macOS)
+#if os(macOS) || os(iOS)
 
 import Foundation
+
+#if os(macOS)
 import Cocoa
+#else
+import UIKit
+#endif
 
 class SwoopLayer: CALayer {
 
-    let root: YogaNode
-    let renderer: BitmapRenderer
+    var root: YogaNode = YogaNode()
+    lazy var renderer: BitmapRenderer = BitmapRenderer(root)
 
     private let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
     private let bitmapInfo: CGBitmapInfo = CGBitmapInfo(rawValue: CGImageByteOrderInfo.order32Little.rawValue | CGImageAlphaInfo.noneSkipLast.rawValue)
 
     init(rootView: View) {
-        root = YogaNode()
-        root.size(100, 100).leftToRight()
-
-        Swoop.loadView(into: root, rootView.body)
-        root.layout()
-
-        renderer = BitmapRenderer(root)
-
         super.init()
-    }
-
-    override init() {
-        fatalError()
-    }
-
-    override init(layer: Any) {
-        fatalError()
+        setRootView(rootView: rootView)
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError()
+        super.init(coder: aDecoder)
+    }
+    
+    func setRootView(rootView: View) {
+        root.size(100, 100).leftToRight()
+        Swoop.loadView(into: root, rootView.body)
+        root.layout()
     }
 
     override func layoutSublayers() {
         renderer.layout(Int(bounds.width) / 2, Int(bounds.height) / 2)
+        
+        setNeedsDisplay()
     }
 
     override func display() {

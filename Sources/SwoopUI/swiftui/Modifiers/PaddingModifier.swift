@@ -1,4 +1,7 @@
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 public struct PaddingModifier: ViewModifier {
     static let defaultPadding: CGFloat = 8
@@ -32,15 +35,15 @@ extension PaddingModifier: CustomStringConvertible {
 }
 
 extension View {
-    public func padding(_ insets: EdgeInsets) -> some View {
+    public func padding(_ insets: EdgeInsets) -> View {
         return modifier(PaddingModifier(insets))
     }
 
-    public func padding(_ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> some View {
+    public func padding(_ edges: Edge.Set = .all, _ length: CGFloat? = nil) -> View {
         return modifier(PaddingModifier(edges, length))
     }
 
-    public func padding(_ length: CGFloat) -> some View {
+    public func padding(_ length: CGFloat) -> View {
         return modifier(PaddingModifier(length))
     }
 }

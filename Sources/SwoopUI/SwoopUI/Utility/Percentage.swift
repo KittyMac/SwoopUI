@@ -1,6 +1,9 @@
 // https://fabiancanas.com/blog/2015/5/21/making-a-numeric-type-in-swift.html
 
 import Foundation
+#if canImport(CoreGraphics)
+import CoreGraphics
+#endif
 
 postfix operator %
 public postfix func % (pct: Float) -> Percentage {
