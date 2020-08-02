@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Flynn",
+        "repositoryURL": "https://github.com/KittyMac/Flynn.git",
+        "state": {
+          "branch": "master",
+          "revision": "df5e4ce8dc342535f0c2202e2f688a1562664706",
+          "version": null
+        }
+      },
+      {
+        "package": "SDL2",
+        "repositoryURL": "https://github.com/ctreffs/SwiftSDL2.git",
+        "state": {
+          "branch": null,
+          "revision": "8f41b0102b5f69f38763635bc8118d469ac7193b",
+          "version": "1.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
