@@ -1,8 +1,8 @@
-SwoopUI is a light-weight, fully concurrent, run anywhere, highly experimental drop in replacement for Swift UI.
+SwoopUI is a light-weight, fully concurrent, run anywhere, **highly experimental** drop in replacement for Swift UI.
 
 ### But, why?
 
-SwoopUI is incredibly now so we don't have a definitive answer. However, here are some reasons we think SwoopUI will be useful:
+SwoopUI is incredibly new so we don't have a definitive answer. However, here are some reasons we think SwoopUI will be useful:
 
 1. **Independence**  
     SwoopUI should have no platform dependencies. We will avoid directly depending on graphical APIs like Metal/Vulkan/OpenGL. You should be use SwoopUI to draw your UI into a raw buffer on any platform Swift supports; server-side, client-side, where ever.
